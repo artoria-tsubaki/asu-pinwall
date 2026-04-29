@@ -1,0 +1,155 @@
+/* ============================================
+   Mistral AI Design System — Global CSS Variables
+   图钉墙系统全局样式变量
+   ============================================ */
+
+:root {
+  /* ---- 主色 ---- */
+  --color-brand-orange: #fa520f;
+  --color-brand-flame: #fb6424;
+  --color-block-orange: #ff8105;
+
+  /* ---- 阳光琥珀系列 ---- */
+  --color-sunshine-900: #ff8a00;
+  --color-sunshine-700: #ffa110;
+  --color-sunshine-500: #ffb83e;
+  --color-sunshine-300: #ffd06a;
+  --color-block-gold: #ffe295;
+  --color-bright-yellow: #ffd900;
+
+  /* ---- 表面 & 背景 ---- */
+  --color-warm-ivory: #fffaeb;
+  --color-cream: #fff0c2;
+  --color-white: #ffffff;
+  --color-mistral-black: #1f1f1f;
+
+  /* ---- 文字 ---- */
+  --color-text-primary: #1f1f1f;
+  --color-text-on-dark: #ffffff;
+  --color-text-secondary: hsl(0, 0%, 24%);
+
+  /* ---- 边框 ---- */
+  --color-input-border: hsl(240, 5.9%, 90%);
+
+  /* ---- Mistral 色块渐变 ---- */
+  --gradient-mistral-block: linear-gradient(
+    135deg,
+    #ffd900 0%,
+    #ffe295 20%,
+    #ffa110 40%,
+    #ff8105 60%,
+    #fb6424 80%,
+    #fa520f 100%
+  );
+
+  /* ---- 暖金五层阴影（卡片抬升效果） ---- */
+  --shadow-card:
+    rgba(127, 99, 21, 0.12) -8px 16px 39px,
+    rgba(127, 99, 21, 0.10) -33px 64px 72px,
+    rgba(127, 99, 21, 0.06) -73px 144px 97px,
+    rgba(127, 99, 21, 0.02) -130px 256px 115px,
+    rgba(127, 99, 21, 0.00) -203px 400px 126px;
+
+  /* ---- 图钉阴影 ---- */
+  --shadow-pin: 0 2px 6px rgba(127, 99, 21, 0.45), 0 1px 3px rgba(0,0,0,0.2);
+
+  /* ---- 间距基准 8px ---- */
+  --space-1:  2px;
+  --space-2:  4px;
+  --space-3:  8px;
+  --space-4:  10px;
+  --space-5:  12px;
+  --space-6:  16px;
+  --space-7:  20px;
+  --space-8:  24px;
+  --space-9:  32px;
+  --space-10: 40px;
+  --space-11: 48px;
+  --space-12: 64px;
+  --space-13: 80px;
+  --space-14: 98px;
+  --space-15: 100px;
+
+  /* ---- 字体 ---- */
+  --font-family: Arial, ui-sans-serif, system-ui, sans-serif;
+
+  /* ---- 圆角 ---- */
+  --radius: 0px;
+
+  /* ---- 字号层级 ---- */
+  --fs-display: 82px;
+  --fs-section: 56px;
+  --fs-subheading-lg: 48px;
+  --fs-subheading: 32px;
+  --fs-card-title: 30px;
+  --fs-feature: 24px;
+  --fs-body: 16px;
+  --fs-caption: 14px;
+
+  /* ---- 滚动条（暖色轨道 + 琥珀拇指，全站含表格/卡片内滚动区） ---- */
+  --scrollbar-size: 8px;
+  --scrollbar-track: rgba(127, 99, 21, 0.08); 
+  --scrollbar-thumb: rgba(255, 209, 129, 0.8);
+  --scrollbar-thumb-hover: rgba(250, 82, 15, 0.7);
+  --scrollbar-thumb-active: rgba(250, 82, 15, 0.85);
+  --scrollbar-corner: var(--color-cream);
+}
+
+/* ---- Reset & Base ---- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: var(--font-family);
+  font-weight: 400;
+  background-color: var(--color-warm-ivory);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* ---- 全局滚动条（Firefox） ---- */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+
+/* ---- 全局滚动条（Chromium / Safari / 新版 Edge） ---- */
+*::-webkit-scrollbar {
+  width: var(--scrollbar-size);
+  height: var(--scrollbar-size);
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 0;
+  min-height: 40px;
+  min-width: 40px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background: var(--scrollbar-thumb-active);
+}
+
+*::-webkit-scrollbar-corner {
+  background: var(--scrollbar-corner);
+}

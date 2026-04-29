@@ -1,0 +1,23 @@
+/* NProgress — 与 docs/README.zh-CN（Mistral 暖色/尖角/琥珀阴影）一致 */
+
+#nprogress .bar {
+  background: var(--gradient-mistral-block);
+  height: 3px;
+  box-shadow: rgba(127, 99, 21, 0.28) 0 1px 10px, rgba(250, 82, 15, 0.15) 0 0 1px;
+  border-radius: var(--radius, 0);
+}
+
+#nprogress .peg {
+  box-shadow:
+    0 0 14px rgba(250, 82, 15, 0.55),
+    0 0 8px rgba(255, 161, 16, 0.45),
+    0 0 4px rgba(255, 130, 5, 0.35);
+}
+
+#nprogress .spinner {
+  display: none;
+}
+
+#nprogress {
+  z-index: 100000;
+}

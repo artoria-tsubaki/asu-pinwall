@@ -1,0 +1,112 @@
+[
+  {
+    "id": "profile-asu",
+    "x": 520,
+    "y": 70,
+    "rotate": -1,
+    "zIndex": 4,
+    "pin": { "color": "#ffa110" },
+    "type": "profile",
+    "title": "基本信息",
+    "content": {
+      "name": "明透",
+      "identity": "虚拟歌手",
+      "description": "在神椿之外的另一个世界「深脊界」中，横空出世的次世代虚拟歌手——「明透」。\n她拥有与生俱来的节奏感，以及变幻莫测的歌声。\n总爱天马行空地幻想，比起深思熟虑，更倾向于凭直觉行动，是一位天真烂漫的少女。",
+      "works": [
+        "明透 Op.3 - ソラゴト / 虚言",
+        "明透 Op.2 - スロウリー/Slowly"
+      ]
+    },
+    "meta": "KAMITSUBAKI · 深脊界"
+  },
+  {
+    "id": "social-grid",
+    "x": 1050,
+    "y": 70,
+    "rotate": 0,
+    "zIndex": 3,
+    "type": "social-grid",
+    "layout": { "w": 360, "h": 200 },
+    "content": {
+      "sectionLabel": "FOLLOW",
+      "items": [
+        {
+          "icon": "youtube",
+          "label": "YOUTUBE",
+          "url": "https://www.youtube.com/channel/UCBLGjbYv6-xxju1i44RjnnA"
+        },
+        {
+          "icon": "bilibili",
+          "label": "哔哩哔哩",
+          "url": "https://space.bilibili.com/1634470651"
+        },
+        {
+          "icon": "kamitsubaki",
+          "label": "神椿",
+          "url": "https://kamitsubaki.jp/artist/asu/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "career-video",
+    "x": 120,
+    "y": 90,
+    "rotate": 1,
+    "zIndex": 2,
+    "pin": { "color": "#ff8a00" },
+    "type": "video",
+    "title": "明透 Op.1",
+    "layout": { "w": 380, "h": 400 },
+    "content": {
+      "title": "明透 Op.1",
+      "description": "「はじめまして。」"
+    },
+    "meta": "Music · MV"
+  },
+  {
+    "id": "debut-days",
+    "x": 120,
+    "y": 1280,
+    "rotate": 0.5,
+    "zIndex": 3,
+    "pin": { "color": "#fa520f" },
+    "type": "days",
+    "title": "出道天数",
+    "meta": "KAMITSUBAKI · 明透"
+  },
+  {
+    "id": "image-wall-teaser",
+    "x": 1620,
+    "y": 720,
+    "rotate": -0.35,
+    "zIndex": 3,
+    "pin": { "color": "#e8a04a" },
+    "type": "image-wall-teaser",
+    "title": "官方绘图",
+    "layout": { "w": 420, "h": 480 },
+    "content": {
+      "intervalMs": 4200,
+      "images": []
+    },
+    "meta": ""
+  },
+  {
+    "id": "latest-tweets-asu",
+    "x": 2480,
+    "y": 1380,
+    "rotate": -0.45,
+    "zIndex": 4,
+    "pin": { "color": "#ffb83e" },
+    "type": "tweets",
+    "title": "最新消息",
+    "layout": { "w": 440, "h": 420 },
+    "content": {
+      "sectionLabel": "LATEST",
+      "handle": "ASU_virtual",
+      "displayName": "明透",
+      "items": []
+    },
+    "meta": "X · @ASU_virtual"
+  }
+]
