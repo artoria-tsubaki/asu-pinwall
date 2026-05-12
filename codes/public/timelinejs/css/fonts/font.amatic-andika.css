@@ -1,7 +1,7 @@
 /*	Font Amatic & Andika
 
-https://www.google.com/fonts/specimen/Amatic+SC
-https://www.google.com/fonts/specimen/Andika
+https://fonts.google.com/specimen/Amatic+SC
+https://fonts.google.com/specimen/Andika
 ----------------------------------------------------- */
 /*	VARIABLES
 	BASE
@@ -24,19 +24,29 @@ https://www.google.com/fonts/specimen/Andika
   font-family: 'Amatic SC';
   font-style: normal;
   font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/amaticsc/v24/TUZyzwprpvBS1izr_vOECuSa.ttf) format('truetype');
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/amaticsc/v28/TUZyzwprpvBS1izr_vO0DQ.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Amatic SC';
   font-style: normal;
   font-weight: 700;
-  src: url(https://fonts.gstatic.com/s/amaticsc/v24/TUZ3zwprpvBS1izr_vOMscGKfrUH.ttf) format('truetype');
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/amaticsc/v28/TUZ3zwprpvBS1izr_vOMscG6eQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Andika';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/andika/v27/mem9Ya6iyW-Lwqgwb7YV.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Andika';
   font-style: normal;
   font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/andika/v25/mem_Ya6iyW-LwqgwarYV.ttf) format('truetype');
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/andika/v27/mem_Ya6iyW-LwqgAbQ.ttf) format('truetype');
 }
 /*	Font Base
 ----------------------------------------------------- */

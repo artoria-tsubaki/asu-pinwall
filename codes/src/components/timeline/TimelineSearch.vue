@@ -197,6 +197,11 @@ watch(isOpen, (v) => {
   border-color: var(--color-sunshine-700);
 }
 
+/* type=search 内置清除按钮：悬停为手型（WebKit / Chromium） */
+.tl-search__input::-webkit-search-cancel-button {
+  cursor: pointer;
+}
+
 .tl-search__list {
   margin: 0;
   padding: 0;

@@ -15,14 +15,16 @@ import json
 import os
 import re
 import sys
+from html import escape
 from datetime import datetime, timezone
-from typing import Optional
+from typing import Any, Optional
 
 
 # ─── 数据转换 ────────────────────────────────────────────────────────────────
 
 def text_to_headline(text: str, max_len: int = 50) -> str:
-    first_line = text.strip().split("\n")[0]
+    plain = re.sub(r"<[^>]+>", "", text)
+    first_line = plain.strip().split("\n")[0]
     if len(first_line) > max_len:
         return first_line[:max_len] + "…"
     return first_line
@@ -33,10 +35,51 @@ def text_to_html_paragraphs(text: str) -> str:
     return "".join(f"<p>{line}</p>" for line in lines)
 
 
+def _entity_url_parts(u) -> Optional[tuple[str, str, str]]:
+    if isinstance(u, dict):
+        short = u.get("url") or ""
+        expanded = u.get("expanded_url") or short
+        display = u.get("display_url") or expanded
+    else:
+        short = getattr(u, "url", None) or ""
+        expanded = getattr(u, "expanded_url", None) or short
+        display = getattr(u, "display_url", None) or expanded
+    if not short:
+        return None
+    return str(short), str(expanded), str(display)
+
+
+def apply_entity_urls_to_text(full_text: str, entities: Any = None) -> str:
+    text = full_text
+    urls_list = None
+    if entities:
+        if isinstance(entities, dict):
+            urls_list = entities.get("urls")
+        else:
+            urls_list = getattr(entities, "urls", None)
+    if urls_list:
+        for u in urls_list:
+            parts = _entity_url_parts(u)
+            if not parts:
+                continue
+            short, expanded, display = parts
+            href = escape(expanded, quote=True)
+            label = escape(display)
+            anchor = (
+                f'<a href="{href}" target="_blank" '
+                f'rel="noopener noreferrer">{label}</a>'
+            )
+            if short in text:
+                text = text.replace(short, anchor, 1)
+    text = re.sub(r"https://t\.co/\S+", "", text)
+    return text.strip()
+
+
 def build_event(username: str, tweet_id: str, created_at: datetime,
-                full_text: str, image_url: Optional[str]) -> dict:
+                full_text: str, image_url: Optional[str],
+                entities: Any = None) -> dict:
     tweet_url = f"https://twitter.com/{username}/status/{tweet_id}"
-    clean_text = re.sub(r"https://t\.co/\S+", "", full_text).strip()
+    rich_text = apply_entity_urls_to_text(full_text, entities)
 
     return {
         "media": {
@@ -49,8 +92,8 @@ def build_event(username: str, tweet_id: str, created_at: datetime,
             "day": str(created_at.day)
         },
         "text": {
-            "headline": text_to_headline(clean_text),
-            "text": text_to_html_paragraphs(clean_text)
+            "headline": text_to_headline(rich_text),
+            "text": text_to_html_paragraphs(rich_text)
         }
     }
 
@@ -110,7 +153,9 @@ def fetch_via_api(username: str, bearer_token: str,
                 image_url = media_map.get(first_key)
 
             dt: datetime = tweet.created_at  # type: ignore
-            entry = build_event(username, str(tweet.id), dt, tweet.text, image_url)
+            entry = build_event(
+                username, str(tweet.id), dt, tweet.text, image_url, tweet.entities
+            )
             events.append(entry)
             collected += 1
             if collected >= limit:

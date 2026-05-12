@@ -1,7 +1,7 @@
 /*	Font Fjalla & Average
 
-https://www.google.com/fonts/specimen/Fjalla+One
-https://www.google.com/fonts/specimen/Average+Sans
+https://fonts.google.com/specimen/Fjalla+One
+https://fonts.google.com/specimen/Average+Sans
 ----------------------------------------------------- */
 /*	VARIABLES
 	BASE
@@ -24,13 +24,15 @@ https://www.google.com/fonts/specimen/Average+Sans
   font-family: 'Average Sans';
   font-style: normal;
   font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/averagesans/v16/1Ptpg8fLXP2dlAXR-HlJJNJ_AtCe.ttf) format('truetype');
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/averagesans/v17/1Ptpg8fLXP2dlAXR-HlJJNJPBQ.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Fjalla One';
   font-style: normal;
   font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/fjallaone/v15/Yq6R-LCAWCX3-6Ky7FAFrOF6lw.ttf) format('truetype');
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/fjallaone/v16/Yq6R-LCAWCX3-6Ky7FAFnOY.ttf) format('truetype');
 }
 /*	Font Base
 ----------------------------------------------------- */

@@ -1,8 +1,8 @@
 [
   {
     "id": "profile-asu",
-    "x": 520,
-    "y": 70,
+    "x": 420,
+    "y": 40,
     "rotate": -1,
     "zIndex": 4,
     "pin": { "color": "#ffa110" },
@@ -21,7 +21,7 @@
   },
   {
     "id": "social-grid",
-    "x": 1050,
+    "x": 1250,
     "y": 70,
     "rotate": 0,
     "zIndex": 3,
@@ -50,8 +50,8 @@
   },
   {
     "id": "career-video",
-    "x": 120,
-    "y": 90,
+    "x": 1080,
+    "y": 290,
     "rotate": 1,
     "zIndex": 2,
     "pin": { "color": "#ff8a00" },
@@ -66,19 +66,20 @@
   },
   {
     "id": "debut-days",
-    "x": 120,
-    "y": 1280,
+    "x": 720,
+    "y": 1240,
     "rotate": 0.5,
     "zIndex": 3,
     "pin": { "color": "#fa520f" },
     "type": "days",
     "title": "出道天数",
+    "layout": { "w": 300, "h": 400 },
     "meta": "KAMITSUBAKI · 明透"
   },
   {
     "id": "image-wall-teaser",
     "x": 1620,
-    "y": 720,
+    "y": 900,
     "rotate": -0.35,
     "zIndex": 3,
     "pin": { "color": "#e8a04a" },

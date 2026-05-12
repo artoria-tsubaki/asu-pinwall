@@ -20,8 +20,15 @@
 import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import TimelineSearch from '../components/timeline/TimelineSearch.vue'
-import rawTimeline from '../data/timeline.json'
+import timelineMeta from '../data/timeline.json'
+// 临时：事件数据使用仓库根目录 B 站空间投稿导出（TimelineJS 事件数组）；标题区仍用 timeline.json
+import bilibiliTimelineEvents from '../../../bilibili_space_1634470651_uploads.json'
 import mittBus from '../utils/mittBus'
+
+const rawTimeline = {
+  title: timelineMeta.title,
+  events: Array.isArray(bilibiliTimelineEvents) ? bilibiliTimelineEvents : []
+}
 
 defineOptions({ name: 'TimelineView' })
 
@@ -35,24 +42,46 @@ function goHome() {
   router.push({ name: 'Home' })
 }
 
+function getEventDateParts(item) {
+  const sd = item?.start_date
+  const source = sd?.data ?? sd ?? {}
+  const year = Number(source.year) || 0
+  const month = Number(source.month) || 0
+  const day = Number(source.day) || 0
+  return { year, month, day }
+}
+
 const searchRows = computed(() => {
   const list = rawTimeline.events || []
-  return list.map((item, index) => {
-    const sd = item.start_date
-    const year = sd?.data?.year ?? sd?.year
-    const month = sd?.data?.month ?? sd?.month
-    const day = sd?.data?.day ?? sd?.day
-    const dateLabel = [year, month, day].filter(Boolean).join('/')
-    const headline = item.text?.headline || '—'
-    return {
-      key: `e-${index}`,
-      headline,
-      dateLabel,
-      matchTitle: String(headline).toLowerCase(),
-      matchDate: String(dateLabel).toLowerCase(),
+  return list
+    .map((item, index) => {
+      const { year, month, day } = getEventDateParts(item)
+      const dateLabel = [year, month, day].filter(Boolean).join('/')
+      const headline = item.text?.headline || '—'
+      return {
+        key: `e-${index}`,
+        headline,
+        dateLabel,
+        matchTitle: String(headline).toLowerCase(),
+        matchDate: String(dateLabel).toLowerCase(),
+        sortKey: `${String(year).padStart(4, '0')}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`,
+        sourceIndex: index
+      }
+    })
+    .sort((a, b) => {
+      if (a.sortKey !== b.sortKey) {
+        return a.sortKey.localeCompare(b.sortKey)
+      }
+      return a.sourceIndex - b.sourceIndex
+    })
+    .map((row, index) => ({
+      key: row.key,
+      headline: row.headline,
+      dateLabel: row.dateLabel,
+      matchTitle: row.matchTitle,
+      matchDate: row.matchDate,
       slideIndex: index + 1
-    }
-  })
+    }))
 })
 
 const embedId = 'timeline-embed'
@@ -237,9 +266,17 @@ watch(
 }
 
 .timeline-page__close-icon {
+  display: inline-block;
   font-size: 28px;
   line-height: 1;
   font-weight: 300;
+  transform: rotate(0deg);
+  transform-origin: center;
+  transition: transform 0.28s ease;
+}
+
+.timeline-page__close:hover .timeline-page__close-icon {
+  transform: rotate(-90deg);
 }
 
 /* position: fixed; inset: 0 给父容器提供确定的视口高度，flex: 1 才能可靠分配剩余空间 */

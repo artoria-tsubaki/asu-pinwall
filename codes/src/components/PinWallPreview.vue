@@ -215,7 +215,7 @@ const DEFAULT_LAYOUT_BY_TYPE = {
   mixed: { w: 400, h: 292 },
   profile: { w: 320, h: 420 },
   'social-grid': { w: 360, h: 200 },
-  days: { w: 240, h: 180 },
+  days: { w: 300, h: 400 },
   tweets: { w: 440, h: 420 },
   'image-wall-teaser': { w: 420, h: 480 }
 }

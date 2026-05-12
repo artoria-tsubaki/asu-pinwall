@@ -1,7 +1,7 @@
 /*	Font Lustria & Lato
 
-https://www.google.com/fonts/specimen/Lustria
-https://www.google.com/fonts/specimen/Lato
+https://fonts.google.com/specimen/Lustria
+https://fonts.google.com/specimen/Lato
 ----------------------------------------------------- */
 /*	VARIABLES
 	BASE
@@ -24,19 +24,36 @@ https://www.google.com/fonts/specimen/Lato
   font-family: 'Lato';
   font-style: italic;
   font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/lato/v24/S6u8w4BMUTPHjxsAXC-v.ttf) format('truetype');
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lato/v25/S6u8w4BMUTPHjxswWw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lato/v25/S6u_w4BMUTPHjxsI5wqPHA.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/lato/v24/S6uyw4BMUTPHjx4wWw.ttf) format('truetype');
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lato/v25/S6uyw4BMUTPHvxk.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lato/v25/S6u9w4BMUTPHh6UVew8.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Lustria';
   font-style: normal;
   font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/lustria/v13/9oRONYodvDEyjuhOnC8zNg.ttf) format('truetype');
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lustria/v14/9oRONYodvDEyjuhOrCg.ttf) format('truetype');
 }
 /*	Font Base
 ----------------------------------------------------- */

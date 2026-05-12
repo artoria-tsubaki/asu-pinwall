@@ -14,15 +14,80 @@
     <SvgMouseFollower />
     <!-- 固定的标题栏（在 viewport 上层，不随画布移动） -->
     <header class="pin-wall__header">
-      <div class="pin-wall__brand">
-        <span class="pin-wall__brand-block"></span>
-        <h1 class="pin-wall__title">PIN WALL</h1>
+      <div class="pin-wall__header-start">
+        <div class="pin-wall__brand">
+          <span class="pin-wall__brand-block"></span>
+          <h1 class="pin-wall__title">PIN WALL</h1>
+        </div>
       </div>
       <div class="pin-wall__header-right">
-        <p class="pin-wall__subtitle">图钉墙 · 创意空间</p>
-        <span class="pin-wall__hint">按住鼠标拖动画布</span>
+        <button
+          type="button"
+          class="pin-wall__nav-open"
+          aria-label="打开导航菜单"
+          :aria-expanded="drawerOpen"
+          @click="openDrawer"
+        >
+          <span class="pin-wall__nav-open-bars" aria-hidden="true">
+            <span class="pin-wall__nav-open-bar" />
+            <span class="pin-wall__nav-open-bar" />
+            <span class="pin-wall__nav-open-bar" />
+          </span>
+          <span class="pin-wall__nav-open-label">导航</span>
+        </button>
       </div>
     </header>
+
+    <Teleport to="body">
+      <Transition name="pin-wall-drawer">
+        <div
+          v-if="drawerOpen"
+          class="pin-wall-drawer"
+          role="presentation"
+        >
+          <div
+            class="pin-wall-drawer__backdrop"
+            aria-hidden="true"
+            @click="closeDrawer"
+          />
+          <aside
+            class="pin-wall-drawer__panel"
+            role="dialog"
+            aria-modal="true"
+            aria-label="卡片导航"
+            @click.stop
+          >
+            <div class="pin-wall-drawer__head">
+              <span class="pin-wall-drawer__head-title">卡片</span>
+              <button
+                type="button"
+                class="pin-wall-drawer__close"
+                aria-label="关闭导航菜单"
+                @click="closeDrawer"
+              >
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+            <nav class="pin-wall-drawer__nav" aria-label="画布卡片列表">
+              <button
+                v-for="(card, idx) in props.cards"
+                :key="card.id"
+                type="button"
+                class="pin-wall-drawer__item"
+                :class="{
+                  'pin-wall-drawer__item--odd': idx % 2 === 0,
+                  'pin-wall-drawer__item--even': idx % 2 === 1
+                }"
+                :style="{ '--drawer-i': idx }"
+                @click="onDrawerNavigate(card)"
+              >
+                {{ navLabel(card) }}
+              </button>
+            </nav>
+          </aside>
+        </div>
+      </Transition>
+    </Teleport>
 
     <!-- 卡片内图片等资源就绪前的加载层 -->
     <div
@@ -82,7 +147,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted, nextTick } from 'vue'
+import { ref, onMounted, onUnmounted, nextTick, watch } from 'vue'
 import PinCard from './PinCard.vue'
 import PinWallPreview from './PinWallPreview.vue'
 import SvgMouseFollower from './SvgMouseFollower.vue'
@@ -129,6 +194,89 @@ let startX = 0
 let startY = 0
 let startOffsetX = 0
 let startOffsetY = 0
+
+/** 顶部导航抽屉：按卡片标题跳转画布（与 PinWallPreview 中线对齐逻辑一致） */
+const drawerOpen = ref(false)
+let drawerEscapeHandler = null
+
+const PIN_STACK_ABOVE_CARD = 28
+const DEFAULT_LAYOUT_BY_TYPE = {
+  text: { w: 300, h: 248 },
+  image: { w: 400, h: 312 },
+  video: { w: 380, h: 268 },
+  table: { w: 360, h: 228 },
+  mixed: { w: 400, h: 292 },
+  profile: { w: 320, h: 420 },
+  'social-grid': { w: 360, h: 200 },
+  days: { w: 300, h: 400 },
+  tweets: { w: 440, h: 420 },
+  'image-wall-teaser': { w: 420, h: 480 }
+}
+const DEFAULT_LAYOUT_FALLBACK = { w: 320, h: 240 }
+
+function navLabel(card) {
+  const t = card.title
+  if (t != null && String(t).trim() !== '') return String(t).trim()
+  if (card.content?.sectionLabel) return card.content.sectionLabel
+  if (card.type === 'social-grid') return '社交链接'
+  return card.id || '未命名'
+}
+
+function getCardLayoutSizeForNav(card) {
+  const measured = cardDimensions.value[card.id]
+  if (measured && measured.w > 0 && measured.h > 0) {
+    return { w: measured.w, h: measured.h }
+  }
+  if (card.layout && typeof card.layout.w === 'number' && typeof card.layout.h === 'number') {
+    return { w: card.layout.w, h: card.layout.h }
+  }
+  return DEFAULT_LAYOUT_BY_TYPE[card.type] || DEFAULT_LAYOUT_FALLBACK
+}
+
+function navigateToCard(card) {
+  const vw = viewportWidth.value
+  const vh = viewportHeight.value - 64
+  const pinStack = card.type === 'social-grid' ? 0 : PIN_STACK_ABOVE_CARD
+  const { w, h } = getCardLayoutSizeForNav(card)
+  const centerCanvasX = card.x + w / 2
+  const centerCanvasY = card.y + pinStack + h / 2
+  const targetOffsetX = -(centerCanvasX - vw / 2)
+  const targetOffsetY = -(centerCanvasY - vh / 2)
+  onNavigate(targetOffsetX, targetOffsetY)
+}
+
+function openDrawer() {
+  drawerOpen.value = true
+}
+
+function closeDrawer() {
+  drawerOpen.value = false
+}
+
+function onDrawerNavigate(card) {
+  closeDrawer()
+  nextTick(() => navigateToCard(card))
+}
+
+watch(drawerOpen, (open) => {
+  if (drawerEscapeHandler) {
+    document.removeEventListener('keydown', drawerEscapeHandler)
+    drawerEscapeHandler = null
+  }
+  if (open) {
+    drawerEscapeHandler = (e) => {
+      if (e.key === 'Escape') closeDrawer()
+    }
+    document.addEventListener('keydown', drawerEscapeHandler)
+  }
+})
+
+onUnmounted(() => {
+  if (drawerEscapeHandler) {
+    document.removeEventListener('keydown', drawerEscapeHandler)
+    drawerEscapeHandler = null
+  }
+})
 
 // 初始化时将画布定位到左上角（留出 header 高度）
 onMounted(async () => {
@@ -352,21 +500,242 @@ function clampOffset(val, axis) {
 
 .pin-wall__header-right {
   display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  pointer-events: auto;
+}
+
+.pin-wall__header-start {
+  display: flex;
+  align-items: center;
+  pointer-events: auto;
+}
+
+.pin-wall__nav-open {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 40px;
+  padding: 0 14px;
+  border: none;
+  border-radius: 0;
+  background: #fff0c2;
+  color: #1f1f1f;
+  cursor: pointer;
+  font-family: var(--font-family);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  box-shadow:
+    rgba(127, 99, 21, 0.14) -2px 4px 12px,
+    rgba(127, 99, 21, 0.06) -6px 12px 24px;
+  transition: background 0.15s ease, box-shadow 0.15s ease;
+}
+
+.pin-wall__nav-open:hover {
+  background: #ffe295;
+  box-shadow:
+    rgba(127, 99, 21, 0.2) -2px 4px 12px,
+    rgba(127, 99, 21, 0.1) -6px 12px 24px;
+}
+
+.pin-wall__nav-open-bars {
+  display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  gap: 4px;
+}
+
+.pin-wall__nav-open-bar {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: #1f1f1f;
+}
+
+@media (max-width: 520px) {
+  .pin-wall__nav-open-label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .pin-wall__nav-open {
+    padding: 0 12px;
+  }
+}
+
+/* ---- 顶部导航抽屉 ---- */
+.pin-wall-drawer {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  pointer-events: none;
+}
+
+.pin-wall-drawer__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(22, 14, 4, 0.42);
+  backdrop-filter: blur(5px);
+  pointer-events: auto;
+}
+
+.pin-wall-drawer__panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(380px, 90vw);
+  background: #fffaeb;
+  border-left: 1px solid rgba(127, 99, 21, 0.18);
+  box-shadow:
+    rgba(127, 99, 21, 0.12) -10px 0 36px,
+    rgba(127, 99, 21, 0.08) -24px 0 64px;
+  pointer-events: auto;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0;
+}
+
+.pin-wall-drawer__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+  padding: 0 16px 0 20px;
+  border-bottom: 1px solid rgba(127, 99, 21, 0.12);
+  flex-shrink: 0;
+}
+
+.pin-wall-drawer__head-title {
+  font-family: var(--font-family);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(31, 31, 31, 0.45);
+}
+
+.pin-wall-drawer__close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  color: #1f1f1f;
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 400;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.pin-wall-drawer__close:hover {
+  background: rgba(127, 99, 21, 0.08);
+}
+
+.pin-wall-drawer__nav {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 16px 0 24px;
+  display: flex;
+  flex-direction: column;
   gap: 2px;
 }
 
-.pin-wall__subtitle {
-  font-size: var(--fs-caption);
-  color: var(--color-text-secondary);
-  letter-spacing: 0.5px;
+.pin-wall-drawer__item {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  font-family: var(--font-family);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: #1f1f1f;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.14s ease;
+  opacity: 0;
+  animation-duration: 0.52s;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  animation-fill-mode: forwards;
+  animation-delay: calc(var(--drawer-i, 0) * 56ms + 80ms);
 }
 
-.pin-wall__hint {
-  font-size: 11px;
-  color: rgba(127, 99, 21, 0.5);
-  letter-spacing: 0.3px;
+.pin-wall-drawer__item--odd {
+  animation-name: pin-wall-drawer-item-in-from-right;
+}
+
+.pin-wall-drawer__item--even {
+  animation-name: pin-wall-drawer-item-in-from-left;
+}
+
+.pin-wall-drawer__item:hover {
+  background: rgba(255, 240, 194, 0.85);
+}
+
+.pin-wall-drawer__item:active {
+  background: rgba(255, 217, 0, 0.2);
+}
+
+@keyframes pin-wall-drawer-item-in-from-left {
+  from {
+    opacity: 0;
+    transform: translateX(-36px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pin-wall-drawer-item-in-from-right {
+  from {
+    opacity: 0;
+    transform: translateX(36px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.pin-wall-drawer-enter-active .pin-wall-drawer__backdrop,
+.pin-wall-drawer-leave-active .pin-wall-drawer__backdrop {
+  transition: opacity 0.32s ease;
+}
+
+.pin-wall-drawer-enter-active .pin-wall-drawer__panel,
+.pin-wall-drawer-leave-active .pin-wall-drawer__panel {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pin-wall-drawer-enter-from .pin-wall-drawer__backdrop,
+.pin-wall-drawer-leave-to .pin-wall-drawer__backdrop {
+  opacity: 0;
+}
+
+.pin-wall-drawer-enter-from .pin-wall-drawer__panel,
+.pin-wall-drawer-leave-to .pin-wall-drawer__panel {
+  transform: translateX(100%);
 }
 
 /* ---- 画布（可拖拽移动） ---- */

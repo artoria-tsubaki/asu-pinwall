@@ -1,7 +1,7 @@
 /*	Font Bevan & Pontano+Sans
 
-https://www.google.com/fonts/specimen/Bevan
-https://www.google.com/fonts/specimen/Pontano+Sans
+https://fonts.google.com/specimen/Bevan
+https://fonts.google.com/specimen/Pontano+Sans
 ----------------------------------------------------- */
 /*	VARIABLES
 	BASE
@@ -22,15 +22,52 @@ https://www.google.com/fonts/specimen/Pontano+Sans
 ================================================== */
 @font-face {
   font-family: 'Bevan';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/bevan/v26/4iCt6KZ0a9NXjG8YWC4.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Bevan';
   font-style: normal;
   font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/bevan/v21/4iCj6KZ0a9NXjG8dWC4.ttf) format('truetype');
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/bevan/v26/4iCj6KZ0a9NXjF8a.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Pontano Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/pontanosans/v19/qFdW35GdgYR8EzR6oBLDHa3wyRf8W8eBM6XLOSzMncY.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Pontano Sans';
   font-style: normal;
   font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/pontanosans/v16/qFdW35GdgYR8EzR6oBLDHa3wyRf8W8eBM6XLOXLMrcGGow.ttf) format('truetype');
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/pontanosans/v19/qFdW35GdgYR8EzR6oBLDHa3wyRf8W8eBM6XLOXLMncY.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Pontano Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/pontanosans/v19/qFdW35GdgYR8EzR6oBLDHa3wyRf8W8eBM6XLOUDMncY.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Pontano Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/pontanosans/v19/qFdW35GdgYR8EzR6oBLDHa3wyRf8W8eBM6XLOazLncY.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Pontano Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/pontanosans/v19/qFdW35GdgYR8EzR6oBLDHa3wyRf8W8eBM6XLOZXLncY.ttf) format('truetype');
 }
 /*	Font Base
 ----------------------------------------------------- */

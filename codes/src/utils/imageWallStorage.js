@@ -2,7 +2,7 @@
 export const IMAGE_WALL_STORAGE_KEY = 'pinwall-image-wall-payload'
 
 /**
- * @param {{ src: string, alt?: string }[]} images
+ * @param {{ src: string, alt?: string, title?: string }[]} images
  */
 export function setImageWallPayload(images) {
   sessionStorage.setItem(
@@ -12,7 +12,7 @@ export function setImageWallPayload(images) {
 }
 
 /**
- * @returns {{ src: string, alt?: string }[]}
+ * @returns {{ src: string, alt?: string, title?: string }[]}
  */
 export function getImageWallPayload() {
   try {

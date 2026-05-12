@@ -2,9 +2,9 @@
 ----------------------------------------------------- */
 /*	Font PT Sans & PT Serif & PT Sans Narrow
 
-http://www.google.com/webfonts/specimen/PT+Sans+Narrow
-http://www.google.com/webfonts/specimen/PT+Sans
-http://www.google.com/webfonts/specimen/PT+Serif
+https://fonts.google.com/specimen/PT+Sans+Narrow
+https://fonts.google.com/specimen/PT+Sans
+https://fonts.google.com/specimen/PT+Serif
 ----------------------------------------------------- */
 /*	VARIABLES
 	BASE
@@ -27,25 +27,29 @@ http://www.google.com/webfonts/specimen/PT+Serif
   font-family: 'PT Sans';
   font-style: normal;
   font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/ptsans/v17/jizaRExUiTo99u79D0KEwA.ttf) format('truetype');
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ptsans/v18/jizaRExUiTo99u79P0U.ttf) format('truetype');
 }
 @font-face {
   font-family: 'PT Sans Narrow';
   font-style: normal;
   font-weight: 700;
-  src: url(https://fonts.gstatic.com/s/ptsansnarrow/v18/BngSUXNadjH0qYEzV7ab-oWlsbg95AiFW_g.ttf) format('truetype');
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ptsansnarrow/v19/BngSUXNadjH0qYEzV7ab-oWlsbg95DiC.ttf) format('truetype');
 }
 @font-face {
   font-family: 'PT Serif';
   font-style: italic;
   font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/ptserif/v18/EJRTQgYoZZY2vCFuvAFT_r21dw.ttf) format('truetype');
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ptserif/v19/EJRTQgYoZZY2vCFuvAFTzro.ttf) format('truetype');
 }
 @font-face {
   font-family: 'PT Serif';
   font-style: normal;
   font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/ptserif/v18/EJRVQgYoZZY2vCFuvAFWzro.ttf) format('truetype');
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ptserif/v19/EJRVQgYoZZY2vCFuvDFR.ttf) format('truetype');
 }
 /*	Font Base
 ----------------------------------------------------- */

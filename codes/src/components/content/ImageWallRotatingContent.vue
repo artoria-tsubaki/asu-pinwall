@@ -86,7 +86,13 @@ onUnmounted(() => {
 
 function openWall() {
   if (!slides.value.length) return
-  setImageWallPayload(slides.value.map((i) => ({ src: i.src, alt: i.alt || '' })))
+  setImageWallPayload(
+    slides.value.map((i) => ({
+      src: i.src,
+      alt: i.alt || '',
+      title: (i.title && String(i.title)) || ''
+    }))
+  )
   router.push({ name: 'ImageWall' })
 }
 </script>

@@ -7,6 +7,7 @@ defineOptions({ name: 'HomeView' })
 
 import PinWall from '../components/PinWall.vue'
 import cardsData from '../data/cards.json'
+import illusMeta from '../assets/images/illus/illus.json'
 import asuMusicData from '../../../data/asu_music_data.json'
 import albemuthMusicData from '../../../data/albemuth_music_data.json'
 import { ref } from 'vue'
@@ -19,12 +20,20 @@ const illusModules = import.meta.glob('../assets/images/illus/*.{jpg,jpeg,png,we
   eager: true,
   import: 'default'
 })
+const illusTitleByFile = new Map(
+  Array.isArray(illusMeta.items) ? illusMeta.items.map((it) => [it.file, it.title]) : []
+)
 const officialIllustrationImages = Object.keys(illusModules)
   .sort()
-  .map((path) => ({
-    src: illusModules[path],
-    alt: '官方绘图'
-  }))
+  .map((path) => {
+    const file = path.replace(/^.*\//, '')
+    const title = illusTitleByFile.get(file) || ''
+    return {
+      src: illusModules[path],
+      alt: title || '官方绘图',
+      ...(title ? { title } : {})
+    }
+  })
 
 function buildOriginalSongsTableContent(data) {
   return {
