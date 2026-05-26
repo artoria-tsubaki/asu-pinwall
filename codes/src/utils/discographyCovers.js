@@ -12,9 +12,14 @@ const albemuthModules = import.meta.glob('../assets/images/albemuth-discography/
   query: '?url',
   import: 'default'
 })
+const asuCoverModules = import.meta.glob('../assets/images/asu-cover/*', {
+  eager: true,
+  query: '?url',
+  import: 'default'
+})
 
 const coverUrlByFileName = new Map()
-for (const modules of [asuModules, albemuthModules]) {
+for (const modules of [asuModules, albemuthModules, asuCoverModules]) {
   for (const path of Object.keys(modules)) {
     const name = path.split(/[/\\]/).pop()
     if (name) {

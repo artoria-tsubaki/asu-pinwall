@@ -12,13 +12,19 @@
     <Teleport to="body">
       <div
         v-if="previewIndex !== null"
+        ref="previewBackdropRef"
         class="image-wall-page__preview-backdrop"
+        :class="{ 'image-wall-page__preview-backdrop--active': previewBackdropVisible }"
         role="dialog"
         aria-modal="true"
         aria-label="图片预览"
         @click="closePreview"
       >
-        <div class="image-wall-page__preview-toolbar" @click.stop>
+        <div
+          class="image-wall-page__preview-toolbar"
+          :class="{ 'image-wall-page__preview-toolbar--active': previewBackdropVisible }"
+          @click.stop
+        >
           <button
             type="button"
             class="image-wall-page__preview-btn image-wall-page__preview-btn--download"
@@ -77,14 +83,20 @@
           </button>
         </div>
         <div class="image-wall-page__preview-stage" @click="closePreview">
-          <img
+          <div
             v-if="previewImage"
-            :src="previewImage.src"
-            :alt="previewImage ? cardDisplayTitle(previewImage) : imageTitlePlaceholder"
-            class="image-wall-page__preview-img"
-            decoding="async"
+            ref="previewFrameRef"
+            class="image-wall-page__preview-frame"
+            :style="previewFrameStyle"
             @click.stop
-          />
+          >
+            <img
+              :src="previewImage.src"
+              :alt="cardDisplayTitle(previewImage)"
+              class="image-wall-page__preview-img"
+              decoding="async"
+            />
+          </div>
         </div>
       </div>
     </Teleport>
@@ -99,11 +111,12 @@
           v-model="searchQuery"
           type="search"
           class="image-wall-page__search"
-          placeholder="按标题搜索…"
+          placeholder="按标题搜索"
           autocomplete="off"
           aria-label="按标题筛选图片"
         />
       </div>
+
       <div v-if="!wallItems.length" class="image-wall-page__empty">
         暂无图片，请从图钉墙卡片进入。
       </div>
@@ -118,14 +131,16 @@
       <div v-else class="image-wall-page__masonry">
         <div
           v-for="i in filteredIndices"
-          :key="i + wallItems[i].src"
+          :key="`${i}-${wallItems[i].src}`"
           class="image-wall-page__item"
           :data-lazy-index="i"
         >
           <div class="image-wall-page__cover-wrap">
             <div class="image-wall-page__cover-card">
               <div
+                :ref="(el) => setThumbRef(i, el)"
                 class="image-wall-page__img-wrapper"
+                :class="{ 'image-wall-page__img-wrapper--previewing': i === previewIndex }"
                 :style="{ aspectRatio: dimensions[i] ? `${dimensions[i].w} / ${dimensions[i].h}` : '3 / 2' }"
                 role="button"
                 tabindex="0"
@@ -154,78 +169,293 @@
 <script setup>
 defineOptions({ name: 'ImageWallView' })
 
-import { onMounted, onUnmounted, reactive, ref, nextTick, computed, watch } from 'vue'
+import { computed, nextTick, onMounted, onUnmounted, reactive, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
-import { getImageWallPayload } from '../utils/imageWallStorage.js'
+import asuCoverMusicData from '../../../data/asu_cover_music_data.json'
 
-/** 无标题数据时的兜底文案 */
 const imageTitlePlaceholder = '图片标题'
+const asuCoverImages = import.meta.glob('../assets/images/asu-cover/*', {
+  eager: true,
+  import: 'default',
+  query: '?url'
+})
+const asuCoverImageByFile = new Map(
+  Object.entries(asuCoverImages).map(([path, src]) => [path.split('/').pop(), src])
+)
 
 const router = useRouter()
 const wallItems = ref([])
 const searchQuery = ref('')
 const scrollRootRef = ref(null)
-/** 已通过 IntersectionObserver 决定加载的图片下标（进入视口或预取区后才置 true） */
 const loaded = reactive({})
-/** 预加载后记录的图片原始宽高，用于 aspect-ratio 锁定占位高度，防止懒加载时 CSS 列布局重排 */
 const dimensions = reactive({})
-/**
- * 所有图片尺寸均已确定后才置 true，瀑布流在此之前不渲染。
- * 原因：CSS column-count 布局会在任意 item 高度变化时重新平衡列分布，
- * 导致已入场的图片被"挤"到其他位置。等全部尺寸就绪后首次渲染可确保布局稳定。
- * 带宽代价为零——图片本就在预加载，仅推迟了首次显示时机。
- */
 const dimensionsReady = ref(false)
+
+const previewIndex = ref(null)
+const previewDownloadBusy = ref(false)
+const previewBackdropVisible = ref(false)
+const previewBackdropRef = ref(null)
+const previewFrameRef = ref(null)
+const previewAnimating = ref(false)
+const previewSourceRect = ref(null)
+
+const viewportSize = reactive({ width: 0, height: 0 })
+const thumbRefs = new Map()
+const preloadCache = []
+
+let previewKeyHandler = null
+let lazyObserver = null
+let motionMediaQuery = null
+let prefersReducedMotion = false
 
 const filteredIndices = computed(() => {
   const items = wallItems.value
-  const n = items.length
-  if (!n) return []
+  if (!items.length) return []
+
   const q = searchQuery.value.trim()
-  if (!q) return items.map((_, i) => i)
+  if (!q) return items.map((_, index) => index)
+
   return items
-    .map((item, i) => {
-      const t = (item.title || item.alt || '').trim()
-      return t.includes(q) ? i : -1
+    .map((item, index) => {
+      const title = (item.title || item.alt || '').trim()
+      return title.includes(q) ? index : -1
     })
-    .filter((i) => i >= 0)
+    .filter((index) => index >= 0)
 })
 
 const hasActiveSearch = computed(() => !!searchQuery.value.trim())
 
-function cardDisplayTitle(item) {
-  if (!item) return imageTitlePlaceholder
-  const t = (item.title && String(item.title).trim()) || (item.alt && String(item.alt).trim())
-  return t || imageTitlePlaceholder
-}
-
-const previewIndex = ref(null)
-const previewDownloadBusy = ref(false)
-
 const previewImage = computed(() => {
-  const i = previewIndex.value
-  if (i == null || !wallItems.value[i]) return null
-  return wallItems.value[i]
+  const index = previewIndex.value
+  if (index == null || !wallItems.value[index]) return null
+  return wallItems.value[index]
 })
 
-let previewKeyHandler = null
+const previewFrameStyle = computed(() => {
+  const index = previewIndex.value
+  if (index == null) return null
 
-function openPreview(i) {
-  if (!Number.isFinite(i) || i < 0 || i >= wallItems.value.length) return
-  previewIndex.value = i
+  const size = getPreviewFrameSize(index)
+  return {
+    width: `${size.width}px`,
+    height: `${size.height}px`
+  }
+})
+
+function cardDisplayTitle(item) {
+  if (!item) return imageTitlePlaceholder
+  const title = (item.title && String(item.title).trim()) || (item.alt && String(item.alt).trim())
+  return title || imageTitlePlaceholder
 }
 
-function closePreview() {
+function titleBeforeDash(title) {
+  const value = String(title || '').trim()
+  if (!value) return ''
+
+  return value.split(/\s+-\s*/)[0]?.trim() || value
+}
+
+function asuCoverImageSrc(fileName) {
+  if (!fileName) return ''
+
+  const targetName = String(fileName).split('/').pop()
+  return asuCoverImageByFile.get(targetName) || ''
+}
+
+function createAsuCoverWallItems() {
+  const discography = Array.isArray(asuCoverMusicData?.discography)
+    ? asuCoverMusicData.discography
+    : []
+
+  return discography
+    .map((item) => {
+      const src = asuCoverImageSrc(item?.src)
+      const title = titleBeforeDash(item?.Title)
+
+      if (!src) return null
+
+      return {
+        src,
+        alt: title,
+        title
+      }
+    })
+    .filter(Boolean)
+}
+
+function setThumbRef(index, el) {
+  if (el) {
+    thumbRefs.set(index, el)
+  } else {
+    thumbRefs.delete(index)
+  }
+}
+
+function updateViewportSize() {
+  viewportSize.width = window.innerWidth || document.documentElement.clientWidth || 0
+  viewportSize.height = window.innerHeight || document.documentElement.clientHeight || 0
+}
+
+function updateReducedMotionPreference() {
+  prefersReducedMotion = !!motionMediaQuery?.matches
+}
+
+function getPreviewFrameSize(index) {
+  const dims = dimensions[index]
+  const viewportWidth = Math.max(viewportSize.width || window.innerWidth || 0, 320)
+  const viewportHeight = Math.max(viewportSize.height || window.innerHeight || 0, 320)
+  const maxWidth = Math.max(Math.min(1200, viewportWidth - 48), 220)
+  const maxHeight = Math.max(viewportHeight - 128, 220)
+
+  if (!dims?.w || !dims?.h) {
+    const width = maxWidth
+    return {
+      width: Math.round(width),
+      height: Math.round(Math.min(maxHeight, width / 1.5))
+    }
+  }
+
+  const scale = Math.min(maxWidth / dims.w, maxHeight / dims.h)
+  return {
+    width: Math.max(1, Math.round(dims.w * scale)),
+    height: Math.max(1, Math.round(dims.h * scale))
+  }
+}
+
+function getRectDelta(fromRect, toRect) {
+  if (!fromRect || !toRect || !fromRect.width || !fromRect.height || !toRect.width || !toRect.height) {
+    return null
+  }
+
+  return {
+    x: fromRect.left - toRect.left,
+    y: fromRect.top - toRect.top,
+    scaleX: fromRect.width / toRect.width,
+    scaleY: fromRect.height / toRect.height
+  }
+}
+
+function waitForNextFrame() {
+  return new Promise((resolve) => requestAnimationFrame(() => resolve()))
+}
+
+function waitForTransitionEnd(el, fallbackMs = 420) {
+  return new Promise((resolve) => {
+    if (!el) {
+      resolve()
+      return
+    }
+
+    let done = false
+    const finish = () => {
+      if (done) return
+      done = true
+      el.removeEventListener('transitionend', onEnd)
+      window.clearTimeout(timer)
+      resolve()
+    }
+    const onEnd = (event) => {
+      if (event.target === el) finish()
+    }
+    const timer = window.setTimeout(finish, fallbackMs)
+
+    el.addEventListener('transitionend', onEnd)
+  })
+}
+
+function resetPreviewFrameStyle(frameEl = previewFrameRef.value) {
+  if (!frameEl) return
+  frameEl.style.transition = ''
+  frameEl.style.transform = ''
+  frameEl.style.transformOrigin = ''
+}
+
+async function runPreviewOpenAnimation() {
+  const frameEl = previewFrameRef.value
+  const delta = getRectDelta(previewSourceRect.value, frameEl?.getBoundingClientRect())
+
+  if (!frameEl || prefersReducedMotion || !delta) {
+    previewBackdropVisible.value = true
+    previewAnimating.value = false
+    resetPreviewFrameStyle(frameEl)
+    return
+  }
+
+  previewAnimating.value = true
+  frameEl.style.transformOrigin = 'top left'
+  frameEl.style.transition = 'none'
+  frameEl.style.transform = `translate(${delta.x}px, ${delta.y}px) scale(${delta.scaleX}, ${delta.scaleY})`
+
+  await waitForNextFrame()
+
+  previewBackdropVisible.value = true
+  frameEl.style.transition = 'transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1)'
+  frameEl.style.transform = 'translate(0px, 0px) scale(1, 1)'
+
+  await waitForTransitionEnd(frameEl)
+  resetPreviewFrameStyle(frameEl)
+  previewAnimating.value = false
+}
+
+async function runPreviewCloseAnimation() {
+  const frameEl = previewFrameRef.value
+  const targetThumbEl = thumbRefs.get(previewIndex.value)
+  const delta = getRectDelta(targetThumbEl?.getBoundingClientRect(), frameEl?.getBoundingClientRect())
+
+  previewBackdropVisible.value = false
+
+  if (!frameEl || prefersReducedMotion || !delta) {
+    previewAnimating.value = false
+    previewIndex.value = null
+    previewDownloadBusy.value = false
+    resetPreviewFrameStyle(frameEl)
+    return
+  }
+
+  previewAnimating.value = true
+  frameEl.style.transformOrigin = 'top left'
+  frameEl.style.transition = 'transform 0.32s cubic-bezier(0.4, 0, 0.2, 1)'
+  frameEl.style.transform = `translate(${delta.x}px, ${delta.y}px) scale(${delta.scaleX}, ${delta.scaleY})`
+
+  await waitForTransitionEnd(frameEl, 380)
+  resetPreviewFrameStyle(frameEl)
+  previewAnimating.value = false
   previewIndex.value = null
   previewDownloadBusy.value = false
+}
+
+async function openPreview(index) {
+  if (
+    !Number.isFinite(index) ||
+    index < 0 ||
+    index >= wallItems.value.length ||
+    previewAnimating.value ||
+    previewIndex.value !== null
+  ) {
+    return
+  }
+
+  previewSourceRect.value = thumbRefs.get(index)?.getBoundingClientRect() || null
+  previewIndex.value = index
+  previewBackdropVisible.value = false
+  previewDownloadBusy.value = false
+
+  await nextTick()
+  await waitForNextFrame()
+  await runPreviewOpenAnimation()
+}
+
+async function closePreview() {
+  if (previewIndex.value === null || previewAnimating.value) return
+  await runPreviewCloseAnimation()
 }
 
 function fileNameFromSrc(src) {
   if (!src || typeof src !== 'string') return 'image'
   try {
-    const u = new URL(src, window.location.origin)
-    const seg = u.pathname.split('/').filter(Boolean).pop() || 'image'
-    return seg.split('?')[0] || 'image'
+    const url = new URL(src, window.location.origin)
+    const segment = url.pathname.split('/').filter(Boolean).pop() || 'image'
+    return segment.split('?')[0] || 'image'
   } catch {
     return 'image'
   }
@@ -234,12 +464,15 @@ function fileNameFromSrc(src) {
 async function downloadPreviewImage() {
   const item = previewImage.value
   if (!item || previewDownloadBusy.value) return
+
   previewDownloadBusy.value = true
   const name = fileNameFromSrc(item.src)
+
   try {
-    const res = await fetch(item.src)
-    if (!res.ok) throw new Error('fetch failed')
-    const blob = await res.blob()
+    const response = await fetch(item.src)
+    if (!response.ok) throw new Error('fetch failed')
+
+    const blob = await response.blob()
     const url = URL.createObjectURL(blob)
     const a = document.createElement('a')
     a.href = url
@@ -263,57 +496,60 @@ async function downloadPreviewImage() {
   }
 }
 
-watch(previewIndex, (v) => {
+function observeLazyMasonryItems() {
+  const root = scrollRootRef.value
+  if (!root || !lazyObserver) return
+
+  root.querySelectorAll('[data-lazy-index]').forEach((el) => {
+    const rawIndex = el.getAttribute('data-lazy-index')
+    const index = rawIndex == null ? NaN : Number(rawIndex)
+    if (!Number.isFinite(index) || loaded[index]) return
+    lazyObserver.observe(el)
+  })
+}
+
+watch(previewIndex, (value) => {
   if (previewKeyHandler) {
     window.removeEventListener('keydown', previewKeyHandler)
     previewKeyHandler = null
   }
-  if (v !== null) {
-    previewKeyHandler = (e) => {
-      if (e.key === 'Escape') closePreview()
+
+  if (value !== null) {
+    previewKeyHandler = (event) => {
+      if (event.key === 'Escape') closePreview()
     }
     window.addEventListener('keydown', previewKeyHandler)
   }
 })
 
-let lazyObserver = null
-/** 保持对预加载 Image 对象的引用，防止 GC 导致 onload 不触发 */
-const _preloadCache = []
-
-function observeLazyMasonryItems() {
-  const root = scrollRootRef.value
-  if (!root || !lazyObserver) return
-  root.querySelectorAll('[data-lazy-index]').forEach((el) => {
-    const rawIdx = el.getAttribute('data-lazy-index')
-    const idx = rawIdx == null ? NaN : Number(rawIdx)
-    if (!Number.isFinite(idx) || loaded[idx]) return
-    lazyObserver.observe(el)
-  })
-}
+watch([filteredIndices, dimensionsReady], async () => {
+  if (!dimensionsReady.value || !lazyObserver) return
+  await nextTick()
+  observeLazyMasonryItems()
+})
 
 onMounted(async () => {
-  const raw = getImageWallPayload()
-  wallItems.value = raw.map((img) => ({
-    src: img.src,
-    alt: img.alt || '',
-    title:
-      (img.title && String(img.title).trim()) ||
-      (img.alt && String(img.alt).trim()) ||
-      fileNameFromSrc(img.src)
-  }))
+  updateViewportSize()
+  window.addEventListener('resize', updateViewportSize)
+
+  motionMediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
+  updateReducedMotionPreference()
+  motionMediaQuery.addEventListener?.('change', updateReducedMotionPreference)
+
+  wallItems.value = createAsuCoverWallItems()
 
   await Promise.all(
     wallItems.value.map(
-      (img, i) =>
+      (img, index) =>
         new Promise((resolve) => {
-          const el = new Image()
-          _preloadCache.push(el)
-          el.onload = () => {
-            dimensions[i] = { w: el.naturalWidth, h: el.naturalHeight }
+          const image = new Image()
+          preloadCache.push(image)
+          image.onload = () => {
+            dimensions[index] = { w: image.naturalWidth, h: image.naturalHeight }
             resolve()
           }
-          el.onerror = resolve
-          el.src = img.src
+          image.onerror = resolve
+          image.src = img.src
         })
     )
   )
@@ -328,10 +564,12 @@ onMounted(async () => {
     (entries) => {
       for (const entry of entries) {
         if (!entry.isIntersecting) continue
-        const rawIdx = entry.target.getAttribute('data-lazy-index')
-        const idx = rawIdx == null ? NaN : Number(rawIdx)
-        if (!Number.isFinite(idx)) continue
-        loaded[idx] = true
+
+        const rawIndex = entry.target.getAttribute('data-lazy-index')
+        const index = rawIndex == null ? NaN : Number(rawIndex)
+        if (!Number.isFinite(index)) continue
+
+        loaded[index] = true
         lazyObserver.unobserve(entry.target)
       }
     },
@@ -345,17 +583,16 @@ onMounted(async () => {
   observeLazyMasonryItems()
 })
 
-watch([filteredIndices, dimensionsReady], async () => {
-  if (!dimensionsReady.value || !lazyObserver) return
-  await nextTick()
-  observeLazyMasonryItems()
-})
-
 onUnmounted(() => {
   if (previewKeyHandler) {
     window.removeEventListener('keydown', previewKeyHandler)
     previewKeyHandler = null
   }
+
+  window.removeEventListener('resize', updateViewportSize)
+  motionMediaQuery?.removeEventListener?.('change', updateReducedMotionPreference)
+  motionMediaQuery = null
+
   lazyObserver?.disconnect()
   lazyObserver = null
 })
@@ -462,7 +699,6 @@ function goBack() {
   outline-offset: 2px;
 }
 
-/* type=search 内置清除按钮：悬停为手型（WebKit / Chromium） */
 .image-wall-page__search::-webkit-search-cancel-button {
   cursor: pointer;
 }
@@ -494,13 +730,30 @@ function goBack() {
   animation: loading-bounce 1.2s ease-in-out infinite;
 }
 
-.image-wall-page__loading-dot:nth-child(1) { animation-delay: 0s; }
-.image-wall-page__loading-dot:nth-child(2) { animation-delay: 0.2s; }
-.image-wall-page__loading-dot:nth-child(3) { animation-delay: 0.4s; }
+.image-wall-page__loading-dot:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.image-wall-page__loading-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.image-wall-page__loading-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
 
 @keyframes loading-bounce {
-  0%, 80%, 100% { transform: scale(0.6); opacity: 0.3; }
-  40%            { transform: scale(1);   opacity: 0.9; }
+  0%,
+  80%,
+  100% {
+    transform: scale(0.6);
+    opacity: 0.3;
+  }
+
+  40% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
 }
 
 .image-wall-page__masonry {
@@ -528,7 +781,6 @@ function goBack() {
   break-inside: avoid;
 }
 
-/* 与 TableRowDetailView 封面区一致：外层居中 + 白底衬卡 */
 .image-wall-page__cover-wrap {
   display: flex;
   justify-content: center;
@@ -550,6 +802,12 @@ function goBack() {
 .image-wall-page__img-wrapper {
   cursor: pointer;
   border-radius: inherit;
+  overflow: hidden;
+  transition: opacity 0.18s ease;
+}
+
+.image-wall-page__img-wrapper--previewing {
+  opacity: 0;
 }
 
 .image-wall-page__img-wrapper:focus-visible {
@@ -570,6 +828,12 @@ function goBack() {
   box-sizing: border-box;
   background: rgba(22, 14, 4, 0.92);
   backdrop-filter: blur(8px);
+  opacity: 0;
+  transition: opacity 0.26s ease;
+}
+
+.image-wall-page__preview-backdrop--active {
+  opacity: 1;
 }
 
 .image-wall-page__preview-toolbar {
@@ -580,6 +844,14 @@ function goBack() {
   display: flex;
   align-items: center;
   gap: var(--space-4);
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.24s ease, transform 0.24s ease;
+}
+
+.image-wall-page__preview-toolbar--active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .image-wall-page__preview-btn {
@@ -632,7 +904,9 @@ function goBack() {
 }
 
 @keyframes preview-spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .image-wall-page__preview-stage {
@@ -645,12 +919,18 @@ function goBack() {
   justify-content: center;
 }
 
-.image-wall-page__preview-img {
-  display: block;
+.image-wall-page__preview-frame {
+  position: relative;
+  flex: 0 0 auto;
   max-width: 100%;
   max-height: min(88vh, 100%);
-  width: auto;
-  height: auto;
+  will-change: transform;
+}
+
+.image-wall-page__preview-img {
+  display: block;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
   border-radius: var(--radius, 4px);
   box-shadow: 0 12px 48px rgba(0, 0, 0, 0.35);
@@ -664,18 +944,6 @@ function goBack() {
   vertical-align: top;
 }
 
-/* 懒加载前：沿用详情页占位肌理；入场后由 observer 切换为图片 */
-.image-wall-page__cover-placeholder {
-  width: 100%;
-  min-height: 160px;
-  background: linear-gradient(
-    160deg,
-    var(--color-cream, #fff0c2) 0%,
-    rgba(255, 250, 235, 0.9) 100%
-  );
-  border: 1px solid rgba(127, 99, 21, 0.12);
-}
-
 .image-wall-page__image-title {
   margin: var(--space-4) 0 0;
   padding: 0;
@@ -686,5 +954,15 @@ function goBack() {
   color: var(--color-text-primary);
   line-height: 1.25;
   letter-spacing: -0.3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .image-wall-page__img-wrapper,
+  .image-wall-page__preview-backdrop,
+  .image-wall-page__preview-toolbar,
+  .image-wall-page__preview-btn,
+  .image-wall-page__close-icon {
+    transition: none;
+  }
 }
 </style>

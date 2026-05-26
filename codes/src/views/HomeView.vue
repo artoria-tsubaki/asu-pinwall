@@ -10,11 +10,11 @@ import cardsData from '../data/cards.json'
 import illusMeta from '../assets/images/illus/illus.json'
 import asuMusicData from '../../../data/asu_music_data.json'
 import albemuthMusicData from '../../../data/albemuth_music_data.json'
+import asuCoverMusicData from '../../../data/asu_cover_music_data.json'
 import { ref } from 'vue'
 import careerVideoSrc from '../assets/video/明透 Op.1 - 「はじめまして。」.mp4'
 import asuHeadSrc from '../assets/images/head/Asuhead.webp'
 import debutData from '../data/debut.json'
-import tweetsAsuVirtual from '../../../data/tweets_ASU_virtual_20260427_155644.json'
 
 const illusModules = import.meta.glob('../assets/images/illus/*.{jpg,jpeg,png,webp}', {
   eager: true,
@@ -75,16 +75,6 @@ const cards = ref([
         content: debutData
       }
     }
-    if (card.id === 'latest-tweets-asu') {
-      return {
-        ...card,
-        content: {
-          ...card.content,
-          items: Array.isArray(tweetsAsuVirtual) ? tweetsAsuVirtual.slice(0, 5) : [],
-          avatar: asuHeadSrc
-        }
-      }
-    }
     if (card.id === 'image-wall-teaser') {
       return {
         ...card,
@@ -130,6 +120,21 @@ const cards = ref([
     meta: 'Bilibili · 合集 3337044',
     rowDetailRouteName: 'TableRowDetail',
     rowDetailQuery: { table: 'albemuth-bilibili' }
+  },
+  {
+    id: 'asu-cover-table',
+    x: 1520,
+    y: 920,
+    rotate: -0.5,
+    zIndex: 3,
+    pin: { color: '#ff8a00' },
+    type: 'table',
+    title: 'Cover 投稿',
+    layout: { w: 760, h: 620 },
+    content: buildOriginalSongsTableContent(asuCoverMusicData),
+    meta: 'Bilibili · 明透 Cover',
+    rowDetailRouteName: 'TableRowDetail',
+    rowDetailQuery: { table: 'asu-covers' }
   }
 ])
 </script>

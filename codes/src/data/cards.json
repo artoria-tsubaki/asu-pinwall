@@ -78,10 +78,10 @@
   },
   {
     "id": "image-wall-teaser",
-    "x": 1620,
-    "y": 900,
-    "rotate": -0.35,
-    "zIndex": 3,
+    "x": 2480,
+    "y": 1380,
+    "rotate": -0.45,
+    "zIndex": 4,
     "pin": { "color": "#e8a04a" },
     "type": "image-wall-teaser",
     "title": "官方绘图",
@@ -91,23 +91,5 @@
       "images": []
     },
     "meta": ""
-  },
-  {
-    "id": "latest-tweets-asu",
-    "x": 2480,
-    "y": 1380,
-    "rotate": -0.45,
-    "zIndex": 4,
-    "pin": { "color": "#ffb83e" },
-    "type": "tweets",
-    "title": "最新消息",
-    "layout": { "w": 440, "h": 420 },
-    "content": {
-      "sectionLabel": "LATEST",
-      "handle": "ASU_virtual",
-      "displayName": "明透",
-      "items": []
-    },
-    "meta": "X · @ASU_virtual"
   }
 ]

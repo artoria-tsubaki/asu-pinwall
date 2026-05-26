@@ -63,7 +63,11 @@
         aria-label="进入明透活动时间线"
       >
         活动时间线
-        <span class="days-content__timeline-arrow" aria-hidden="true">→</span>
+        <MistralArrowIcon
+          direction="right"
+          class="days-content__timeline-arrow"
+          aria-hidden="true"
+        />
       </router-link>
     </p>
   </div>
@@ -71,6 +75,7 @@
 
 <script setup>
 import { computed, ref } from 'vue'
+import { MistralArrowIcon } from '../../utils/mistralArrowIcon.js'
 
 const props = defineProps({
   content: {
@@ -512,7 +517,10 @@ const ariaLabel = computed(() => {
 }
 
 .days-content__timeline-arrow {
-  font-size: 0.9em;
+  display: block;
+  flex-shrink: 0;
+  width: 13px;
+  height: 13px;
   transition: transform 0.15s ease;
 }
 

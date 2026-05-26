@@ -37,6 +37,7 @@ const props = defineProps({
 
 const router = useRouter()
 const activeIndex = ref(0)
+const imagesReady = ref(false)
 
 const slides = computed(() => {
   const list = Array.isArray(props.content.images) ? props.content.images : []
@@ -51,6 +52,11 @@ const intervalMs = computed(() => {
 })
 
 let timer = null
+let preloadRunId = 0
+
+function randomIndex(length) {
+  return length > 0 ? Math.floor(Math.random() * length) : 0
+}
 
 function tick() {
   const n = slides.value.length
@@ -60,7 +66,7 @@ function tick() {
 
 function startTimer() {
   stopTimer()
-  if (slides.value.length <= 1) return
+  if (!imagesReady.value || slides.value.length <= 1) return
   timer = setInterval(tick, intervalMs.value)
 }
 
@@ -71,16 +77,48 @@ function stopTimer() {
   }
 }
 
-watch([slides, intervalMs], () => {
-  activeIndex.value = 0
+function preloadImage(src) {
+  return new Promise((resolve) => {
+    if (!src) {
+      resolve()
+      return
+    }
+
+    const image = new Image()
+    image.onload = resolve
+    image.onerror = resolve
+    image.src = src
+  })
+}
+
+async function preloadSlides() {
+  const runId = ++preloadRunId
+  const snapshot = slides.value
+  stopTimer()
+  imagesReady.value = false
+  activeIndex.value = randomIndex(snapshot.length)
+
+  await Promise.allSettled(snapshot.map((slide) => preloadImage(slide.src)))
+
+  if (runId !== preloadRunId) return
+  imagesReady.value = true
+  startTimer()
+}
+
+watch(slides, () => {
+  preloadSlides()
+})
+
+watch(intervalMs, () => {
   startTimer()
 })
 
 onMounted(() => {
-  startTimer()
+  preloadSlides()
 })
 
 onUnmounted(() => {
+  preloadRunId += 1
   stopTimer()
 })
 

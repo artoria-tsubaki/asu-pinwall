@@ -21,13 +21,50 @@ import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import TimelineSearch from '../components/timeline/TimelineSearch.vue'
 import timelineMeta from '../data/timeline.json'
-// 临时：事件数据使用仓库根目录 B 站空间投稿导出（TimelineJS 事件数组）；标题区仍用 timeline.json
-import bilibiliTimelineEvents from '../../../bilibili_space_1634470651_uploads.json'
+import asuTimelineEvents from '../../../data/timeline_ASU_virtual_data.json'
 import mittBus from '../utils/mittBus'
+
+function escapeHtml(value) {
+  return String(value ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;')
+}
+
+function plainTextToTimelineHtml(text) {
+  const normalized = String(text ?? '').replace(/\r\n?/g, '\n').trim()
+  if (!normalized) {
+    return ''
+  }
+
+  return normalized
+    .split(/\n{2,}/)
+    .map((paragraph) => {
+      const content = paragraph
+        .split('\n')
+        .map((line) => escapeHtml(line))
+        .join('<br />')
+      return `<p>${content}</p>`
+    })
+    .join('')
+}
+
+function formatTimelineEventText(event) {
+  const text = event?.text ?? {}
+  return {
+    ...event,
+    text: {
+      ...text,
+      text: plainTextToTimelineHtml(text.text)
+    }
+  }
+}
 
 const rawTimeline = {
   title: timelineMeta.title,
-  events: Array.isArray(bilibiliTimelineEvents) ? bilibiliTimelineEvents : []
+  events: Array.isArray(asuTimelineEvents) ? asuTimelineEvents.map(formatTimelineEventText) : []
 }
 
 defineOptions({ name: 'TimelineView' })

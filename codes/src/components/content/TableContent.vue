@@ -15,19 +15,36 @@
               v-for="(header, i) in content.headers"
               :key="i"
               class="table-content__th"
-            >{{ header }}</th>
+              :class="{ 'table-content__th--sortable': isDateColumn(i) }"
+            >
+              <button
+                v-if="isDateColumn(i)"
+                type="button"
+                class="table-content__sort-button"
+                :aria-label="dateSortLabel"
+                @click="toggleDateSort"
+              >
+                <span>{{ header }}</span>
+                <MistralArrowIcon
+                  :direction="dateSortDirection === 'asc' ? 'up' : 'down'"
+                  class="table-content__sort-icon"
+                  aria-hidden="true"
+                />
+              </button>
+              <template v-else>{{ header }}</template>
+            </th>
           </tr>
         </thead>
         <tbody>
           <tr
-            v-for="(row, ri) in content.rows"
-            :key="ri"
+            v-for="item in displayRows"
+            :key="item.originalIndex"
             class="table-content__tr"
             :class="{ 'table-content__tr--nav': rowDetailRouteName }"
-            @click="onRowClick(ri)"
+            @click="onRowClick(item.originalIndex)"
           >
             <td
-              v-for="(cell, ci) in row"
+              v-for="(cell, ci) in item.row"
               :key="ci"
               class="table-content__td"
               :class="{ 'table-content__td--highlight': isHighlight(cell) }"
@@ -53,7 +70,9 @@
 </template>
 
 <script setup>
+import { computed, ref } from 'vue'
 import { useRouter } from 'vue-router'
+import { MistralArrowIcon } from '../../utils/mistralArrowIcon.js'
 
 const props = defineProps({
   content: {
@@ -73,6 +92,49 @@ const props = defineProps({
 })
 
 const router = useRouter()
+const dateSortDirection = ref('desc')
+
+const displayRows = computed(() => {
+  const rows = Array.isArray(props.content?.rows) ? props.content.rows : []
+  const indexedRows = rows.map((row, originalIndex) => ({ row, originalIndex }))
+  const direction = dateSortDirection.value
+  if (direction !== 'asc' && direction !== 'desc') return indexedRows
+
+  return [...indexedRows].sort((a, b) => {
+    const aTime = parseDateCellToTime(a.row?.[0])
+    const bTime = parseDateCellToTime(b.row?.[0])
+    if (aTime == null && bTime == null) return a.originalIndex - b.originalIndex
+    if (aTime == null) return 1
+    if (bTime == null) return -1
+    const delta = aTime - bTime
+    if (delta === 0) return a.originalIndex - b.originalIndex
+    return direction === 'asc' ? delta : -delta
+  })
+})
+
+const dateSortLabel = computed(() =>
+  dateSortDirection.value === 'asc' ? 'Sort by date descending' : 'Sort by date ascending'
+)
+
+function isDateColumn(index) {
+  return index === 0
+}
+
+function toggleDateSort() {
+  dateSortDirection.value = dateSortDirection.value === 'asc' ? 'desc' : 'asc'
+}
+
+function parseDateCellToTime(cell) {
+  const value = typeof cell === 'object' && cell !== null ? cell.value : cell
+  if (typeof value !== 'string') return null
+  const match = value.match(/(\d{4})\D+(\d{1,2})\D+(\d{1,2})/)
+  if (!match) return null
+  const year = Number(match[1])
+  const month = Number(match[2])
+  const day = Number(match[3])
+  if (!year || !month || !day) return null
+  return Date.UTC(year, month - 1, day)
+}
 
 function onRowClick(rowIndex) {
   if (!props.rowDetailRouteName) return
@@ -162,6 +224,43 @@ function formatCell(cell) {
   position: sticky;
   top: 0;
   z-index: 1;
+}
+
+.table-content__th--sortable {
+  padding: 0;
+}
+
+.table-content__sort-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  width: 100%;
+  min-height: 100%;
+  padding: var(--space-5) var(--space-6);
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  text-align: left;
+  text-transform: inherit;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.table-content__sort-button:hover {
+  background: rgba(255, 138, 0, 0.08);
+}
+
+.table-content__sort-icon {
+  display: block;
+  flex-shrink: 0;
+  width: 13px;
+  height: 13px;
+  color: var(--color-brand-orange);
+  opacity: 0.9;
 }
 
 .table-content__tr:nth-child(even) {

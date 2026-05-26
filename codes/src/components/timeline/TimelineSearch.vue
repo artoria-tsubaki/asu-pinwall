@@ -37,7 +37,7 @@
             v-model="query"
             class="tl-search__input"
             type="search"
-            placeholder="搜索事件标题或日期"
+            placeholder="搜索投稿标题或日期"
             autocomplete="off"
             @keydown.esc="close"
           />

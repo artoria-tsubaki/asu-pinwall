@@ -39,11 +39,30 @@
           <h2 class="table-row-detail__song-line">{{ songLine }}</h2>
           <p class="table-row-detail__date-line">{{ row.date }}</p>
 
-          <div
-            class="table-row-detail__desc"
-            :class="{ 'table-row-detail__desc--muted': !descriptionText }"
-          >
-            {{ descriptionText || '暂无与 KAMITSUBAKI 唱片库匹配的详细文案。' }}
+          <div class="table-row-detail__desc-block">
+            <button
+              v-if="descriptionText && descriptionTranslationText"
+              type="button"
+              class="table-row-detail__desc table-row-detail__desc-button"
+              :aria-expanded="showDescTranslation"
+              @click="toggleDescTranslation"
+            >
+              {{ descriptionText }}
+            </button>
+            <div
+              v-else
+              class="table-row-detail__desc"
+              :class="{ 'table-row-detail__desc--muted': !descriptionText }"
+            >
+              {{ descriptionText || '暂无与 KAMITSUBAKI 唱片库匹配的详细文案。' }}
+            </div>
+
+            <template v-if="showDescTranslation && descriptionTranslationText">
+              <div class="table-row-detail__desc-divider" aria-hidden="true" />
+              <div class="table-row-detail__desc-translation">
+                {{ descriptionTranslationText }}
+              </div>
+            </template>
           </div>
 
           <div v-if="playerUrl" class="table-row-detail__video">
@@ -77,6 +96,7 @@ import { computed, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import asuMusicData from '../../../data/asu_music_data.json'
 import albemuthMusicData from '../../../data/albemuth_music_data.json'
+import asuCoverMusicData from '../../../data/asu_cover_music_data.json'
 import {
   findDiscographyEntry,
   extractBvidFromUrl,
@@ -87,10 +107,12 @@ import { getDiscographyCoverUrl } from '../utils/discographyCovers.js'
 const route = useRoute()
 const router = useRouter()
 const coverLoadError = ref(false)
+const showDescTranslation = ref(false)
 
 const tableKey = computed(() => {
   const t = route.query.table
   if (t === 'albemuth-bilibili') return 'albemuth-bilibili'
+  if (t === 'asu-covers') return 'asu-covers'
   return 'original-songs'
 })
 
@@ -102,6 +124,9 @@ const rowIndex = computed(() => {
 const tableRows = computed(() => {
   if (tableKey.value === 'albemuth-bilibili') {
     return albemuthMusicData?.rows
+  }
+  if (tableKey.value === 'asu-covers') {
+    return asuCoverMusicData?.rows
   }
   return asuMusicData?.rows
 })
@@ -116,6 +141,9 @@ const row = computed(() => {
 
 const discEntry = computed(() => {
   if (!row.value) return null
+  if (tableKey.value === 'asu-covers') {
+    return asuCoverMusicData?.discography?.[rowIndex.value] ?? null
+  }
   const entries =
     tableKey.value === 'albemuth-bilibili'
       ? (albemuthMusicData?.discography ?? [])
@@ -124,9 +152,10 @@ const discEntry = computed(() => {
 })
 
 watch(
-  () => rowIndex.value,
+  () => [rowIndex.value, tableKey.value],
   () => {
     coverLoadError.value = false
+    showDescTranslation.value = false
   }
 )
 
@@ -140,6 +169,13 @@ const songLine = computed(() => (row.value ? String(row.value.title) : ''))
 const descriptionText = computed(() => {
   const d = discEntry.value?.Desc
   return typeof d === 'string' && d.trim() ? d.trim() : ''
+})
+
+const descriptionTranslationText = computed(() => {
+  const d = discEntry.value?.DescZh
+  if (typeof d !== 'string' || !d.trim()) return ''
+  const normalized = d.trim()
+  return normalized !== descriptionText.value ? normalized : ''
 })
 
 const bvid = computed(() => {
@@ -157,6 +193,11 @@ const offsiteListenUrl = computed(() => {
 
 function goHome() {
   router.push({ name: 'Home' })
+}
+
+function toggleDescTranslation() {
+  if (!descriptionTranslationText.value) return
+  showDescTranslation.value = !showDescTranslation.value
 }
 </script>
 
@@ -305,9 +346,12 @@ function goHome() {
   line-height: 1.43;
 }
 
-.table-row-detail__desc {
+.table-row-detail__desc-block {
   max-width: 40rem;
   width: 100%;
+}
+
+.table-row-detail__desc {
   font-size: var(--fs-body);
   font-weight: 400;
   line-height: 1.7;
@@ -315,7 +359,35 @@ function goHome() {
   color: var(--color-text-primary, #1f1f1f);
 }
 
+.table-row-detail__desc-button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+
+.table-row-detail__desc-button:hover {
+  color: var(--color-brand-orange, #fa520f);
+}
+
 .table-row-detail__desc--muted {
+  color: var(--color-text-secondary, hsl(0, 0%, 24%));
+}
+
+.table-row-detail__desc-divider {
+  width: 100%;
+  height: 1px;
+  margin: var(--space-6) 0;
+  background: rgba(127, 99, 21, 0.22);
+}
+
+.table-row-detail__desc-translation {
+  font-size: var(--fs-body);
+  line-height: 1.7;
+  white-space: pre-wrap;
   color: var(--color-text-secondary, hsl(0, 0%, 24%));
 }
 

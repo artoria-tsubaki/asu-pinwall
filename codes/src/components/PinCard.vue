@@ -91,7 +91,7 @@ const typeLabelMap = {
   'social-grid': 'SOCIAL',
   days: 'DAYS',
   tweets: 'X / NEWS',
-  'image-wall-teaser': 'GALLERY'
+  'image-wall-teaser': 'IMAGE'
 }
 
 const pinColor = computed(() => {
@@ -158,7 +158,7 @@ const pinColor = computed(() => {
   max-width: 720px;
 }
 
-/* 与 cards.json 中 latest-tweets-asu 的 layout.w 一致，轮播切换时不改变整卡宽度 */
+/* 推文卡固定宽度，轮播切换时不改变整卡宽度（与 tweets 类型 layout.w 对齐） */
 .pin-card--fixed {
   width: 440px;
   min-width: 440px;

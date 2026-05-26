@@ -1,0 +1,2314 @@
+﻿{
+  "source": "data/timeline_ASU_virtual_data.json",
+  "section": "ASU cover timeline",
+  "note": "Generated from data/timeline_ASU_virtual_data.json. discography.Desc is copied from text.text; src is matched by watch.label against codes/src/assets/images/asu-cover.",
+  "updated": "2026-05-18",
+  "columns": [
+    "投稿时间",
+    "歌曲名称",
+    "链接"
+  ],
+  "rows": [
+    {
+      "date": "2026年4月21日",
+      "title": "セレナーデ - なとり",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1s9dSBRE7B",
+        "label": "BV1s9dSBRE7B"
+      }
+    },
+    {
+      "date": "2026年4月10日",
+      "title": "Cold Night - HANA",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV14SQwBEEdH",
+        "label": "BV14SQwBEEdH"
+      }
+    },
+    {
+      "date": "2026年4月1日",
+      "title": "絶対敵対メチャキライヤー -  メドミア covered by 明透×琶舞【神椿】",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1TX9jB8EbR",
+        "label": "BV1TX9jB8EbR"
+      }
+    },
+    {
+      "date": "2026年3月18日",
+      "title": "lulu. - Mrs. GREEN APPLE",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1EbwezEE7L",
+        "label": "BV1EbwezEE7L"
+      }
+    },
+    {
+      "date": "2026年3月14日",
+      "title": "華奢なリップ feat.ちゃんみな -  ジェニーハイ covered by 明透×琶舞 (piano.ver)【神椿】",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1QbwNzRE2h",
+        "label": "BV1QbwNzRE2h"
+      }
+    },
+    {
+      "date": "2026年3月3日",
+      "title": "不可幸力 - Vaundy",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1YbAoz6E4y",
+        "label": "BV1YbAoz6E4y"
+      }
+    },
+    {
+      "date": "2026年2月24日",
+      "title": "Ex-Otogibanashi(Anime ver.) - 月見ヤチヨ(cv.早見沙織) from 超かぐや姫！",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV13ofyBFEWK",
+        "label": "BV13ofyBFEWK"
+      }
+    },
+    {
+      "date": "2026年2月13日",
+      "title": "ラヴィ - すりぃ covered by 明透×琶舞",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1CjcjzzEYL",
+        "label": "BV1CjcjzzEYL"
+      }
+    },
+    {
+      "date": "2026年2月3日",
+      "title": "心予報 - Eve",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1ceFjzNE8P",
+        "label": "BV1ceFjzNE8P"
+      }
+    },
+    {
+      "date": "2026年1月24日",
+      "title": "にわかには信じがたいものです - なとり",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1unzCBKELG",
+        "label": "BV1unzCBKELG"
+      }
+    },
+    {
+      "date": "2026年1月12日",
+      "title": "1991 - 米津玄師",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV16irYBwEN4",
+        "label": "BV16irYBwEN4"
+      }
+    },
+    {
+      "date": "2026年1月1日",
+      "title": "晴る - ヨルシカ",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1v8vQB4EVf",
+        "label": "BV1v8vQB4EVf"
+      }
+    },
+    {
+      "date": "2025年12月15日",
+      "title": "再会 - LiSA,Uru covered by 明透×琶舞",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1hNm1BYEvo",
+        "label": "BV1hNm1BYEvo"
+      }
+    },
+    {
+      "date": "2025年12月6日",
+      "title": "IRIS OUT - 米津玄師",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1r329BqE4o",
+        "label": "BV1r329BqE4o"
+      }
+    },
+    {
+      "date": "2025年11月26日",
+      "title": "革命道中 - アイナ・ジ・エンド",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1UjUYBhEDu",
+        "label": "BV1UjUYBhEDu"
+      }
+    },
+    {
+      "date": "2025年11月16日",
+      "title": "Blue Jeans - HANA",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1KoCXBTEs3",
+        "label": "BV1KoCXBTEs3"
+      }
+    },
+    {
+      "date": "2025年10月27日",
+      "title": "ヴァンパイア - DECO-27",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1WtsUzdEvH",
+        "label": "BV1WtsUzdEvH"
+      }
+    },
+    {
+      "date": "2025年10月17日",
+      "title": "一途 - King Gnu",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1yAWEziErP",
+        "label": "BV1yAWEziErP"
+      }
+    },
+    {
+      "date": "2025年10月6日",
+      "title": "残機 - ずっと真夜中でいいのに。",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1soxjzzEcg",
+        "label": "BV1soxjzzEcg"
+      }
+    },
+    {
+      "date": "2025年9月25日",
+      "title": "再会 - Vaundy",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1CFn8z4EEC",
+        "label": "BV1CFn8z4EEC"
+      }
+    },
+    {
+      "date": "2025年9月14日",
+      "title": "プロポーズ - なとり",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1VspczvEGS",
+        "label": "BV1VspczvEGS"
+      }
+    },
+    {
+      "date": "2025年8月28日",
+      "title": "幾億光年 - omoinotake",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV11Mh1zYECC",
+        "label": "BV11Mh1zYECC"
+      }
+    },
+    {
+      "date": "2025年8月16日",
+      "title": "群青 - YOASOBI",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1kXYvzzEaM",
+        "label": "BV1kXYvzzEaM"
+      }
+    },
+    {
+      "date": "2025年8月6日",
+      "title": "[A]ddiction - GigaReol×EVO+",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1cVtwz8ET9",
+        "label": "BV1cVtwz8ET9"
+      }
+    },
+    {
+      "date": "2025年7月28日",
+      "title": "徘徊 - AKASAKI",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1Wi8JzsEZk",
+        "label": "BV1Wi8JzsEZk"
+      }
+    },
+    {
+      "date": "2025年7月17日",
+      "title": "DRESSING ROOM -なとり",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV171gNzWE5K",
+        "label": "BV171gNzWE5K"
+      }
+    },
+    {
+      "date": "2025年7月10日",
+      "title": "二時間だけのバカンスfeaturing 椎名林檎 -宇多田ヒカル covered by 明透×琶舞",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1oVGGzLE9a",
+        "label": "BV1oVGGzLE9a"
+      }
+    },
+    {
+      "date": "2025年6月27日",
+      "title": "BRAIN - Kanaria",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1qSKqzKEbs",
+        "label": "BV1qSKqzKEbs"
+      }
+    },
+    {
+      "date": "2025年6月20日",
+      "title": "Super Ball - TOMOO",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1dtKwzYE51",
+        "label": "BV1dtKwzYE51"
+      }
+    },
+    {
+      "date": "2025年6月12日",
+      "title": "UNDEAD - YOASOBI",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1J7MczuEne",
+        "label": "BV1J7MczuEne"
+      }
+    },
+    {
+      "date": "2025年5月28日",
+      "title": "睨めっ娘 - 友成空",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1VHjqzQETx",
+        "label": "BV1VHjqzQETx"
+      }
+    },
+    {
+      "date": "2025年5月18日",
+      "title": "Plazma - 米津玄師",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1oSJgztEUp",
+        "label": "BV1oSJgztEUp"
+      }
+    },
+    {
+      "date": "2025年4月25日",
+      "title": "百花繚乱 - 幾田りら",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1PCLHztEyY",
+        "label": "BV1PCLHztEyY"
+      }
+    },
+    {
+      "date": "2025年4月18日",
+      "title": "メロウ - 須田景凪",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1ni5EzrEKh",
+        "label": "BV1ni5EzrEKh"
+      }
+    },
+    {
+      "date": "2025年4月5日",
+      "title": "BOW AND ARROW - 米津玄師",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1CBRoY1E1A",
+        "label": "BV1CBRoY1E1A"
+      }
+    },
+    {
+      "date": "2025年3月25日",
+      "title": "弾きこもり - AKASAKI",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV16SotYaEZg",
+        "label": "BV16SotYaEZg"
+      }
+    },
+    {
+      "date": "2025年3月16日",
+      "title": "NERVEs (Vol.2) - WurtS",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1U5Q8YiEHK",
+        "label": "BV1U5Q8YiEHK"
+      }
+    },
+    {
+      "date": "2025年3月4日",
+      "title": "どうにかなっちゃいそう！ - NOMELON NOLEMON",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1SQ9JY7EGJ",
+        "label": "BV1SQ9JY7EGJ"
+      }
+    },
+    {
+      "date": "2025年2月23日",
+      "title": "TAIDADA - ずっと真夜中でいいのに。",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1XQAmeWEBw",
+        "label": "BV1XQAmeWEBw"
+      }
+    },
+    {
+      "date": "2025年2月12日",
+      "title": "ショコラカタブラ - Ado",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1LeKjejEYE",
+        "label": "BV1LeKjejEYE"
+      }
+    },
+    {
+      "date": "2025年2月1日",
+      "title": "Pick you up - iri",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1JfA5e6E5o",
+        "label": "BV1JfA5e6E5o"
+      }
+    },
+    {
+      "date": "2025年1月19日",
+      "title": "風神 - Vaundy",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1EfA5e6Em1",
+        "label": "BV1EfA5e6Em1"
+      }
+    },
+    {
+      "date": "2025年1月8日",
+      "title": "New me - YOASOBI",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1EcALeuEwD",
+        "label": "BV1EcALeuEwD"
+      }
+    },
+    {
+      "date": "2024年5月4日",
+      "title": "全方向美少女 - 乃紫",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1YoKLerE7k",
+        "label": "BV1YoKLerE7k"
+      }
+    },
+    {
+      "date": "2024年12月20日",
+      "title": "Subtitle - Official髭男dism",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV15MALeeExy",
+        "label": "BV15MALeeExy"
+      }
+    },
+    {
+      "date": "2024年12月12日",
+      "title": "Bunny Girl - AKASAKI",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV15MALeeEtd",
+        "label": "BV15MALeeEtd"
+      }
+    },
+    {
+      "date": "2024年11月23日",
+      "title": "糸電話 - なとり",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1YgALeAE6c",
+        "label": "BV1YgALeAE6c"
+      }
+    },
+    {
+      "date": "2024年11月13日",
+      "title": "RED OUT - 米津玄師",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1fnKWeMEgq",
+        "label": "BV1fnKWeMEgq"
+      }
+    },
+    {
+      "date": "2024年10月22日",
+      "title": "鬼ノ宴 - 友成空",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1fnKWeME6m",
+        "label": "BV1fnKWeME6m"
+      }
+    },
+    {
+      "date": "2024年10月10日",
+      "title": "Feelin' Go (o) d - 藤井風",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1fHKWeBE7p",
+        "label": "BV1fHKWeBE7p"
+      }
+    },
+    {
+      "date": "2024年9月29日",
+      "title": "毎日 - 米津玄師",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1ZHKWeqEmw",
+        "label": "BV1ZHKWeqEmw"
+      }
+    },
+    {
+      "date": "2024年9月4日",
+      "title": "ファタール - GEMN",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1VUKpecE9e",
+        "label": "BV1VUKpecE9e"
+      }
+    },
+    {
+      "date": "2024年8月25日",
+      "title": "地球儀 - 米津玄師",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1gdKpexEeC",
+        "label": "BV1gdKpexEeC"
+      }
+    },
+    {
+      "date": "2024年8月15日",
+      "title": "Nagisa - imase",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1hgKneEEz9",
+        "label": "BV1hgKneEEz9"
+      }
+    },
+    {
+      "date": "2024年8月4日",
+      "title": "traveling - 宇多田ヒカル",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV183KnemEMY",
+        "label": "BV183KnemEMY"
+      }
+    },
+    {
+      "date": "2024年7月24日",
+      "title": "夏夜のマジック - indigo la End",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1iXKLe5EHq",
+        "label": "BV1iXKLe5EHq"
+      }
+    },
+    {
+      "date": "2024年7月14日",
+      "title": "初恋キラー - 乃紫",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1v9KLeCEgv",
+        "label": "BV1v9KLeCEgv"
+      }
+    },
+    {
+      "date": "2024年7月5日",
+      "title": "魔性の女A - 紫 今",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1iSKLejEdt",
+        "label": "BV1iSKLejEdt"
+      }
+    },
+    {
+      "date": "2024年6月15日",
+      "title": "さよーならまたいつか！ - 米津玄師",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1iSKLejERG",
+        "label": "BV1iSKLejERG"
+      }
+    },
+    {
+      "date": "2024年6月5日",
+      "title": "Talking Box - WurtS",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1iDKLe1EB5",
+        "label": "BV1iDKLe1EB5"
+      }
+    },
+    {
+      "date": "2024年5月26日",
+      "title": "ビビデバ - 星街すいせい",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1aFKjezEkM",
+        "label": "BV1aFKjezEkM"
+      }
+    },
+    {
+      "date": "2024年5月15日",
+      "title": "fake face dance music - 音田雅則",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV19oKLerEGH",
+        "label": "BV19oKLerEGH"
+      }
+    },
+    {
+      "date": "2024年4月12日",
+      "title": "何色でもない花 - 宇多田ヒカル",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1SJ4m1V7UP",
+        "label": "BV1SJ4m1V7UP"
+      }
+    },
+    {
+      "date": "2024年4月8日",
+      "title": "燈 - 崎山蒼志",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1Rx421U7cV",
+        "label": "BV1Rx421U7cV"
+      }
+    },
+    {
+      "date": "2024年3月23日",
+      "title": "Beyond the way - Giga",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1mp42127NA",
+        "label": "BV1mp42127NA"
+      }
+    },
+    {
+      "date": "2024年3月13日",
+      "title": "春を告げる - yama",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1mS421w7j9",
+        "label": "BV1mS421w7j9"
+      }
+    },
+    {
+      "date": "2024年3月4日",
+      "title": "ミッドナイトガール - imase",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1iH4y1j7Uh",
+        "label": "BV1iH4y1j7Uh"
+      }
+    },
+    {
+      "date": "2024年2月25日",
+      "title": "Myra - Tani Yuuki",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1uZ42127om",
+        "label": "BV1uZ42127om"
+      }
+    },
+    {
+      "date": "2024年2月15日",
+      "title": "All Alone With You - EGOIST",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1LS421P795",
+        "label": "BV1LS421P795"
+      }
+    },
+    {
+      "date": "2024年2月5日",
+      "title": "光 - 宇多田ヒカル",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV12i421o7cc",
+        "label": "BV12i421o7cc"
+      }
+    },
+    {
+      "date": "2024年1月22日",
+      "title": "damn - 藤井風",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1Wi4y1W7qc",
+        "label": "BV1Wi4y1W7qc"
+      }
+    },
+    {
+      "date": "2024年1月15日",
+      "title": "失礼しますが、RIP♡ - Mori Calliope",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1Ha4y127Zf",
+        "label": "BV1Ha4y127Zf"
+      }
+    },
+    {
+      "date": "2024年1月1日",
+      "title": "新時代 - Ado",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1L64y1N7sf",
+        "label": "BV1L64y1N7sf"
+      }
+    },
+    {
+      "date": "2023年10月25日",
+      "title": "Ordinary days - milet(from サンライトLIVE2 2023.08.26)",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1qj411i7sN",
+        "label": "BV1qj411i7sN"
+      }
+    },
+    {
+      "date": "2023年12月19日",
+      "title": "クリスマスソング - back number",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV19e411y7Ro",
+        "label": "BV19e411y7Ro"
+      }
+    },
+    {
+      "date": "2023年12月8日",
+      "title": "snow jam - Rin音",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1Z64y1V7SN",
+        "label": "BV1Z64y1V7SN"
+      }
+    },
+    {
+      "date": "2023年12月1日",
+      "title": "唱 - Ado",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1gg4y11711",
+        "label": "BV1gg4y11711"
+      }
+    },
+    {
+      "date": "2023年11月13日",
+      "title": "ECHO - Crusher-P",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1eg4y117vb",
+        "label": "BV1eg4y117vb"
+      }
+    },
+    {
+      "date": "2023年11月6日",
+      "title": "end of a life - Mori Calliope",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1re411k7se",
+        "label": "BV1re411k7se"
+      }
+    },
+    {
+      "date": "2023年10月31日",
+      "title": "SPECIALZ - King Gnu",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1bC4y1u7SS",
+        "label": "BV1bC4y1u7SS"
+      }
+    },
+    {
+      "date": "2023年10月17日",
+      "title": "化け猫 - キタニタツヤ",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV13h4y1B7xd",
+        "label": "BV13h4y1B7xd"
+      }
+    },
+    {
+      "date": "2023年10月10日",
+      "title": "KICK BACK - 米津玄師",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1yw411r7wi",
+        "label": "BV1yw411r7wi"
+      }
+    },
+    {
+      "date": "2023年10月3日",
+      "title": "喜劇 - 星野源",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1xu4y1x7v6",
+        "label": "BV1xu4y1x7v6"
+      }
+    },
+    {
+      "date": "2023年9月26日",
+      "title": "色彩 - yama",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1AN411n7do",
+        "label": "BV1AN411n7do"
+      }
+    },
+    {
+      "date": "2023年9月18日",
+      "title": "青のすみか - キタニタツヤ",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1C34y1A7iw",
+        "label": "BV1C34y1A7iw"
+      }
+    },
+    {
+      "date": "2023年9月9日",
+      "title": "大丈夫 - RADWIMPS",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1Zh4y187Ds",
+        "label": "BV1Zh4y187Ds"
+      }
+    },
+    {
+      "date": "2023年8月24日",
+      "title": "会いたいわ - iri",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1GN411n78D",
+        "label": "BV1GN411n78D"
+      }
+    },
+    {
+      "date": "2023年8月11日",
+      "title": "ANTIFRAGILE - LE SSERAFIM",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1Fr4y1f7Vx",
+        "label": "BV1Fr4y1f7Vx"
+      }
+    },
+    {
+      "date": "2023年8月3日",
+      "title": "Cinnamon - キタニタツヤ",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1Pw411m7zS",
+        "label": "BV1Pw411m7zS"
+      }
+    },
+    {
+      "date": "2023年7月27日",
+      "title": "火炎 - 女王蜂",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1vV411c7Us",
+        "label": "BV1vV411c7Us"
+      }
+    },
+    {
+      "date": "2023年7月20日",
+      "title": "ネイティブダンサー - サカナクション",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1Hw411m7Gz",
+        "label": "BV1Hw411m7Gz"
+      }
+    },
+    {
+      "date": "2023年7月12日",
+      "title": "LOOP - SIRUP",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV16w411Y7Ut",
+        "label": "BV16w411Y7Ut"
+      }
+    },
+    {
+      "date": "2023年7月2日",
+      "title": "Wonderland - iri",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV16w411v7T6",
+        "label": "BV16w411v7T6"
+      }
+    },
+    {
+      "date": "2023年6月22日",
+      "title": "アイドル - YOASOBI",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1Mu411u7tQ",
+        "label": "BV1Mu411u7tQ"
+      }
+    },
+    {
+      "date": "2023年6月12日",
+      "title": "ハレンチ - ちゃんみな",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1Z8411y7cT",
+        "label": "BV1Z8411y7cT"
+      }
+    },
+    {
+      "date": "2023年6月2日",
+      "title": "きらり - 藤井風",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1194y1a7zK",
+        "label": "BV1194y1a7zK"
+      }
+    },
+    {
+      "date": "2023年5月23日",
+      "title": "フライデーナイト - なとり",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1HH4y1U7Bm",
+        "label": "BV1HH4y1U7Bm"
+      }
+    },
+    {
+      "date": "2023年5月14日",
+      "title": "勝たんしか症候群 - たかやん",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV14p4y1F7gS",
+        "label": "BV14p4y1F7gS"
+      }
+    },
+    {
+      "date": "2023年5月5日",
+      "title": "【存流×明透】踊 - Ado covered by Albemuth",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1vc411N7Dh",
+        "label": "BV1vc411N7Dh"
+      }
+    },
+    {
+      "date": "2023年4月12日",
+      "title": "デスペレート / 孤注一掷 - TeddyLoid&Giga",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1P24y1A7hg",
+        "label": "BV1P24y1A7hg"
+      }
+    },
+    {
+      "date": "2023年4月2日",
+      "title": "虎視眈々 - 梅とら",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1Cc41157DW",
+        "label": "BV1Cc41157DW"
+      }
+    },
+    {
+      "date": "2023年3月21日",
+      "title": "W/X/Y - Tani Yuuki",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1tX4y1Z7RF",
+        "label": "BV1tX4y1Z7RF"
+      }
+    },
+    {
+      "date": "2023年3月13日",
+      "title": "カワキヲアメク / 声嘶力竭 - 美波",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1N24y1u7Go",
+        "label": "BV1N24y1u7Go"
+      }
+    },
+    {
+      "date": "2023年3月5日",
+      "title": "戸惑いテレパシー / 困惑的心灵感应 - 花譜",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1Po4y1k7gE",
+        "label": "BV1Po4y1k7gE"
+      }
+    },
+    {
+      "date": "2023年2月7日",
+      "title": "第六感 - Reol",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV14j411M7uQ",
+        "label": "BV14j411M7uQ"
+      }
+    },
+    {
+      "date": "2023年1月28日",
+      "title": "エジソン / 爱迪生 - 水曜日のカンパネラ",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1634y1f71s",
+        "label": "BV1634y1f71s"
+      }
+    },
+    {
+      "date": "2023年1月10日",
+      "title": "シンデレラボーイ / 灰姑娘男孩 - Saucy Dog",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1Sv4y1v7uA",
+        "label": "BV1Sv4y1v7uA"
+      }
+    },
+    {
+      "date": "2023年1月2日",
+      "title": "ちゃんとあるよ / 好好存在着哦 - 傘村トータ",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1kG4y1m7JD",
+        "label": "BV1kG4y1m7JD"
+      }
+    },
+    {
+      "date": "2022年12月24日",
+      "title": "東京フラッシュ / 东京Flash - Vaundy",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1ZA411X79d",
+        "label": "BV1ZA411X79d"
+      }
+    },
+    {
+      "date": "2022年12月17日",
+      "title": "【存流×明透】東京は夜 - 平田義久 covered by Albemuth",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1F14y1K7zP",
+        "label": "BV1F14y1K7zP"
+      }
+    },
+    {
+      "date": "2022年12月4日",
+      "title": "NIGHT DANCER - imase",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1W24y1k7Cc",
+        "label": "BV1W24y1k7Cc"
+      }
+    },
+    {
+      "date": "2022年11月12日",
+      "title": "なんでもないや / 没什么大不了 - RADWIMPS",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1tP4y1y7PH",
+        "label": "BV1tP4y1y7PH"
+      }
+    },
+    {
+      "date": "2022年11月3日",
+      "title": "Overdose - なとり",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1LP4y1U7Zm",
+        "label": "BV1LP4y1U7Zm"
+      }
+    },
+    {
+      "date": "2022年10月23日",
+      "title": "恋風邪にのせて - Vaundy",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1SR4y1D7f3",
+        "label": "BV1SR4y1D7f3"
+      }
+    },
+    {
+      "date": "2022年10月15日",
+      "title": "さみしいひと / 孤独之人 - 理芽",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1z44y1f7sm",
+        "label": "BV1z44y1f7sm"
+      }
+    },
+    {
+      "date": "2022年10月5日",
+      "title": "ブランケット / 毛毯 - 菅原圭",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV11G4y1H7oN",
+        "label": "BV11G4y1H7oN"
+      }
+    },
+    {
+      "date": "2022年9月26日",
+      "title": "ズルい幻 - めいちゃん",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV16N4y1K73L",
+        "label": "BV16N4y1K73L"
+      }
+    },
+    {
+      "date": "2022年9月16日",
+      "title": "a.m.3:21 - yama",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV15t4y1j7zt",
+        "label": "BV15t4y1j7zt"
+      }
+    },
+    {
+      "date": "2022年9月4日",
+      "title": "海の幽霊 - 米津玄師",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1vP411V7cf",
+        "label": "BV1vP411V7cf"
+      }
+    },
+    {
+      "date": "2022年8月21日",
+      "title": "不可解 - 花譜",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1YN4y1V7vp",
+        "label": "BV1YN4y1V7vp"
+      }
+    },
+    {
+      "date": "2022年8月12日",
+      "title": "少女レイ- みきとP",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV12g411k7e7",
+        "label": "BV12g411k7e7"
+      }
+    },
+    {
+      "date": "2022年8月5日",
+      "title": "NEUROMANCE - 理芽",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV19B4y1476N",
+        "label": "BV19B4y1476N"
+      }
+    },
+    {
+      "date": "2022年7月28日",
+      "title": "No title - Reol×春猿火",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1qa411T7SC",
+        "label": "BV1qa411T7SC"
+      }
+    },
+    {
+      "date": "2022年7月18日",
+      "title": "夜になったら耿十八は / 到了夜晚耿十八就 - Peg",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1pa411H7Jd",
+        "label": "BV1pa411H7Jd"
+      }
+    },
+    {
+      "date": "2022年7月10日",
+      "title": "チョコレートミルク / 巧克力牛奶 - あぷえら",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1Jt4y147KU",
+        "label": "BV1Jt4y147KU"
+      }
+    },
+    {
+      "date": "2022年6月21日",
+      "title": "CH4NGE - Giga",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1ga411x7kR",
+        "label": "BV1ga411x7kR"
+      }
+    },
+    {
+      "date": "2022年6月15日",
+      "title": "flos - R Sound Design",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1wY411T7F7",
+        "label": "BV1wY411T7F7"
+      }
+    },
+    {
+      "date": "2022年5月31日",
+      "title": "アイディスマイル / IDSMILE - とあ",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1aY4y1V77S",
+        "label": "BV1aY4y1V77S"
+      }
+    },
+    {
+      "date": "2022年5月24日",
+      "title": "アスター / Aster - はるまきごはん",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1aR4y1w7mR",
+        "label": "BV1aR4y1w7mR"
+      }
+    },
+    {
+      "date": "2022年5月15日",
+      "title": "ねむるまち / 沉睡的城镇 - くじら",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1KY4y1k7fv",
+        "label": "BV1KY4y1k7fv"
+      }
+    },
+    {
+      "date": "2022年5月5日",
+      "title": "ラストリゾート / Last Resort - Ayase",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1wU4y1S7cd",
+        "label": "BV1wU4y1S7cd"
+      }
+    },
+    {
+      "date": "2022年4月29日",
+      "title": "ANEMONE - 吐息",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1jr4y1n7EN",
+        "label": "BV1jr4y1n7EN"
+      }
+    },
+    {
+      "date": "2022年4月20日",
+      "title": "LAZY - DUSTCELL",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1JS4y1A7R4",
+        "label": "BV1JS4y1A7R4"
+      }
+    },
+    {
+      "date": "2022年4月14日",
+      "title": "花を唄う / 歌颂花束 - シノ",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1BF411g7YH",
+        "label": "BV1BF411g7YH"
+      }
+    },
+    {
+      "date": "2022年4月6日",
+      "title": "チルドレン / children - BIN",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1b94y1Z7xz",
+        "label": "BV1b94y1Z7xz"
+      }
+    },
+    {
+      "date": "2022年3月28日",
+      "title": "私論理 - 花譜",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1jP4y1M7NH",
+        "label": "BV1jP4y1M7NH"
+      }
+    },
+    {
+      "date": "2022年3月24日",
+      "title": "フラジール / 易碎 - ぬゆり",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1rT4y1i7Ve",
+        "label": "BV1rT4y1i7Ve"
+      }
+    },
+    {
+      "date": "2022年3月15日",
+      "title": "食虫植物 - 理芽",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV19F411s7W1",
+        "label": "BV19F411s7W1"
+      }
+    },
+    {
+      "date": "2022年3月8日",
+      "title": "帝国少女 - R Sound Design",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1sL4y1u7dZ",
+        "label": "BV1sL4y1u7dZ"
+      }
+    },
+    {
+      "date": "2022年2月26日",
+      "title": "秒針を噛む - ずっと真夜中でいいのに。",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1Su411X7fc",
+        "label": "BV1Su411X7fc"
+      }
+    },
+    {
+      "date": "2022年2月21日",
+      "title": "愛を伝えたいだとか / 传达爱 - あいみょん",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1ub4y1t7Bn",
+        "label": "BV1ub4y1t7Bn"
+      }
+    },
+    {
+      "date": "2022年2月9日",
+      "title": "綺麗 - 吉澤嘉代子",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1Sb4y177Yf",
+        "label": "BV1Sb4y177Yf"
+      }
+    },
+    {
+      "date": "2022年2月1日",
+      "title": "マシュマリー / marsh mally - MIMI",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV12Y411t7JG",
+        "label": "BV12Y411t7JG"
+      }
+    },
+    {
+      "date": "2022年1月22日",
+      "title": "金木犀の夜 - きのこ帝国",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1FS4y1o7W6",
+        "label": "BV1FS4y1o7W6"
+      }
+    },
+    {
+      "date": "2022年1月15日",
+      "title": "Sincerely - TRUE",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1WS4y1f7xu",
+        "label": "BV1WS4y1f7xu"
+      }
+    },
+    {
+      "date": "2022年1月4日",
+      "title": "フォニイ - ツミキ",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV19r4y1m7ev",
+        "label": "BV19r4y1m7ev"
+      }
+    },
+    {
+      "date": "2021年12月20日",
+      "title": "絶え間なく藍色 - 獅子志司",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1FZ4y1X7Sy",
+        "label": "BV1FZ4y1X7Sy"
+      }
+    },
+    {
+      "date": "2021年12月6日",
+      "title": "獏 - john",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1WL4y1H7Ru",
+        "label": "BV1WL4y1H7Ru"
+      }
+    },
+    {
+      "date": "2021年11月26日",
+      "title": "真夜中のメリーゴーランド - 鈴木愛理",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV18q4y1g7Js",
+        "label": "BV18q4y1g7Js"
+      }
+    },
+    {
+      "date": "2021年11月7日",
+      "title": "不埒な喝采 - ポリスピカデリー feat. 可不(KAFU)",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1Rv411T7m4",
+        "label": "BV1Rv411T7m4"
+      }
+    },
+    {
+      "date": "2021年9月25日",
+      "title": "徒花の涙 - ウォルピスカーター",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1cL411s7bB",
+        "label": "BV1cL411s7bB"
+      }
+    },
+    {
+      "date": "2021年9月13日",
+      "title": "エウテルペ - EGOIST",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1d34y1Q7BP",
+        "label": "BV1d34y1Q7BP"
+      }
+    },
+    {
+      "date": "2021年9月1日",
+      "title": "六等星の夜 - Aimer",
+      "watch": {
+        "url": "https://www.bilibili.com/video/BV1zb4y1m7Mg",
+        "label": "BV1zb4y1m7Mg"
+      }
+    }
+  ],
+  "discography": [
+    {
+      "Date": "2026.4.21",
+      "Title": "セレナーデ - なとり",
+      "Desc": "こんな悲しい結末でごめんねって、 誰に向けているのかすら不確かなのに何故か胸がギュッとなりました..🫀\n\n皆さんはどうですか🫀",
+      "src": "BV1s9dSBRE7B.jpg",
+      "DescZh": "对于这样悲伤的结局，说声对不起，可我甚至不确定这份道歉是说给谁听的，却还是莫名心口一紧..🫀\n\n大家觉得呢🫀"
+    },
+    {
+      "Date": "2026.4.10",
+      "Title": "Cold Night - HANA",
+      "Desc": "冷たい夜、なのかもしれないけど\n風を切って爽快に走り抜ける姿が絵に浮かぶ🚲\n絶対にやり抜くって決めたんだ❄️",
+      "src": "BV14SQwBEEdH.jpg",
+      "DescZh": "也许这是个寒冷的夜晚，\n但脑海里却浮现出迎风疾驰、畅快奔跑的身影🚲\n我已经决定了，一定要坚持到底❄️"
+    },
+    {
+      "Date": "2026.4.1",
+      "Title": "絶対敵対メチャキライヤー -  メドミア covered by 明透×琶舞【神椿】",
+      "Desc": "学校同じだったら絶対姫に煙たがられる対象になってそうなのが容易に想像できてないた。\n\nけどワタクシのイモウトとして生まれてしまった訳だから仕方ない❤️💋勝\n\nこれからもよろしくね👩‍❤️‍💋‍👩",
+      "src": "BV1TX9jB8EbR.jpg",
+      "DescZh": "如果和她上同一所学校，我大概绝对会变成那种会被公主嫌烦的人，光是想象就让我哭了。\n\n不过既然注定作为我的妹妹出生，也没办法啦❤️💋赢了\n\n今后也请多多关照👩‍❤️‍💋‍👩"
+    },
+    {
+      "Date": "2026.3.18",
+      "Title": "lulu. - Mrs. GREEN APPLE",
+      "Desc": "大好きなフリーレンとluluによって\n宇宙的愛の摂理を学ばせていただく日々です。\n\nそれにしても壮大すぎて\n心だけ何処までもいけてしまいそう…🚀",
+      "src": "BV1EbwezEE7L.jpg",
+      "DescZh": "因为最喜欢的《葬送的芙莉莲》和《lulu.》，\n这些天我一直在学习宇宙级爱的法则。\n\n话说回来，也太过壮阔了，\n感觉只有心都能一路飞到天边……🚀"
+    },
+    {
+      "Date": "2026.3.14",
+      "Title": "華奢なリップ feat.ちゃんみな -  ジェニーハイ covered by 明透×琶舞 (piano.ver)【神椿】",
+      "Desc": "このあいだのあすべまる！で琶舞ちゃんと歌った\n「華奢なリップ」、切り出してアップしてもらいました🎊\n\n歌ってみたは琶舞ちゃんのchでアップされておりますが\n生歌のピアノアレンジverもまた違った良さがあるので、\nぜひどちらもプレイリストにいれて沢山聴いてみてネ🎧",
+      "src": "BV1QbwNzRE2h.jpg",
+      "DescZh": "前阵子在 asubemaru! 里和琶舞酱一起唱的\n《华奢なリップ》，这次截出来上传啦🎊\n\n翻唱版已经上传在琶舞酱的频道，\n不过现场钢琴改编版也有另一种不同的魅力，\n一定要把两个版本都加进歌单里多听听哦🎧"
+    },
+    {
+      "Date": "2026.3.3",
+      "Title": "不可幸力 - Vaundy",
+      "Desc": "ずっと歌ってみたかった歌を歌えて気づいたら歌い終わっていた。\n\n軽やかなビートと皮肉な言葉が絡まって生まれるなんとも言えない温度感がたまらなく好きです。\n\n行き場のない感情を浮遊させ、\n今日も歌っています…🎤",
+      "src": "BV1YbAoz6E4y.jpg",
+      "DescZh": "终于唱到了那首一直很想翻唱的歌，回过神来时已经唱完了。\n\n轻快的节拍和带点讽刺意味的话语交织出的那种难以言喻的温度感，我喜欢得不得了。\n\n让无处安放的情绪漂浮起来，\n今天也在继续歌唱……🎤"
+    },
+    {
+      "Date": "2026.2.24",
+      "Title": "Ex-Otogibanashi(Anime ver.) - 月見ヤチヨ(cv.早見沙織) from 超かぐや姫！",
+      "Desc": "不思議とまた還りたくなる、みたいな気持ちに誘う\nピュアで透き通った本家様の歌声を耳中に焼き付けて歌いました､､🧚",
+      "src": "BV13ofyBFEWK.jpg",
+      "DescZh": "我把原唱那纯净透明、让人不可思议地又想回去的歌声深深烙进耳朵里，再唱了出来､､🧚"
+    },
+    {
+      "Date": "2026.2.13",
+      "Title": "ラヴィ - すりぃ covered by 明透×琶舞",
+      "Desc": "こちらの曲があまりにもｷｬｯｷｬしていたので、\nこちらも全力で遊んだら、この後珍しく声が枯れました。🍂 完敗。笑\n\nでも遊び抜いたし、姫とのデュエットだし、聴いてください♠️",
+      "src": "BV1CjcjzzEYL.jpg",
+      "DescZh": "这首歌实在太闹腾太可爱了，\n所以我这边也全力玩开了，结果之后难得唱到嗓子都哑了。🍂 完败。笑\n\n但我真的玩得很尽兴，而且还是和公主的合唱，请一定听听♠️"
+    },
+    {
+      "Date": "2026.2.3",
+      "Title": "心予報 - Eve",
+      "Desc": "早くまた会いたいな、\n喜んでくれるかな、って\n\n君を思うだけで生きていけたらいいのに🌛\n思い馳せるのが生きがい🌆",
+      "src": "BV1ceFjzNE8P.jpg",
+      "DescZh": "好想快点再见到你，\n你会开心吗，\n\n如果光是想着你就能活下去就好了🌛\n思念你就是我的生存意义🌆"
+    },
+    {
+      "Date": "2026.1.24",
+      "Title": "にわかには信じがたいものです - なとり",
+      "Desc": "どうかしちゃってるということで、\n様々な人格を盛り込むように色んな声をごちゃ混ぜにしました。 ぷはｱ。🪨",
+      "src": "BV1unzCBKELG.jpg",
+      "DescZh": "因为整个人都不太对劲，\n所以我把各种人格都塞了进去，混进了各种不同的声音。呼哈。🪨"
+    },
+    {
+      "Date": "2026.1.12",
+      "Title": "1991 - 米津玄師",
+      "Desc": "悲しい気持ちを表現する時の\nぽつりぽつりと刻む感じがすごく好きで、\n言葉を置いて行かないように振り返りながら歌いました。🌠",
+      "src": "BV16irYBwEN4.jpg",
+      "DescZh": "在表达悲伤的时候，\n那种一句一句轻轻刻下去的感觉我特别喜欢，\n所以我一边回头确认不把词丢下，一边唱了出来。🌠"
+    },
+    {
+      "Date": "2026.1.1",
+      "Title": "晴る - ヨルシカ",
+      "Desc": "快晴の中、少し肌寒い風を浴びながら草原に立ってるイメージが一瞬で脳内再生されるような、\nあまりにも爽やかな音の上で、\n実は少し汗をかきながら歌いました、、\n\n最後はアカペラまで、、🏃‍♀️ なんだか初心に帰った🙏",
+      "src": "BV1v8vQB4EVf.jpg",
+      "DescZh": "这首歌清爽到让我瞬间就在脑海里放映出这样一个画面：\n晴空之下，带着一点微凉的风，站在草原上。\n我就是在这样的声音里，实际上还有点出汗地唱完了、、\n\n最后甚至还唱到了清唱部分、、🏃‍♀️ 有种回到初心的感觉🙏"
+    },
+    {
+      "Date": "2025.12.15",
+      "Title": "再会 - LiSA,Uru covered by 明透×琶舞",
+      "Desc": "琶舞姫の歌力によって射抜かれた部分から、\n閉まっていた気持ちが溢れて声になりました。\n心赴くままに歌う事の有り難さを噛み締めました,,🌠",
+      "src": "BV1hNm1BYEvo.jpg",
+      "DescZh": "被琶舞姬的歌声击中的地方，\n那些原本封闭着的情绪溢了出来，化成了声音。\n我再次深深体会到，顺着内心去歌唱是一件多么珍贵的事,,🌠"
+    },
+    {
+      "Date": "2025.12.6",
+      "Title": "IRIS OUT - 米津玄師",
+      "Desc": "激情に駆られ、滝汗でした。",
+      "src": "BV1r329BqE4o.jpeg",
+      "DescZh": "被激情驱使，汗流得像瀑布一样。"
+    },
+    {
+      "Date": "2025.11.26",
+      "Title": "革命道中 - アイナ・ジ・エンド",
+      "Desc": "私の脳内を余すことなく実況中継されてるのかなと思ってしまうくらいアツい熱が迸る歌詞だったので、つい思いが溢れました。\n\n歌いあがり、きっと情熱的です。\nご堪能あれ。。。❤️‍🔥",
+      "src": "BV1UjUYBhEDu.jpg",
+      "DescZh": "歌词热烈到让我忍不住觉得，像是在把我脑内的一切都毫无保留地实况转播出来一样，于是情绪自然涌了出来。\n\n唱到最后，一定是很炽热的。\n请尽情享用吧。。。❤️‍🔥"
+    },
+    {
+      "Date": "2025.11.16",
+      "Title": "Blue Jeans - HANA",
+      "Desc": "後半部分から耐えられなくて感情爆発して歌ってます\n\n怒りの感情が湧くのは自分でも珍しいなと思いながらせっかくなので包み隠さず出してみました…💣",
+      "src": "BV1KoCXBTEs3.jpg",
+      "DescZh": "从后半段开始就忍不住了，完全情绪爆发地唱了出来。\n\n连我自己都觉得会涌起愤怒这种情绪很少见，所以难得一次，干脆毫无保留地释放出来了…💣"
+    },
+    {
+      "Date": "2025.10.27",
+      "Title": "ヴァンパイア - DECO-27",
+      "Desc": "たまには全力女子をしないと生きていけないので、",
+      "src": "BV1WtsUzdEvH.jpg",
+      "DescZh": "偶尔不做一下全力以赴的女孩子，我就活不下去，所以，"
+    },
+    {
+      "Date": "2025.10.17",
+      "Title": "一途 - King Gnu",
+      "Desc": "本当の気持ちを言葉に残す事は本当に怖いのに、\nそんな事すら棚にあげてしまうほどに好きという気持ちは\nどこまでも真っ直ぐで 一瞬でもいいから\nそこに全てを捧げてもいいと思うほど\n誰かを想った過去が過ぎる歌",
+      "src": "BV1yAWEziErP.jpg",
+      "DescZh": "明明把真正的心情留成语言这件事是那么可怕，\n可“喜欢”这种感情却笔直到连这种事都能暂时抛在一边，\n甚至让人觉得哪怕只有一瞬，\n也愿意把一切都献给那里。\n这是一首会让人回想起自己曾那样想着某个人的歌。"
+    },
+    {
+      "Date": "2025.10.6",
+      "Title": "残機 - ずっと真夜中でいいのに。",
+      "Desc": "歌う前に、\nAcaねさんの書く独特な歌詞の咀嚼をしたくて\n久しぶりにチェンソーマン観たくなって観てみた。\n\nこの一連の流れというか、曲の嗜み方（？）、\nなんか好きだなと思って今日はいい日だった🌷",
+      "src": "BV1soxjzzEcg.jpg",
+      "DescZh": "开唱之前，\n我很想先咀嚼一下 Acaね 写的那种独特歌词，\n于是久违地又想看《电锯人》，就去看了。\n\n这一整套流程，或者说这种品味一首歌的方式（？），\n总觉得很喜欢，所以今天是很好的一天🌷"
+    },
+    {
+      "Date": "2025.9.25",
+      "Title": "再会 - Vaundy",
+      "Desc": "光の気持ち、、\n愛おしくて胸が苦しい、、🫂\nオープニングでこの曲が流れる度にどんどんこの曲と登場人物に感情移入していく、、🫀",
+      "src": "BV1CFn8z4EEC.jpg",
+      "DescZh": "光的心情……\n可爱得让胸口发痛、、🫂\n每次片头响起这首歌，我都会越来越代入这首歌和登场人物的感情、、🫀"
+    },
+    {
+      "Date": "2025.9.14",
+      "Title": "プロポーズ - なとり",
+      "Desc": "独り言を言うようなつぶやき声でポツリポツリ…\nなんか新鮮で、歌っていて新境地を垣間見た気がしました\n\n嫌われちゃったらどうしようとか考えてんの色々。🧠分かる",
+      "src": "BV1VspczvEGS.jpg",
+      "DescZh": "我像在自言自语那样，用低声呢喃一点一点地唱了出来……\n感觉很新鲜，唱着唱着像是窥见了新的境地。\n\n像“要是被讨厌了怎么办”之类的念头，各种各样。🧠我懂"
+    },
+    {
+      "Date": "2025.8.28",
+      "Title": "幾億光年 - omoinotake",
+      "Desc": "l love you という言葉が物語になって壮大な音楽になっていた…\n\n私もその一部になれてたらいいなぁ🌌",
+      "src": "BV11Mh1zYECC.jpg",
+      "DescZh": "“I love you” 这句话竟然变成了故事，化成了如此壮阔的音乐……\n\n要是我也能成为其中的一部分就好了🌌"
+    },
+    {
+      "Date": "2025.8.16",
+      "Title": "群青 - YOASOBI",
+      "Desc": "私はここにいるのに、本音に従うには時に勇気が必要で、それが嫌で耳を塞いで\nいつかは、きっと誰かが。\nそんな気持ちでなんとなくの平穏を手に入れた。\n\nでも結局気付かされる。\n私が欲しいのは平穏ではなく、ありのままに生きることで、\nそして私の願いを叶えるのはこの私でいたいんだって🌻。",
+      "src": "BV1kXYvzzEaM.jpg",
+      "DescZh": "明明我就在这里，可遵从真心有时却需要勇气，我讨厌那样，于是捂住了耳朵。\n总觉得，总有一天，一定会有人替我去做。\n抱着这样的心情，我得到了某种模糊的平静。\n\n可最后还是会被点醒。\n我真正想要的并不是平静，而是坦率地活着；\n而且，我希望实现我愿望的人，正是这个我自己🌻。"
+    },
+    {
+      "Date": "2025.8.6",
+      "Title": "[A]ddiction - GigaReol×EVO+",
+      "Desc": "良い子を辞めてみました。🫀\nズブズブな疑似恋愛。",
+      "src": "BV1cVtwz8ET9.jpg",
+      "DescZh": "我试着不再做好孩子了。🫀\n深陷其中的拟态恋爱。"
+    },
+    {
+      "Date": "2025.7.28",
+      "Title": "徘徊 - AKASAKI",
+      "Desc": "今日はいいよねって思いながら\n終電用のアラームをさりげなく消す\nあの背徳感を私にください",
+      "src": "BV1Wi8JzsEZk.jpg",
+      "DescZh": "一边想着“今天可以吧”，\n一边若无其事地关掉末班车的闹钟。\n请把那种背德感赐给我吧"
+    },
+    {
+      "Date": "2025.7.17",
+      "Title": "DRESSING ROOM -なとり",
+      "Desc": "愛憎に呑まれにいきたい時がある",
+      "src": "BV171gNzWE5K.jpg",
+      "DescZh": "有时候就是想被爱与憎吞没。"
+    },
+    {
+      "Date": "2025.7.10",
+      "Title": "二時間だけのバカンスfeaturing 椎名林檎 -宇多田ヒカル covered by 明透×琶舞",
+      "Desc": "初めて聞いた時と今とでは見える情景や雰囲気までもが違っていて\n私も私なりに少しずつ大人になれているのかななんて思ったりなどしました👗",
+      "src": "BV1oVGGzLE9a.jpg",
+      "DescZh": "第一次听和现在听，眼前浮现的景象与氛围都已经不一样了。\n我也会想，也许自己也正在以自己的方式一点点长大吧👗"
+    },
+    {
+      "Date": "2025.6.27",
+      "Title": "BRAIN - Kanaria",
+      "Desc": "冒頭のメロからもう虜でした\nこの曲のメロディの妖艶さに酔いしれたひと時...\nありがとうございました",
+      "src": "BV1qSKqzKEbs.jpg",
+      "DescZh": "从开头的旋律起我就已经被俘获了。\n沉醉在这首歌那妖艳的旋律里的一段时光……\n谢谢你。"
+    },
+    {
+      "Date": "2025.6.20",
+      "Title": "Super Ball - TOMOO",
+      "Desc": "自分の事がスーパーボールと重なってそんな自分を少し愛おしく感じました…⚪️✨\nこのまま跳ねて飛び上がったり沈んだりしながら「好き」を確かめていきたい",
+      "src": "BV1dtKwzYE51.jpg",
+      "DescZh": "我把自己和超级弹力球重叠在一起，甚至有点觉得这样的自己也很可爱…⚪️✨\n想就这样一边弹跳起伏，一边确认“喜欢”这件事。"
+    },
+    {
+      "Date": "2025.6.12",
+      "Title": "UNDEAD - YOASOBI",
+      "Desc": "人間が歌う旋律ではないよと思いながら半泣きモードでしたが、歌詞に支えられてなんとか完成しました、、😭 幸せになろうとしないなんて不幸だ、って言葉は何度か聞いたことあっても、 卑怯だ、は初めてで脳裏に焼きついた。",
+      "src": "BV1J7MczuEne.jpg",
+      "DescZh": "一边想着“这根本不是人类能唱的旋律吧”，一边半哭着录完了，但多亏歌词支撑，总算完成了、、😭\n“不想获得幸福是不幸”，这种说法以前听过几次，\n可“那很卑鄙”还是第一次听见，深深烙进了脑海。"
+    },
+    {
+      "Date": "2025.5.28",
+      "Title": "睨めっ娘 - 友成空",
+      "Desc": "爽やかな歌いこなしと気品と妖艶さを彷彿とさせる曲過ぎて、脳裏に刻み込まれる速さが異常でした。\n一回聴いたら忘れない曲…❤️‍🔥\n\n私バージョンいかがでしょう…？🎤",
+      "src": "BV1VHjqzQETx.jpg",
+      "DescZh": "这首歌唱得实在太清爽，又带着气质和妖艳感，让它刻进脑海的速度都异常惊人。\n听过一次就忘不了的歌…❤️‍🔥\n\n我的版本怎么样呢…？🎤"
+    },
+    {
+      "Date": "2025.5.18",
+      "Title": "Plazma - 米津玄師",
+      "Desc": "歌詞を読んでいると、時空に対する疾走感を感じて海の幽霊のMVを思い出した…🌊\n米津さんの、何かを選択して進んでいくスピード感が音と歌詞に反映されているのかな、なんて想像しました⭐️🚀",
+      "src": "BV1oSJgztEUp.jpg",
+      "DescZh": "读着歌词时，会感到一种穿越时空般的疾驰感，让我想起了《海之幽灵》的 MV…🌊\n我会想象，米津先生那种不断做出选择并继续前进的速度感，是不是也被映在了声音和歌词里呢⭐️🚀"
+    },
+    {
+      "Date": "2025.4.25",
+      "Title": "百花繚乱 - 幾田りら",
+      "Desc": "薬屋のひとりごとの主人公二人を思い出して胸ときめきながら歌いました...✨\nもう一回観てこよっと👹",
+      "src": "BV1PCLHztEyY.jpg",
+      "DescZh": "一边想起《药屋少女的呢喃》的两位主角，一边心动地唱了出来...✨\n我再去看一遍好了👹"
+    },
+    {
+      "Date": "2025.4.18",
+      "Title": "メロウ - 須田景凪",
+      "Desc": "本当に毎度のことながら\n曲の歌詞に全身でありがとうと感謝しながら歌っていました…\n抜粋したい部分が多すぎて文字数を超えそうです…☕️✏︎",
+      "src": "BV1ni5EzrEKh.jpg",
+      "DescZh": "真的一如既往，\n我是怀着全身心感谢歌词的心情在唱这首歌的……\n想摘出来说的部分实在太多，感觉字数都快不够了…☕️✏︎"
+    },
+    {
+      "Date": "2025.4.5",
+      "Title": "BOW AND ARROW - 米津玄師",
+      "Desc": "そう君の苦悩は君が自分で選んだ痛みだ\nそして掴んだあの煌めきも全て君のものだ\n\nMVもなん度もなん度も観ました\nそして、この歌詞の部分を紙に書いて冷蔵庫に貼りました",
+      "src": "BV1CBRoY1E1A.jpg",
+      "DescZh": "“没错，你的苦恼是你自己选择的痛，\n而你抓住的那份闪耀也全都属于你。”\n\nMV 我也反复看了好多好多遍，\n甚至把这段歌词写在纸上贴到了冰箱上。"
+    },
+    {
+      "Date": "2025.3.25",
+      "Title": "弾きこもり - AKASAKI",
+      "Desc": "内側にこもりたくなる時、\nついつい聴きたくなる…🎸\nナイーブさの中にグルーヴが\n込まれていて中毒…\nヘッドホンが\n頭から離れなくなる程ループして\n聴いちゃう…🎧",
+      "src": "BV16SotYaEZg.jpg",
+      "DescZh": "想把自己缩回内心里的时候，\n就会忍不住想听这首歌…🎸\n那种纤细里包裹着律动，\n让人上瘾……\n循环到耳机都像粘在头上一样，\n不停地听……🎧"
+    },
+    {
+      "Date": "2025.3.16",
+      "Title": "NERVEs (Vol.2) - WurtS",
+      "Desc": "フロアで踊りたくなるような曲に自分の声が合わさる事が結構嬉しくて、\nミックス音源頂いて聞いた時めちゃくちゃブチ上がりました❤️‍🔥\nみんなもぶち上がってますように",
+      "src": "BV1U5Q8YiEHK.jpg",
+      "DescZh": "能把自己的声音叠到这样一首让人想在舞池里跳起来的歌上，我真的挺开心的。\n拿到混音音源一听时，情绪直接被点爆了❤️‍🔥\n希望大家也都能一起燃起来。"
+    },
+    {
+      "Date": "2025.3.4",
+      "Title": "どうにかなっちゃいそう！ - NOMELON NOLEMON",
+      "Desc": "私なりの「どうにかなっちゃいそう」な感じで歌ってみました😇///\n現場からは以上です😇/////////",
+      "src": "BV1SQ9JY7EGJ.jpg",
+      "DescZh": "我用属于自己的“感觉快要不行了”的方式唱了唱这首歌😇///\n现场报道完毕😇/////////"
+    },
+    {
+      "Date": "2025.2.23",
+      "Title": "TAIDADA - ずっと真夜中でいいのに。",
+      "Desc": "萎えるぜ... が口癖になりそうで\n日々気をつけているほど最近は\nダンダダンに釘付けです\nオープニングからエンディングまで\n余すことなく観ています…🔥\nまさか歌えるなんて…！",
+      "src": "BV1XQAmeWEBw.jpg",
+      "DescZh": "最近我已经迷《胆大党》迷到，\n连“烦死了...”都快成口头禅了，所以每天都在提醒自己别说出口。\n从片头到片尾我一丁点都没落下，全都在看……🔥\n没想到居然还能唱到这首歌…！"
+    },
+    {
+      "Date": "2025.2.12",
+      "Title": "ショコラカタブラ - Ado",
+      "Desc": "毎度Adoさんの曲は全部、\n太鼓の達人で言うところの鬼の中でもトップオブザトップ並みの難易度です。\nこんな難易度の高い楽曲たちをライブで歌っているのかと思うと恐怖すら感じます。\n精進します…🔥",
+      "src": "BV1LeKjejEYE.jpg",
+      "DescZh": "Ado 的歌每次都是，\n就像《太鼓达人》里“鬼”难度中的顶级难度一样难。\n一想到她竟然会在现场演唱会上唱这些高难度曲子，我甚至会感到害怕。\n我还得继续精进…🔥"
+    },
+    {
+      "Date": "2025.2.1",
+      "Title": "Pick you up - iri",
+      "Desc": "今この瞬間を引き延ばしたくなる位にに幸せな時がある\n私が生きる未来の中で、そんな今は過去になって、その過去は思い出としてずっと残り続ける\nだから今この瞬間に幸せを残す程に、未来の私が幸せになるんだって\n思うようにしている⭐️",
+      "src": "BV1JfA5e6E5o.jpg",
+      "DescZh": "有的时候，会幸福到想把此刻无限拉长。\n在我所活着的未来里，这样的“现在”会变成过去，而那段过去又会一直作为回忆留存下来。\n所以我会这样想：只要我在此刻留下越多幸福，未来的我就会越幸福⭐️"
+    },
+    {
+      "Date": "2025.1.19",
+      "Title": "風神 - Vaundy",
+      "Desc": "何度傷ついて疲れ果てても、\nもう一度誰かを愛してみたいなという気持ちが、歌っている時溢れました🪷",
+      "src": "BV1EfA5e6Em1.jpg",
+      "DescZh": "无论受了多少伤、累到什么程度，\n我在唱这首歌时，还是忍不住涌出了“还想再试着去爱一次某个人”的心情🪷"
+    },
+    {
+      "Date": "2025.1.8",
+      "Title": "New me - YOASOBI",
+      "Desc": "ここからきっと\nそれまでのどんな私よりずっと\n私になる…⭐️\n\n私が私を更新していく\nその感覚を最近覚えました\nとても清々しい🌳\nnew me!☺︎",
+      "src": "BV1EcALeuEwD.jpg",
+      "DescZh": "从这里开始一定会\n比起过去任何一个我，\n更成为“我自己”…⭐️\n\n最近我开始记住了那种\n由我自己不断更新自己的感觉。\n特别清爽🌳\nnew me!☺︎"
+    },
+    {
+      "Date": "2024.5.4",
+      "Title": "全方向美少女 - 乃紫",
+      "Desc": "（私は）正面で見ても横から見ても下から見てもいい女〜\nてな具合におまじないとして言葉お借りします🪄\n気分が落ちない言葉の魔法❤️\nめちゃめちゃ可愛らしい曲、私らしく楽しく歌わせて頂きました！",
+      "src": "BV1YoKLerE7k.jpg",
+      "DescZh": "“不管从正面看、侧面看，还是从下往上看，（我）都是个好女人～”\n就像这样，把这句话借来当成我的小咒语🪄\n这是一种不会让心情低落的语言魔法❤️\n这首歌真的非常可爱，我也用属于自己的方式开心地唱了出来！"
+    },
+    {
+      "Date": "2024.12.20",
+      "Title": "Subtitle - Official髭男dism",
+      "Desc": "mv、大泣きでした…\nあえて特に頭から離れない歌詞を書き出すのをやめます…\n何度でも聴いてほしい！😭✨",
+      "src": "BV15MALeeExy.jpg",
+      "DescZh": "MV 把我看哭了……\n我干脆不特意写下那些特别挥之不去的歌词了……\n真的希望你们能一遍又一遍地听！😭✨"
+    },
+    {
+      "Date": "2024.12.12",
+      "Title": "Bunny Girl - AKASAKI",
+      "Desc": "切実にドキドキしながら歌いました。\nBunny Girl 、いいをんな",
+      "src": "BV15MALeeEtd.jpg",
+      "DescZh": "我带着真切的心跳感唱了这首歌。\nBunny Girl，真是个好女人。"
+    },
+    {
+      "Date": "2024.11.23",
+      "Title": "糸電話 - なとり",
+      "Desc": "まだ私が一桁の歳だった頃、\n仲良しだった男の子と\n糸電話をしたくて\n一生懸命に作ったのを\n今でも覚えています…☎️\nきゅん…\n時に思い出を愛おしみながら\n出来るだけ今という一瞬の中に\n潜り続けていたい…🌙",
+      "src": "BV1YgALeAE6c.jpg",
+      "DescZh": "在我还是个位数年纪的时候，\n曾经特别想和一个关系很好的男孩子玩线电话，\n还非常认真地做过一个，\n到现在都还记得……☎️\n心动……\n有时我也会一边珍惜回忆，\n一边想尽可能持续潜进名为“此刻”的这一瞬间里……🌙"
+    },
+    {
+      "Date": "2024.11.13",
+      "Title": "RED OUT - 米津玄師",
+      "Desc": "ホラーというポップな言葉ではおさまり切らないほどの\nじんわりと生暖かい恐怖の念が押し寄せてきます．．．\n恐怖の根源をかき消すためにまた恐怖の根源を生む、\nそれを生きている間繰り返していく\nみたいな",
+      "src": "BV1fnKWeMEgq.jpg",
+      "DescZh": "这已经不是“恐怖”这种偏流行的词语能装得下的程度了，\n那种缓缓逼近、带着温热感的恐惧扑面而来……\n为了抹去恐惧的根源，又不断制造新的恐惧根源，\n像是在活着的时候反复重复这样的事。"
+    },
+    {
+      "Date": "2024.10.22",
+      "Title": "鬼ノ宴 - 友成空",
+      "Desc": "和ならではの妖艶さが好きです\n鬼と人間が愉快な夜会を開いている情景が浮かびました👹",
+      "src": "BV1fnKWeME6m.jpg",
+      "DescZh": "我很喜欢那种只有和风里才有的妖艳感。\n脑海里浮现出鬼与人类举办愉快夜宴的画面👹"
+    },
+    {
+      "Date": "2024.10.10",
+      "Title": "Feelin' Go (o) d - 藤井風",
+      "Desc": "胸に支えになっている粒々をろ過できるものは、後にも先にも自分だけ\nまた歌詞に救われた⭐️",
+      "src": "BV1fHKWeBE7p.jpg",
+      "DescZh": "能把堵在胸口的那些小颗粒过滤掉的，\n从头到尾都只有自己。\n又一次被歌词拯救了⭐️"
+    },
+    {
+      "Date": "2024.9.29",
+      "Title": "毎日 - 米津玄師",
+      "Desc": "何かを求めて手を伸ばした昨日、\nそして疲れてしまう今日、そんな自分に呆れてしまう明日\nぶれてぶれてブレまくりな日々\nあっという間な一週間を見て見ぬ振りしてまた頑張ろうとする今日この頃です🚶‍♀️",
+      "src": "BV1ZHKWeqEmw.jpg",
+      "DescZh": "昨天为了追逐什么而伸出手，\n今天又因此疲惫不堪，到了明天又会对这样的自己感到无奈。\n摇摆不定、不断偏离的日子里，\n眼看一周转瞬即逝，却还是装作没看见，又继续努力的最近🚶‍♀️"
+    },
+    {
+      "Date": "2024.9.4",
+      "Title": "ファタール - GEMN",
+      "Desc": "こちらの楽曲は暴れん坊な王子（キタニタツヤさん）とイケメンな王子（中島健人さん）という印象…🧛🤴\n一人二役を担当させて頂き、中々苦戦しましたが王子になりきれていただろうか…👑",
+      "src": "BV1VUKpecE9e.jpg",
+      "DescZh": "这首歌给我的印象，就像是任性的王子（北谷达也先生）和帅气王子（中岛健人先生）……🧛🤴\n我一个人分饰两角，虽然中途吃了不少苦头，但不知道有没有成功演成王子呢…👑"
+    },
+    {
+      "Date": "2024.8.25",
+      "Title": "地球儀 - 米津玄師",
+      "Desc": "物心ついた時に心に誓った事を\n何度も思い出させてくれる曲\nこの道が続くのは、続けと願ったから",
+      "src": "BV1gdKpexEeC.jpg",
+      "DescZh": "这是一首会让我一次又一次想起，\n在刚懂事时就对自己发过誓的事情的歌。\n这条路之所以会延续下去，是因为我曾许愿它继续延伸。"
+    },
+    {
+      "Date": "2024.8.15",
+      "Title": "Nagisa - imase",
+      "Desc": "進めない赤も青に変わるの\n涼しげな青も赤に変わるの…\n素敵な歌詞…",
+      "src": "BV1hgKneEEz9.jpg",
+      "DescZh": "“连无法前进的红也会变成蓝，\n连清凉的蓝也会变成红……”\n真是美妙的歌词……"
+    },
+    {
+      "Date": "2024.8.4",
+      "Title": "traveling - 宇多田ヒカル",
+      "Desc": "❝若さゆえにすぐにチラリ\n風の前の塵に同じ❞\n私はこの歌詞がとても好きです\n体に染み込みやすい語呂の気持ちよさと、\nイタズラな遊び心と大人びてひとりぼっちな寂しさと\n入り混じりまくっていて胸がギュッとなりました🌜",
+      "src": "BV183KnemEMY.jpg",
+      "DescZh": "❝正因为年轻，才总是轻易一瞥，\n与风前尘埃并无不同❞\n我非常喜欢这段歌词。\n它读起来顺口到很容易渗进身体里，\n顽皮的玩心、成熟又孤单的寂寞，\n各种情绪混在一起，让我胸口一紧🌜"
+    },
+    {
+      "Date": "2024.7.24",
+      "Title": "夏夜のマジック - indigo la End",
+      "Desc": "私が夏の夜に意識的に聴いてしまう曲ナンバーワンです。\n去年の夏特に聴いていたので、去年の夏を思い出しながらエモーショナルな気持ちになりながら歌いました🎆",
+      "src": "BV1iXKLe5EHq.jpg",
+      "DescZh": "这是我在夏夜里会有意识地反复去听的第一名歌曲。\n因为去年夏天尤其常听，所以我一边回想那个夏天，一边带着很有氛围的情绪唱了出来🎆"
+    },
+    {
+      "Date": "2024.7.14",
+      "Title": "初恋キラー - 乃紫",
+      "Desc": "できるだけ傷つきたくないのに、導かれるように抗えないのは何故でしょう🍑\nこの曲を歌ってると、世の乙女たちと肩を組んでいるような気分になり、\n苦さと恋しさが入り混じって夜な夜なお散歩に出かけました💭🌛",
+      "src": "BV1v9KLeCEgv.jpg",
+      "DescZh": "明明想尽量不受伤，却又像被引导着一样无法抗拒，这是为什么呢🍑\n唱这首歌的时候，会有种仿佛在和世上的少女们肩并肩的感觉，\n带着苦涩与恋慕交织的心情，我在夜里一次次出去散步💭🌛"
+    },
+    {
+      "Date": "2024.7.5",
+      "Title": "魔性の女A - 紫 今",
+      "Desc": "ほしいものは全て手に入れる\nを超えて、私はいつだって、手に入る\nそんなマインドにさせてくれる最強の曲💙",
+      "src": "BV1iSKLejEdt.jpg",
+      "DescZh": "想要的东西全都要拿到手，\n不止如此，我一直都是“会被得到的那个人”。\n这就是一首能让人进入这种心态的最强歌曲💙"
+    },
+    {
+      "Date": "2024.6.15",
+      "Title": "さよーならまたいつか！ - 米津玄師",
+      "Desc": "さよならって、えいっと一気に行き先を変更するくらいのもんで、悲しいだけに囚われるのは勿体無いのかもしれないなと思えるような曲🌕\nもしも堕ちそうになることがあったら、この曲聴いて散歩しよう⭐️",
+      "src": "BV1iSKLejERG.jpg",
+      "DescZh": "“告别”这种事，也许就像狠狠干脆利落地把目的地改掉一样，\n并不值得只被悲伤困住。\n这是一首会让我这么想的歌🌕\n如果哪天我好像快要坠下去了，就听着这首歌去散步吧⭐️"
+    },
+    {
+      "Date": "2024.6.5",
+      "Title": "Talking Box - WurtS",
+      "Desc": "もしもし〜☎︎の一言めには、少しの緊張と恥ずかしさと楽しみな気持ちが詰まっていて\n「聞いたこともないくらいの未体験が浮き上がって止まんないよ Calling night〜♪」\nこの歌詞とそんな気持ちが重なりました⭐️",
+      "src": "BV1iDKLe1EB5.jpg",
+      "DescZh": "“喂喂～☎︎”这句开头里，装着一点紧张、一点害羞，还有一点期待。\n“浮现出连听都没听过的未体验，停不下来的 Calling night～♪”\n这句歌词和那样的心情重合在了一起⭐️"
+    },
+    {
+      "Date": "2024.5.26",
+      "Title": "ビビデバ - 星街すいせい",
+      "Desc": "MVのインパクトが凄すぎて、忙しなく動き回り終いには感情大爆発のあの映像を脳裏に焼き付けながら歌いました\nノリノリ🔥",
+      "src": "BV1aFKjezEkM.jpg",
+      "DescZh": "MV 的冲击力实在太强了，我是一边把那种忙个不停、最后情绪大爆发的画面烙在脑海里，一边唱出来的。\n超嗨🔥"
+    },
+    {
+      "Date": "2024.5.15",
+      "Title": "fake face dance music - 音田雅則",
+      "Desc": "普段はめちゃくちゃオシャレなグルーヴとキャッチーなメロに魅了されてて気づかなかったんだけど、\n悲しい曲すぎました。\nまるでピエロが笑いながら泣いて踊ってるみたいな\nこれからも私はこの曲の虜です",
+      "src": "BV19oKLerEGH.jpg",
+      "DescZh": "平时我总是先被它时髦得不行的 groove 和抓耳的旋律吸引，根本没注意到，\n但这首歌其实悲伤得不得了。\n就像小丑一边笑一边哭一边跳舞那样。\n今后我也依然会是这首歌的俘虏。"
+    },
+    {
+      "Date": "2024.4.12",
+      "Title": "何色でもない花 - 宇多田ヒカル",
+      "Desc": "自分を信じられなきゃ、何も信じらんない。\n今の自分の心が求めていた栄養がこの言葉に詰まっていて\n抱きしめられるように心地良さを感じながら歌いました。\n「何色でもない花」のMVがとっても素敵だった、、\nあの映像を脳内で再生しながら歌えて幸せだった…☕️",
+      "src": "BV1SJ4m1V7UP.jpg",
+      "DescZh": "如果连自己都无法相信，就什么也信不了。\n现在的我心里所需要的养分，就全都装在这句话里，\n我像被拥抱着一样，带着舒服的感觉唱了出来。\n《何色でもない花》的 MV 也特别美……\n能一边在脑海里放着那段画面一边唱，真的很幸福…☕️"
+    },
+    {
+      "Date": "2024.4.8",
+      "Title": "燈 - 崎山蒼志",
+      "Desc": "崎山さんが紡ぎ出した歌詞で胸がぎゅっとなって\n編曲の世界観をもって心に染み込む速度を加速させる\n何度も何度も聴いては感謝で溢れる曲\n歌えてとても嬉しい…!\nとにかく、大切だと感じるものは一生懸命に大切にしたいなと\n思う日々です..🌟",
+      "src": "BV1Rx421U7cV.jpg",
+      "DescZh": "崎山先生编织出的歌词让我的心一下子揪紧，\n而编曲的世界观又让它渗进心里的速度变得更快。\n是一首让我听了无数次、每次都只剩感激溢出的歌。\n能唱到真的很开心…!\n总之，凡是我觉得重要的东西，都想拼尽全力去珍惜。\n最近一直这样想着..🌟"
+    },
+    {
+      "Date": "2024.3.23",
+      "Title": "Beyond the way - Giga",
+      "Desc": "この曲を聴いてると、細胞がものすごいスピードで宇宙まで駆け抜けていくようなイメージが浮かんで、\nそれがすごく気持ちいい\n想い馳せることだけで身体中満たしていたい🔥",
+      "src": "BV1mp42127NA.jpg",
+      "DescZh": "听着这首歌时，脑海里会浮现出细胞以惊人的速度一路冲向宇宙的画面，\n那种感觉特别舒服。\n我想光靠思念，就把全身填满🔥"
+    },
+    {
+      "Date": "2024.3.13",
+      "Title": "春を告げる - yama",
+      "Desc": "もう春なんだね🌸\n私にとっての春って、新しいものと共にあるキラキラした側面だけではなくて、過去を名残惜しく思ったりどこか置いて行かれているような寂しさを感じたりもするんです。\n「春を告げる」からもそんな二面性を感じながら歌いました🌸",
+      "src": "BV1mS421w7j9.jpg",
+      "DescZh": "已经是春天了呢🌸\n对我来说，春天不只是伴随新事物而来的闪闪发光的一面，\n也会让我对过去依依不舍，或者感到一种仿佛被留在原地的寂寞。\n我也是带着从《春を告げる》中感受到的这种两面性来唱的🌸"
+    },
+    {
+      "Date": "2024.3.4",
+      "Title": "ミッドナイトガール - imase",
+      "Desc": "昔の恋に恋焦がれることって、\nまるでカセットプレイヤーにカセットを入れて、時々歪む音もいいなあって感じながら、巻き戻しボタンを押して巻き戻したりする時みたいだなって\n歌詞を読んでいるとそんな事をふと思いました。\n素敵な歌詞、、📼",
+      "src": "BV1iH4y1j7Uh.jpg",
+      "DescZh": "对过去的恋情念念不忘，\n就像把磁带放进卡带播放器里，一边觉得偶尔失真的声音也挺好，一边按下倒带键让它回卷一样。\n读着歌词的时候，我忽然就这样想了。\n真是很棒的歌词、、📼"
+    },
+    {
+      "Date": "2024.2.25",
+      "Title": "Myra - Tani Yuuki",
+      "Desc": "誰かひとりを思ってうまれた曲は、やっぱり胸にどしんと重たいものを感じる。そしてこの重みは誰かの胸にまっすぐ突き刺さる。\n私は突き刺さった…",
+      "src": "BV1uZ42127om.jpg",
+      "DescZh": "为某一个人而诞生的歌，果然会让胸口沉沉一震。\n而这种重量，也会直直刺进某个人的心里。\n我就被刺中了……"
+    },
+    {
+      "Date": "2024.2.15",
+      "Title": "All Alone With You - EGOIST",
+      "Desc": "メロディや歌声から懐かしさと寂しさを感じながら、感極まってしまいました。\n思い出って例え苦いものだったとしても愛おしいなって、この曲を聴きながらふと思いました。",
+      "src": "BV1LS421P795.jpg",
+      "DescZh": "从旋律和歌声里感受到了怀旧与寂寞，唱着唱着就情绪上来了。\n一边听这首歌，一边忽然觉得，回忆这种东西，就算是苦涩的，也依然很可爱。"
+    },
+    {
+      "Date": "2024.2.5",
+      "Title": "光 - 宇多田ヒカル",
+      "Desc": "光のカケラのみたいに音が散りばめられているこの曲に馴染めるように声を沢山重ねました\n何度も聞いてきたこの曲を歌えて幸せでした✨",
+      "src": "BV12i421o7cc.jpg",
+      "DescZh": "为了让自己的声音能够融入这首像光的碎片般把音符洒满各处的歌，我叠了很多层声音。\n能唱到这首听过无数次的歌，真的很幸福✨"
+    },
+    {
+      "Date": "2024.1.22",
+      "Title": "damn - 藤井風",
+      "Desc": "恋したら上がったり下がったりの繰り返しで自分もめちゃくちゃ後回し。\nもうしないって誓ったのに、誓いなんてなんの効力もなくて\nあーまたやってんなあって心の中で呟いている。\n\nこの感じ、私だけじゃ無いんだなあって、この曲に少し救われた気持ちです😮‍💨",
+      "src": "BV1Wi4y1W7qc.jpg",
+      "DescZh": "一旦恋爱，就总是在上上下下之间反复折腾，连自己都会被排到很后面。\n明明发誓说不要再这样了，可誓言根本没有任何效力，\n心里只会一边嘀咕“啊，又来了啊”。\n\n这种感觉，原来不只我一个人会有啊，所以这首歌多少让我有点被治愈了😮‍💨"
+    },
+    {
+      "Date": "2024.1.15",
+      "Title": "失礼しますが、RIP♡ - Mori Calliope",
+      "Desc": "難解なパズルみたいに一つ一つのフレーズを地道に繋げていくようで、形になった時はこの上なく安堵しました。\n母国語すらかんじゃうので正直もう泣きそうだった。笑",
+      "src": "BV1Ha4y127Zf.jpg",
+      "DescZh": "就像在拼一副高难度的谜题一样，一句一句地耐心把短语接起来，\n等它终于成形的时候，我松了一口气，前所未有地安心。\n连母语都会咬字打结的我，当时说实话都快哭了。笑"
+    },
+    {
+      "Date": "2024.1.1",
+      "Title": "新時代 - Ado",
+      "Desc": "パワフルな曲に飲み込まれてしまわないようにと、私も負けじと歌にパワーを込めました。\n曲に背中を押されるような形で、歌う前より歌った後はスッキリと心も晴れ渡った🌞",
+      "src": "BV1L64y1N7sf.jpg",
+      "DescZh": "为了不被这首充满力量的歌吞没，我也不甘示弱地把力量全部灌进了歌里。\n像是被这首歌从背后推了一把一样，唱完之后，心也比唱之前更加清朗了🌞"
+    },
+    {
+      "Date": "2023.10.25",
+      "Title": "Ordinary days - milet(from サンライトLIVE2 2023.08.26)",
+      "Desc": "君の隣で笑うより、君に笑ってほしい\n私の気持ちです",
+      "src": "BV1qj411i7sN.jpg",
+      "DescZh": "比起在你身边笑，\n我更想让你露出笑容。\n这就是我的心情。"
+    },
+    {
+      "Date": "2023.12.19",
+      "Title": "クリスマスソング - back number",
+      "Desc": "歌いながら、真っ直ぐ過ぎる歌詞に感極まって泣きそうになった、、\n素直なままでいたいなって思えた…🎄",
+      "src": "BV19e411y7Ro.jpg",
+      "DescZh": "唱着唱着，被那过于坦率直白的歌词触动得差点哭出来、、\n让我觉得，真想就这样一直保持真诚…🎄"
+    },
+    {
+      "Date": "2023.12.8",
+      "Title": "snow jam - Rin音",
+      "Desc": "歌詞の至る所にキュンが散りばめられていてキュンが全開な声になっている気がします…🫰\n自分を主人公に重ねて歌いました⭐️",
+      "src": "BV1Z64y1V7SN.jpg",
+      "DescZh": "歌词的每个角落都撒满了让人心动的瞬间，感觉我的声音也变成了心动全开的状态…🫰\n我把自己和主人公重叠在一起唱了出来⭐️"
+    },
+    {
+      "Date": "2023.12.1",
+      "Title": "唱 - Ado",
+      "Desc": "この曲を聴いた瞬間に「ぶちこんでるな」という言葉に尽きて強烈さに身が縮こまりまったのを覚えています。\n私もぶちこんでみました\nどうだろうか",
+      "src": "BV1gg4y11711.jpg",
+      "DescZh": "听到这首歌的瞬间，我脑子里只剩一句“这也太猛了吧”，那种冲击力让我整个人都缩了一下。\n于是我也狠狠干了一把。\n怎么样呢？"
+    },
+    {
+      "Date": "2023.11.13",
+      "Title": "ECHO - Crusher-P",
+      "Desc": "機械的な世界観と人間の心の叫びを融合させた歪な空気感を感じながら歌いました",
+      "src": "BV1eg4y117vb.jpg",
+      "DescZh": "我是带着一种机械世界观与人类内心呐喊融在一起的扭曲空气感来唱的。"
+    },
+    {
+      "Date": "2023.11.6",
+      "Title": "end of a life - Mori Calliope",
+      "Desc": "過去に後ろ髪引かれて、それでも未来に手を伸ばして行ったり来たりしている自分は滑稽でそれが時々心を寂しくするけれど、\nこの曲を聴いていたら私だけじゃないのかもって思えて、また音楽にありがとうって感謝した",
+      "src": "BV1re411k7se.jpg",
+      "DescZh": "被过去牵住头发，却又还是伸手去够未来，在来来回回之间摇摆的自己有点滑稽，这也时不时让心变得很寂寞。\n但听着这首歌时，我会觉得，也许并不只有我一个人这样，于是又一次想对音乐说谢谢。"
+    },
+    {
+      "Date": "2023.10.31",
+      "Title": "SPECIALZ - King Gnu",
+      "Desc": "まじで本当に、みんなスペシャルなんだよな！\n自分を最大限に発揮した究極の自分で居続けようね！",
+      "src": "BV1bC4y1u7SS.jpg",
+      "DescZh": "真的啊，大家全都很特别！\n要一直作为那个把自己发挥到极致的、最究极的自己活下去哦！"
+    },
+    {
+      "Date": "2023.10.17",
+      "Title": "化け猫 - キタニタツヤ",
+      "Desc": "もうこれ以上振り回さないでよ、、って思いながらも言いなりになってしまう、そんな魔法を持った魔術師に引っかかった気持ちになる、、胸をキュッと縮こませながら歌いました",
+      "src": "BV13h4y1B7xd.jpg",
+      "DescZh": "一边想着“别再这样摆布我了啊……”，一边却还是会照着对方的意思走。\n这首歌让我有种像是被一个拥有魔法的魔术师蛊惑了一样的感觉……我一边胸口紧缩，一边唱了出来。"
+    },
+    {
+      "Date": "2023.10.10",
+      "Title": "KICK BACK - 米津玄師",
+      "Desc": "あれもこれも全部欲しい！！！\nおさまらない衝動、仕方が無いから全てに手を伸ばしてみる！！",
+      "src": "BV1yw411r7wi.jpg",
+      "DescZh": "那个也想要，这个也想要，全部都想要！！！\n既然这股冲动收不住，那就干脆对一切都伸手试试看！！"
+    },
+    {
+      "Date": "2023.10.3",
+      "Title": "喜劇 - 星野源",
+      "Desc": "「探し諦めた私の居場所は作るものだった」\n今でも探して掴みかけては離れていく、そんなものに嘆いては諦めたくなる事もあるけれど、この言葉にまた背中を押されました\n諦めずに、粘り強く、誰かにまかせないで、自分の大切なものを守りたいな",
+      "src": "BV1xu4y1x7v6.jpg",
+      "DescZh": "“那个我寻找过又放弃过的归处，原来是需要自己亲手创造的。”\n直到现在，我依然会在快要抓住又失去的东西面前叹气，甚至想要放弃，\n但这句话又一次在背后推了我一把。\n不放弃，顽强一点，不把一切交给别人，想要亲自守住自己珍视的东西。"
+    },
+    {
+      "Date": "2023.9.26",
+      "Title": "色彩 - yama",
+      "Desc": "歌詞を何度も繰り返し読みました。\nこれからも何度も繰り返し読んでは、このままの自分をゆるしていいんだということを忘れないでいたいな",
+      "src": "BV1AN411n7do.jpg",
+      "DescZh": "我把歌词反复读了好多遍。\n今后我也想一遍又一遍地重读它，不要忘记：原来的自己，也可以被原谅。"
+    },
+    {
+      "Date": "2023.9.18",
+      "Title": "青のすみか - キタニタツヤ",
+      "Desc": "いつかの未来に後悔を増やさないように\n時には勇気を出してどんな時も向き合っていたいね",
+      "src": "BV1C34y1A7iw.jpg",
+      "DescZh": "为了不让未来的某一天留下更多后悔，\n希望自己无论何时都能鼓起勇气，好好去面对。"
+    },
+    {
+      "Date": "2023.9.9",
+      "Title": "大丈夫 - RADWIMPS",
+      "Desc": "君の大丈夫になりたい。\nうまく言葉にできなかった私の中の思いがぎゅっと詰まっている言葉\n歌詞がお守りみたいで、心の音楽の一つになりました。",
+      "src": "BV1Zh4y187Ds.jpg",
+      "DescZh": "想成为你的“没关系”。\n这是把我那些一直说不出口的心情，紧紧浓缩在一起的一句话。\n歌词像护身符一样，成了我心里的一段音乐。"
+    },
+    {
+      "Date": "2023.8.24",
+      "Title": "会いたいわ - iri",
+      "Desc": "離れてる時の「会いたい」って言葉、なんであんなに嬉しくなっちゃうんだろ",
+      "src": "BV1GN411n78D.jpg",
+      "DescZh": "分开时说出的“好想见你”，为什么总会让人那么开心呢。"
+    },
+    {
+      "Date": "2023.8.11",
+      "Title": "ANTIFRAGILE - LE SSERAFIM",
+      "Desc": "歌詞に惚れました。\n私は私の道をいく！！",
+      "src": "BV1Fr4y1f7Vx.jpg",
+      "DescZh": "我被歌词迷住了。\n我要走我自己的路！！"
+    },
+    {
+      "Date": "2023.8.3",
+      "Title": "Cinnamon - キタニタツヤ",
+      "Desc": "その目は何をみているの？\n幻惑に食われてしまわないで。",
+      "src": "BV1Pw411m7zS.jpg",
+      "DescZh": "你的那双眼睛到底在看什么？\n别被迷惑吞没了。"
+    },
+    {
+      "Date": "2023.7.27",
+      "Title": "火炎 - 女王蜂",
+      "Desc": "曲に食われる。\n危機感に震える身体とは裏腹に、つい口角は上がってしまう。\n生き物のような曲との出会いは生きている実感をくれる。",
+      "src": "BV1vV411c7Us.jpg",
+      "DescZh": "会被这首歌吃掉。\n明明身体因为危机感而发抖，嘴角却还是会不由自主地上扬。\n遇见这样像活物一样的歌，会让我真切地感觉到自己还活着。"
+    },
+    {
+      "Date": "2023.7.20",
+      "Title": "ネイティブダンサー - サカナクション",
+      "Desc": "寒くてひとりの夜、不安な気持ちがどんどん膨らんで、\nひとりで抱えられない時のあのどうしようもない気持ちが、この曲を歌うと湧き出てきました",
+      "src": "BV1Hw411m7Gz.jpg",
+      "DescZh": "在寒冷又独自一人的夜里，不安会越积越大。\n那种一个人根本抱不住的无可奈何，唱这首歌时就会不断涌上来。"
+    },
+    {
+      "Date": "2023.7.12",
+      "Title": "LOOP - SIRUP",
+      "Desc": "幸せな気持ちの時に、この曲を歌えて、もっと幸せな気持ちになりました\nあったかいなあ",
+      "src": "BV16w411Y7Ut.jpg",
+      "DescZh": "在幸福的时候唱到这首歌，让我变得更加幸福了。\n真温暖啊。"
+    },
+    {
+      "Date": "2023.7.2",
+      "Title": "Wonderland - iri",
+      "Desc": "怠惰に過ごせる日がある事を、\nくだらない冗談と笑顔で埋められる日がある事を、素直に喜んでいたい。\n喜んでいいんだよ。",
+      "src": "BV16w411v7T6.jpg",
+      "DescZh": "能有可以慵懒度日的日子，\n能有用无聊玩笑和笑容填满的日子，\n我想坦率地为这些感到高兴。\n你可以高兴的。"
+    },
+    {
+      "Date": "2023.6.22",
+      "Title": "アイドル - YOASOBI",
+      "Desc": "色んな視点からの思いが描かれている楽曲ですよね🎤\n隠しきれていない本当の気持ちを、思いのままに歌ってみました。",
+      "src": "BV1Mu411u7tQ.jpg",
+      "DescZh": "这是一首描绘了各种视角中不同心情的歌曲呢🎤\n我也把那些藏不住的真心，顺着感觉唱了出来。"
+    },
+    {
+      "Date": "2023.6.12",
+      "Title": "ハレンチ - ちゃんみな",
+      "Desc": "愛されたいと願い過ぎると、心は傷ついてしまうんだね。\n愛って、自分の中から外へ広がっていくものなのかも。\n自分を赦して、もっと信じてあげたい。\nこの事を忘れないでいたいな。",
+      "src": "BV1Z8411y7cT.jpg",
+      "DescZh": "一味地渴望被爱，心就会受伤啊。\n爱，也许是从自己心里向外扩散出去的东西。\n我想原谅自己，也更想相信自己。\n希望自己不要忘记这件事。"
+    },
+    {
+      "Date": "2023.6.2",
+      "Title": "きらり - 藤井風",
+      "Desc": "この世界に生きていると、\nいつも目移りばかりで忙しい。\nけれどどんなに時間がかかっても、この心で様々なものを掻き分けて、たったひとつの宝ものにいつかきっと触れている。\n何度も遠回りして確かめてきたなら、最高の伏線回収を最後に用意できる。\n全てがきらり⭐️",
+      "src": "BV1194y1a7zK.jpg",
+      "DescZh": "活在这个世界上，\n总是会被各种东西分散注意力，忙得不可开交。\n可无论花多少时间，总有一天，我会用这颗心拨开重重杂物，触碰到那唯一的宝物。\n如果已经绕了许多弯路一路确认而来，那么最后一定能迎来最棒的伏笔回收。\n一切都闪闪发光⭐️"
+    },
+    {
+      "Date": "2023.5.23",
+      "Title": "フライデーナイト - なとり",
+      "Desc": "うしろ髪引かれている時みたいに放って置けなくて何度も思い出してしまうような曲。\n「なんか要らないしなんか足りない。」\n時々やってくるモヤモヤと重なった歌詞。",
+      "src": "BV1HH4y1U7Bm.jpg",
+      "DescZh": "像被什么牵住后发一样，让人放不下、会一遍遍想起的歌。\n“好像什么都不需要，又好像少了点什么。”\n这句歌词和那种时不时袭来的烦闷感重叠在了一起。"
+    },
+    {
+      "Date": "2023.5.14",
+      "Title": "勝たんしか症候群 - たかやん",
+      "Desc": "ハジメテノコトバ、タクサン。\nｷﾞｬﾙｷﾞｬﾙ",
+      "src": "BV14p4y1F7gS.jpg",
+      "DescZh": "第一次说的词，有很多。\n辣妹辣妹。"
+    },
+    {
+      "Date": "2023.5.5",
+      "Title": "【存流×明透】踊 - Ado covered by Albemuth",
+      "Desc": "MVにでてくる主人公に身を投影して聴いてみてほしいです🔥\nメラメラが飛び火して踊りたくなる、きっと。",
+      "src": "BV1vc411N7Dh.jpg",
+      "DescZh": "希望你听的时候，能把自己投射进 MV 里出现的那个主角身上🔥\n那股熊熊燃烧的火一定会蔓延出来，让人想跳起舞来。"
+    },
+    {
+      "Date": "2023.4.12",
+      "Title": "デスペレート / 孤注一掷 - TeddyLoid&Giga",
+      "Desc": "器用さとかどこかに消えてさ\n自分なりにどうにかしようとしても、できなくてさ\n身体中どんどん染まっていってさ\nこうなったら最期だなぁとか思って思考止めたくなるけど、止められないから歌うしかないよね？",
+      "src": "BV1P24y1A7hg.jpg",
+      "DescZh": "灵巧啊什么的，不知道丢到哪里去了。\n明明也想用自己的方式设法解决，却做不到。\n全身一点一点被染上颜色。\n明明会想“到了这地步就是终局了吧”，想把思考停下来，可又停不住，那就只能唱了不是吗？"
+    },
+    {
+      "Date": "2023.4.2",
+      "Title": "虎視眈々 - 梅とら",
+      "Desc": "赤＆ピンクの混ざったような香りが充満した部屋を連想しました。\n甘いもの中毒者なので、「甘い甘いcandy」の歌詞に全力のご機嫌を注ぎました。",
+      "src": "BV1Cc41157DW.jpg",
+      "DescZh": "我联想到了一间充满着红色与粉色混合香气的房间。\n因为我是甜食成瘾者，所以把满满的好心情，全都灌进了“甘い甘い candy”这句歌词里。"
+    },
+    {
+      "Date": "2023.3.21",
+      "Title": "W/X/Y - Tani Yuuki",
+      "Desc": "「W/X/Y」を歌ってみました。\n\n「この先もずっと」。これまで、そう願うことができるものを、人を、ずっと探し続けてきたような気がします。\n永遠を想う心はとても繊細で、時に触れ合うことを躊躇うけれど、それでもやっぱり眩しい。大切にしたいです。",
+      "src": "BV1tX4y1Z7RF.jpg",
+      "DescZh": "我唱了《W/X/Y》。\n\n“从今以后也一直如此”。一直以来，我好像都在不断寻找那些能够让我这么期望的事物、和那样的人。\n向往永恒的心非常纤细，有时甚至会害怕与之真正触碰，但即便如此，它依然很耀眼。我想珍惜它。"
+    },
+    {
+      "Date": "2023.3.13",
+      "Title": "カワキヲアメク / 声嘶力竭 - 美波",
+      "Desc": "ぐちゃぐちゃになった心をぶら下げて、\n終わりのない洞窟の中に嘆きながら入っていく。\nそんなどうしようもない主人公の\n絶望の姿に痛みを感じながら歌いました。",
+      "src": "BV1N24y1u7Go.jpg",
+      "DescZh": "我像是拎着一颗乱成一团的心，\n一边哀叹一边走进那个没有尽头的洞窟。\n唱这首歌时，我感受着那位无可救药的主人公绝望的模样所带来的痛楚。"
+    },
+    {
+      "Date": "2023.3.5",
+      "Title": "戸惑いテレパシー / 困惑的心灵感应 - 花譜",
+      "Desc": "カンザキイオリさんの歌詞に、\n花譜ちゃんのまっすぐで真っ白な声が重なる\n花譜ちゃんワールドが頭の中いっぱいに広がる中、\nそのイメージに酔いしれながら歌ってみました。🌼",
+      "src": "BV1Po4y1k7gE.jpg",
+      "DescZh": "神崎伊织先生的歌词，\n叠上花谱那笔直又纯白的声音，\n当花谱的世界在我脑海里铺满开来时，\n我沉醉着那样的画面，把这首歌唱了出来。🌼"
+    },
+    {
+      "Date": "2023.2.7",
+      "Title": "第六感 - Reol",
+      "Desc": "せーので手放せよ 感覚で胸を打つものそれ以外を\n\nこの歌詞を心に刻みます。\nそして私も予定にないことをやる時のあのワクワクが凄く好きです。",
+      "src": "BV14j411M7uQ.jpg",
+      "DescZh": "“一、二，放手吧，把那些凭感觉击中心口之外的东西都丢开。”\n\n这句歌词我要刻在心里。\n而且我自己也非常喜欢那种去做计划之外的事时涌上来的兴奋感。"
+    },
+    {
+      "Date": "2023.1.28",
+      "Title": "エジソン / 爱迪生 - 水曜日のカンパネラ",
+      "Desc": "ポップでキャッチーな音楽は気付けば口ずさんでしまうけど、\n歌詞を改めて振りかえるのは結構後になってからだったり、意味を知るのはそれよりもっと先だったりする\n音楽を、そんな風に長い期間の中で様々な味わい方で味わえるって幸せだし胸が躍るよね✨みんなはどう？💌",
+      "src": "BV1634y1f71s.jpg",
+      "DescZh": "流行又抓耳的音乐，总会让人不知不觉哼起来，\n但真正回头重新看歌词，往往已经是很久以后；理解其中含义，可能又是在更之后。\n音乐能像这样在很长的时间里被用各种方式反复品味，真的很幸福，也让人心跳加快呢✨大家觉得呢？💌"
+    },
+    {
+      "Date": "2023.1.10",
+      "Title": "シンデレラボーイ / 灰姑娘男孩 - Saucy Dog",
+      "Desc": "ここ半年くらいずっと、好きってなんだろう？って考えていました。\nそしてその答えにふと気付いた時、この曲に出会いました\nあなたの事となると、私の頭は役に立たないんだなぁ。\n歌う事で答え合わせができました💌",
+      "src": "BV1Sv4y1v7uA.jpg",
+      "DescZh": "这半年左右，我一直都在想：喜欢到底是什么呢？\n而就在我忽然意识到那个答案的时候，遇见了这首歌。\n一旦是和你有关的事，我的脑子就一点都派不上用场啊。\n透过歌唱，我完成了对答案的确认💌"
+    },
+    {
+      "Date": "2023.1.2",
+      "Title": "ちゃんとあるよ / 好好存在着哦 - 傘村トータ",
+      "Desc": "",
+      "src": "BV1kG4y1m7JD.jpg",
+      "DescZh": ""
+    },
+    {
+      "Date": "2022.12.24",
+      "Title": "東京フラッシュ / 东京Flash - Vaundy",
+      "Desc": "好きな人とか気になってる人と夜の高速道路をドライブしながら、\nたわいのないはなしをして、そしてbgmにさりげなくこの曲を流して、\n少し会話が途切れた時にこの曲だけが車の中で流れて少しドキドキしてる\n\nみたいなそんな映像を想像しながら歌いました…💌",
+      "src": "BV1ZA411X79d.jpg",
+      "DescZh": "我一边想象着这样的画面一边唱了出来…💌\n和喜欢的人，或是有点在意的人一起在夜晚的高速公路上兜风，\n聊着一些无关紧要的小事，然后把这首歌若无其事地当作 BGM 放出来。\n当对话稍微停下来的时候，车里只剩这首歌在流淌，于是心里也跟着有一点点心跳加速。"
+    },
+    {
+      "Date": "2022.12.17",
+      "Title": "【存流×明透】東京は夜 - 平田義久 covered by Albemuth",
+      "Desc": "叫びました。\nここには、本音と雰囲気以外いらない…",
+      "src": "BV1F14y1K7zP.jpg",
+      "DescZh": "我喊出来了。\n这里不需要除了真心和氛围之外的任何东西……"
+    },
+    {
+      "Date": "2022.12.4",
+      "Title": "NIGHT DANCER - imase",
+      "Desc": "どんなに呆れてしまうことでも\n放っておけないことってあるよね\n\n嫌いなはずなのに傷ついたのに連絡は無視できなかったり。\nそんな自分に嫌気がさすけど、なんだか操られているみたいに止まれなくて。\n\nこの曲を聴くと、泣きながら踊っているような、そんな映像が浮かんだよ",
+      "src": "BV1W24y1k7Cc.jpg",
+      "DescZh": "不管多么让人无语，\n也总有些事是没办法置之不理的吧。\n\n明明应该讨厌，明明也受过伤，却还是没法无视对方发来的消息。\n会因此对这样的自己感到厌烦，可又像被操控了一样停不下来。\n\n听这首歌的时候，我脑海里浮现出一幅一边流泪一边跳舞的画面。"
+    },
+    {
+      "Date": "2022.11.12",
+      "Title": "なんでもないや / 没什么大不了 - RADWIMPS",
+      "Desc": "「君は派手なクライヤー\nその涙止めてみたいな\nだけど君は拒んだ\n溢れるままの涙を見て分かった」\n\nこの歌詞がどうも私の脳内を駆け巡る…",
+      "src": "BV1tP4y1y7PH.jpg",
+      "DescZh": "“你是个夸张的 cryer，\n真想让你的眼泪停下来，\n可你却拒绝了，\n看着你任由泪水溢出，我终于明白了。”\n\n这段歌词不知为何一直在我脑海里盘旋……"
+    },
+    {
+      "Date": "2022.11.3",
+      "Title": "Overdose - なとり",
+      "Desc": "色んなものと引き換えに、生きた心地を追い求めて…\n\nなとりさんの「Overdose」は、歌いながらそんな気持ちが込み上げました。",
+      "src": "BV1LP4y1U7Zm.jpg",
+      "DescZh": "像是拿各种东西去交换，只为追求一种“自己还活着”的实感……\n\n唱なとり的《Overdose》时，这样的心情不断涌了上来。"
+    },
+    {
+      "Date": "2022.10.23",
+      "Title": "恋風邪にのせて - Vaundy",
+      "Desc": "くだらない時間が繰り返されるちょうど良さとか、\nくだらない苦しみとか、\nこの先もあっていいから、もう少し一緒にいてみたいな\n別にくだらなくてもいいから\n\nそんなことを考えながら、歌ってみました。",
+      "src": "BV1SR4y1D7f3.jpg",
+      "DescZh": "那种无聊时光反复出现的恰到好处，\n那种无聊的痛苦，\n如果今后也还能继续存在的话，我还想再和你多待一会儿。\n哪怕无聊也没关系。\n\n我是一边想着这些，一边唱了出来。"
+    },
+    {
+      "Date": "2022.10.15",
+      "Title": "さみしいひと / 孤独之人 - 理芽",
+      "Desc": "私なりの「さみしいひと」を歌ってみました。\n俯瞰して見下ろすように誰かを見ていて、\nぼんやり眺めてたら実はそれが私だったって事に気づく、\nみたいなそんなどうしようもない感じを声にしてみました。\n\nどうだったかな？今回も沢山聴いてね！",
+      "src": "BV1z44y1f7sm.jpg",
+      "DescZh": "我用属于自己的方式唱了《さみしいひと》。\n像是在俯瞰、像是在低头看着某个人，\n可迷迷糊糊地看着看着，才发现那个人原来其实是我自己。\n我把那种无可奈何的感觉化成了声音。\n\n怎么样呢？这次也请多多听哦！"
+    },
+    {
+      "Date": "2022.10.5",
+      "Title": "ブランケット / 毛毯 - 菅原圭",
+      "Desc": "愚か者には不釣り合いな、永遠の幸せ\nそれを側に起き続ける方が不安になる時がある\nだから1人溺れる海をゆこう。\nそれでも幸せはちらついて、遠りすぎていくたびに感情が動いているのが分かる\nまだまだどこまでも人間みたいだ。\n\nそんな揺れる自分の心を感じながら歌いました",
+      "src": "BV11G4y1H7oN.jpg",
+      "DescZh": "对于愚笨之人来说并不相称的、永恒的幸福。\n可有时候，比起失去它，反而是让它一直待在身边更让人不安。\n所以就一个人向那片溺水的海走去吧。\n即便如此，幸福还是会若隐若现，每当它从身边滑过时，我都能感觉到自己的情绪仍在被牵动。\n看来我依然彻头彻尾地，很像个人类。\n\n我是带着这份摇摆不定的心把它唱出来的。"
+    },
+    {
+      "Date": "2022.9.26",
+      "Title": "ズルい幻 - めいちゃん",
+      "Desc": "時々生きること自体が憎たらしくなる。\nもっと綺麗に生きたかったのにと。\n一度間違えたらオセロみたいに全部の色が黒に変わっていくようで。\nそうやって何度も間違えるのに、その度ちゃんと後悔するのは、まだ何処か自分に期待しているから？\n\nと、考えながら歌ってみました",
+      "src": "BV16N4y1K73L.jpg",
+      "DescZh": "有时候，连活着这件事本身都会让我觉得可恨。\n明明想活得更漂亮一些。\n一旦走错一步，就像黑白棋一样，所有颜色都会一口气变成黑色。\n明明就这样一次又一次犯错，可每次还是会真心后悔，是因为心底某处仍然对自己抱有期待吗？\n\n带着这样的思考，我唱了这首歌。"
+    },
+    {
+      "Date": "2022.9.16",
+      "Title": "a.m.3:21 - yama",
+      "Desc": "憂鬱そうで怠惰な姿さえもどこか魅力的な人っているよね。\nくじらさんが紡がれたメロディとyamaさんの歌声から、そんな人を連想したよ。\n\nつい癖になって、また聴きたくなるような歌を歌えてたら嬉しいなあ。",
+      "src": "BV15t4y1j7zt.jpg",
+      "DescZh": "有时候就是会有那种看起来忧郁又懒散，却莫名很有魅力的人，对吧。\n从くじら先生编织的旋律和 yama 的歌声里，我联想到了那样的人。\n\n如果我也能唱出那种让人上瘾、会忍不住想再听一次的歌就好了。"
+    },
+    {
+      "Date": "2022.9.4",
+      "Title": "海の幽霊 - 米津玄師",
+      "Desc": "美しいとか、世界観だとか、神秘だとか、そもそも言葉におさめられない。\n人の感じる心はそんなもんじゃないと思うんです。\n分からないから分かりたい、だけど分かりたくない部分もある、それでも追いかけている。",
+      "src": "BV1vP411V7cf.jpg",
+      "DescZh": "“美丽也好，世界观也好，神秘也好”，这些本来就不是能被语言装进去的东西。\n人的感受绝不是那么简单的。\n正因为不懂才想懂，可又有一部分是不想真正懂透的，即便如此，还是会不断追逐。"
+    },
+    {
+      "Date": "2022.8.21",
+      "Title": "不可解 - 花譜",
+      "Desc": "「言葉にできない歪な感情」\n私もずっと感じて生きてきた様な気がします。\n\n世の中、学校が決めたルールの理由をどうしても納得できず従えない中で、\nやっぱり違うと感じながら私の信じるものを信じてみたいと思う気持ち。\n\nこの歌では、そんな感情を吐き出す事ができました",
+      "src": "BV1YN4y1V7vp.jpg",
+      "DescZh": "“无法化为语言的扭曲感情。”\n我也觉得自己像是一直带着这样的感觉活到现在。\n\n在这个世界里，明明无论如何都无法认同学校规定的那些规则，也没办法乖乖服从，\n可还是会一边觉得“不对”，一边想去相信自己所相信的东西。\n\n这首歌让我把那样的感情吐露了出来。"
+    },
+    {
+      "Date": "2022.8.12",
+      "Title": "少女レイ- みきとP",
+      "Desc": "「君は、友達。」\n純粋無垢で感情が分からないのに、それでも何か確かなものを欲している。\n\nそんな時の心の痛みを感じながら、この曲を歌わせて頂きました...！",
+      "src": "BV12g411k7e7.jpg",
+      "DescZh": "“你是，朋友。”\n明明纯真无垢、连感情是什么都不太明白，却还是渴望着某种确切的东西。\n\n我是一边感受着那种时刻心里的疼痛，一边唱了这首歌……！"
+    },
+    {
+      "Date": "2022.8.5",
+      "Title": "NEUROMANCE - 理芽",
+      "Desc": "本当に何故私達は誰かと共に生きようとするんだろうね\nその誰かといても、満足できない夜もあるのにね\n\nこの歌をうたっていて、思いました。",
+      "src": "BV19B4y1476N.jpg",
+      "DescZh": "我真的会想，为什么我们总想和某个人一起活下去呢。\n明明就算和那个人在一起，也还是会有无法满足的夜晚。\n\n唱着这首歌时，我这样想了。"
+    },
+    {
+      "Date": "2022.7.28",
+      "Title": "No title - Reol×春猿火",
+      "Desc": "「助けて」。\nその言葉を言える人が居ないと気付いて絶望した時、\nある音楽に縋って、少しずつ心を取り戻していくことができました。\n\n私の身体に触れる事なく、そっと包み込んでくれる存在がこの世界にあるって、素晴らしいなぁ、なんてこの曲を歌いながら感じていました。",
+      "src": "BV1qa411T7SC.jpg",
+      "DescZh": "“救救我”。\n当我意识到身边根本没有能够说出这句话的人、并因此绝望时，\n我曾抓住某段音乐，才一点点把自己的心找回来。\n\n不需要触碰我的身体，就能温柔地把我包裹起来——这个世界上原来真的存在这样的东西啊。唱着这首歌时，我就这么觉得，真好。"
+    },
+    {
+      "Date": "2022.7.18",
+      "Title": "夜になったら耿十八は / 到了夜晚耿十八就 - Peg",
+      "Desc": "独特で古風な世界観が漂っていて、歌い終えた後もしばらく頭の中でヘビロテしてました💫\n\nこの独特な曲の主人公もきっと独特な雰囲気を持った人なんだろうなぁと感じて、その表現として、声や歌い方を何種類かに分けてみたんだけど、\n\nた、楽しすぎた…",
+      "src": "BV1pa411H7Jd.jpg",
+      "DescZh": "这首歌飘着一种独特又古典的世界观，唱完之后也还在脑海里循环了好一阵💫\n\n我也觉得这首独特歌曲里的主人公一定也是个气质很特别的人，\n于是为了表达这一点，我把声音和唱法分成了好几种。\n\n太、太好玩了……"
+    },
+    {
+      "Date": "2022.7.10",
+      "Title": "チョコレートミルク / 巧克力牛奶 - あぷえら",
+      "Desc": "ちょっと大人めな声色で歌うチョコレートミルク🍫\n\nうまく言葉に出来ないけれど、\n1人でいる時にまた聴きたくなってしまう様なー曲に仕上げる事ができた気がします💌\n\nエモいとはこういう事を言うのかなぁ?",
+      "src": "BV1Jt4y147KU.jpg",
+      "DescZh": "用稍微成熟一点的声线唱出的《巧克力牛奶》🍫\n\n虽然很难准确说出来，\n但我觉得自己把它做成了一首那种一个人独处时还会想再拿出来听的歌💌\n\n所谓“emo”，是不是就是这种感觉呢？"
+    },
+    {
+      "Date": "2022.6.21",
+      "Title": "CH4NGE - Giga",
+      "Desc": "CH4NGE歌うと無敵になれる。\nこれに尽きます。\n私のCH4NGE、最高でしょ？🌎",
+      "src": "BV1ga411x7kR.jpg",
+      "DescZh": "唱 CH4NGE 的时候，会让我觉得自己无敌了。\n就是这么回事。\n我的 CH4NGE，很棒吧？🌎"
+    },
+    {
+      "Date": "2022.6.15",
+      "Title": "flos - R Sound Design",
+      "Desc": "「flos」を歌ってみました！\n淡々と進んでいくけれど、ふんわりとした余韻が残る、そんな曲だよね。\n暖かい陽だまりの様な、心をあたためてくれるカバーソングになれていたら嬉しいな🌿\n\n今回も沢山聴いてね！",
+      "src": "BV1wY411T7F7.jpg",
+      "DescZh": "我翻唱了《flos》！\n它虽然平静地向前走，却会留下柔软的余韵，是这样的一首歌呢。\n如果它能成为一首像温暖日光一样、能够轻轻暖热人心的翻唱就好了🌿\n\n这次也请多多听哦！"
+    },
+    {
+      "Date": "2022.5.31",
+      "Title": "アイディスマイル / IDSMILE - とあ",
+      "Desc": "可愛いアイドルさんになって、沢山の方とノリノリで歌っている気分でした⭐️\n\n明るい雰囲気の曲だけど、その中に葛藤とか苦しみを抱えてるんだなって思うような部分もあって\nそこはちゃんと一言一言大切に噛み締めて歌ったよ\n\n共感する歌詞の部分では感情が溢れてしまった…！",
+      "src": "BV1aY4y1V77S.jpg",
+      "DescZh": "我像是变成了可爱的偶像小姐，和很多人一起兴高采烈地唱歌一样⭐️\n\n虽然是氛围明亮的歌，但其中也有会让人觉得角色其实怀着纠结和痛苦的部分。\n所以那些地方我都一字一句认真咀嚼着唱了出来。\n\n唱到让我共鸣的歌词时，情绪还是一下子溢出来了…！"
+    },
+    {
+      "Date": "2022.5.24",
+      "Title": "アスター / Aster - はるまきごはん",
+      "Desc": "つまりはファンタジー♪",
+      "src": "BV1aR4y1w7mR.jpg",
+      "DescZh": "也就是说，这就是幻想♪"
+    },
+    {
+      "Date": "2022.5.15",
+      "Title": "ねむるまち / 沉睡的城镇 - くじら",
+      "Desc": "この曲の世界観と、yamaさんの歌が大好きです！\n彼女の声に浸りながら夢見心地で毎日聴いています。\n\n「ねむるまちに行こう」\n\nって、誰かに誘われてみたいなぁなんて思いながら気持ちよく歌いました💤",
+      "src": "BV1KY4y1k7fv.jpg",
+      "DescZh": "我很喜欢这首歌的世界观，也很喜欢 yama 的歌声！\n我每天都沉浸在她的声音里，如同做梦一样地反复聆听。\n\n“去沉睡的城市吧”\n\n一边想着“真想被谁这样邀请一次啊”，一边心情很舒服地唱了出来💤"
+    },
+    {
+      "Date": "2022.5.5",
+      "Title": "ラストリゾート / Last Resort - Ayase",
+      "Desc": "時々、雨続きの日なんかに、急に全てが嫌になって自暴自棄になったりして。\nそんな日に聴きたい曲だなって。\n\n歌いながら少し暗い気持ちになって、気怠さをそのまま声にしてみたよ。\n何もかも嫌になる時は、嫌になったっていいやって、\nこの曲が思わせてくれる気が、する！",
+      "src": "BV1wU4y1S7cd.jpg",
+      "DescZh": "有时候在连日下雨的时候，会突然变得什么都讨厌，甚至有点自暴自弃。\n我会觉得，这真是一首适合那种日子听的歌。\n\n唱着唱着心情也跟着有点阴沉，于是把那份倦怠原样放进了声音里。\n当什么都让人厌烦的时候，就算讨厌一切也没关系——这首歌会让我产生这样的感觉！"
+    },
+    {
+      "Date": "2022.4.29",
+      "Title": "ANEMONE - 吐息",
+      "Desc": "この曲は、わざと投げやりな気持ちで歌ってみたよ。\n\nどうにでもなれ、なんでもいいや\n\nそういう気持ちって、色々苦しんだ先にあるものだなぁと思っていて、\nこの曲はそんな苦しみを感じた曲だったので、私の中にあるそういう投げやりな姿をあらわにさせてみました。",
+      "src": "BV1jr4y1n7EN.jpg",
+      "DescZh": "这首歌，我是故意带着一种自暴自弃的心情去唱的。\n\n爱怎样怎样吧，什么都无所谓了。\n\n我觉得这种心情，往往是经历了许多痛苦之后才会出现的东西。\n因为这首歌就让我感受到了那样的痛苦，所以我试着把自己心里那种破罐破摔的样子完全显露出来。"
+    },
+    {
+      "Date": "2022.4.20",
+      "Title": "LAZY - DUSTCELL",
+      "Desc": "初めてのラップに挑戦！！\n普段の喋っている時の感覚と近くて新鮮でした。\n\n私、結構めんどくさがりで、忙しくなるほど何もしたくなくなるんだぁ、、(共感してほしい、、\n\nこの曲はそんな自分を受け入れてくれてるような曲で、レコーディングしながら心地良かったです！",
+      "src": "BV1JS4y1A7R4.jpg",
+      "DescZh": "第一次挑战说唱！！\n和我平时说话时的感觉很接近，特别新鲜。\n\n我其实挺怕麻烦的，越忙就越会变得什么都不想干、、（希望有人共鸣、、）\n\n这首歌就像是在接纳这样的我一样，录音的时候让我觉得很舒服！"
+    },
+    {
+      "Date": "2022.4.14",
+      "Title": "花を唄う / 歌颂花束 - シノ",
+      "Desc": "この曲には、刹那を感じさせるような声が似合うなぁと思ったので、色んな春の思い出をぼんやり振り返りながら歌ってみたよ。\n\n実はこの曲、私にとっては\nこれまで歌ってきたどの曲よりも難しかった…！\n\nみんな、4月病や5月病の気配を感じたら是非この曲を聴いてみてね🥰",
+      "src": "BV1BF411g7YH.jpg",
+      "DescZh": "我觉得这首歌很适合那种带着刹那感的声音，\n所以一边朦朦胧胧地回顾各种春天的回忆，一边唱了出来。\n\n其实这首歌对我来说，\n比我到现在唱过的任何一首都还要难……！\n\n大家要是感觉到了“四月病”或“五月病”的气息，一定要来听听这首歌哦🥰"
+    },
+    {
+      "Date": "2022.4.6",
+      "Title": "チルドレン / children - BIN",
+      "Desc": "大人も子供。\nそれを忘れないように大人になりたいなぁ。\nと、この歌をうたって、思いました。",
+      "src": "BV1b94y1Z7xz.png",
+      "DescZh": "大人也是孩子。\n我想成为那种不会忘记这一点的大人啊。\n唱着这首歌时，我是这么想的。"
+    },
+    {
+      "Date": "2022.3.28",
+      "Title": "私論理 - 花譜",
+      "Desc": "元気溌剌！爽快感あふれる曲と思って歌っていたんだけど\n歌い進めていくにつれて、少し違う…\n\nきらびやかで、大きい何かを追いかけている時の、「物足りなさ」のようなもの...を感じました。\n\nだからこそお構いなしに、元気よく歌ってみたけど\n皆にはどう聞こえたかな？",
+      "src": "BV1jP4y1M7NH.jpg",
+      "DescZh": "一开始唱的时候，我还以为这是一首元气满满、爽快感十足的歌，\n可是唱着唱着，又觉得好像不是那么回事……\n\n我感受到了一种“在追逐闪闪发亮、巨大之物时的不足感”……\n\n正因为这样，我还是不管不顾地元气满满唱了出来，\n大家听起来是什么感觉呢？"
+    },
+    {
+      "Date": "2022.3.24",
+      "Title": "フラジール / 易碎 - ぬゆり",
+      "Desc": "この曲の舞台になる時代は、今より少し前の感じがして、登場する主人公も一昔前のイメージでした。\n\nサビの歌詞とメロがそう感じさせているのかなーと....\n\n皆はどんな感じがした？",
+      "src": "BV1rT4y1i7Ve.jpeg",
+      "DescZh": "这首歌所描绘的时代，给我的感觉像是比现在稍早一些的时候，登场的主人公也像是上一代风格的人物。\n\n也许是副歌的歌词和旋律让我产生了这种感觉吧……\n\n大家觉得是什么感觉呢？"
+    },
+    {
+      "Date": "2022.3.15",
+      "Title": "食虫植物 - 理芽",
+      "Desc": "なんだかこの曲は、助けてっていうメッセージが込められている様に感じたのと、\n私自身共感できる部分があってしまったので、\n想いを込めずにはいられませんでした…🙏\n\n聴いてる皆にも気持ち、伝わったら嬉しいな。",
+      "src": "BV19F411s7W1.jpg",
+      "DescZh": "总觉得这首歌里藏着一种“救救我”的讯息，\n而且里面也刚好有一部分和我自己产生了共鸣，\n所以实在没办法不把感情放进去…🙏\n\n如果听的人也能感受到我的心情，我会很开心。"
+    },
+    {
+      "Date": "2022.3.8",
+      "Title": "帝国少女 - R Sound Design",
+      "Desc": "この曲は、言葉を淡々と並べる様に歌いました。\nその歌い方と歌詞も相まって切なさを感して、それが私は結構好き…💭\n\nみんなは好き？",
+      "src": "BV1sL4y1u7dZ.jpeg",
+      "DescZh": "这首歌，我是像把词语淡淡地一行行摆出来那样唱的。\n那样的唱法再加上歌词本身，会让人感到一种切切实实的悲伤，而我还挺喜欢这种感觉的…💭\n\n大家喜欢吗？"
+    },
+    {
+      "Date": "2022.2.26",
+      "Title": "秒針を噛む - ずっと真夜中でいいのに。",
+      "Desc": "私、明るいねと言われるとこが多いんだ。\n実際笑って泣いて、心のままに過ごしてるし。\n\nでも怒りを全開にする様な事が滅多に起きないかわりに、小さな鬱憤の積み重ねはあるなぁと感じてて。\n\nこの曲は、そんな鬱憤を曝け出す事を許してくれる様な曲に思えたので、叫ぶ様に歌ってみました。\n\nぷはぁ。",
+      "src": "BV1Su411X7fc.png",
+      "DescZh": "很多人都说我很开朗。\n实际上我也确实会笑会哭，会照着自己的心去过日子。\n\n但虽然几乎很少会发生让我把愤怒彻底爆发出来的事，\n我还是会觉得，内心里其实一直积着一些小小的郁闷。\n\n这首歌就像是在允许我把那种郁结彻底暴露出来，所以我用近乎呐喊的方式把它唱了出来。\n\n呼啊。"
+    },
+    {
+      "Date": "2022.2.21",
+      "Title": "愛を伝えたいだとか / 传达爱 - あいみょん",
+      "Desc": "今日の歌の感想ツイートできてたと思ったらできてなかった...！\n\nこの曲では、私の捻くれてる所をだしてみたよ。笑\n少し弱いというか、心配性だったり、ネガティブな面も、ちょっと持っているから。\n\nそんな，普段はあまり出せない一面をこの曲では思いっきり表現できました！🌸",
+      "src": "BV1ub4y1t7Bn.jpg",
+      "DescZh": "我本来还以为今天已经发出了这首歌的感想推文，结果其实没发……！\n\n在这首歌里，我试着把自己有点别扭的一面拿了出来。笑\n我其实也有点脆弱、爱担心，还有一点消极。\n\n像这样平时不太能拿出来的一面，这次就在这首歌里尽情表现出来了！🌸"
+    },
+    {
+      "Date": "2022.2.9",
+      "Title": "綺麗 - 吉澤嘉代子",
+      "Desc": "私、吉澤嘉代子さんの世界観にめろめろなんです💕\n\nこの先どんどん大人になっても、心は少女のままでいたいな…、という想いが私にもあって、\n\nこの曲、「綺麗」にも、そんな願いのこもった\n淡い桃色の可愛らしい空気が流れている様な感じがするんです。",
+      "src": "BV1Sb4y177Yf.jpg",
+      "DescZh": "我真的好迷吉泽嘉代子小姐的世界观呀💕\n\n就算今后越来越长大，我也想让自己的心一直像少女一样……我自己也有这样的想法。\n\n而这首《綺麗》，也让我觉得里面流淌着一种带着这样愿望的、淡淡桃粉色的可爱空气。"
+    },
+    {
+      "Date": "2022.2.1",
+      "Title": "マシュマリー / marsh mally - MIMI",
+      "Desc": "この歌は歌詞とメロディが心を掻きむしって\n感情的に歌わずにはいられなかった！\n\nけど、この曲に馴染む歌はさみしさを噛み締めて外には出さない上品さが似合っているなぁと思ったり\n\n逆に明るめの声色で歌ったりした方が心にスーッと入ってくるなと感じたので、私の心を落ち着かせながら歌いました笑",
+      "src": "BV12Y411t7JG.png",
+      "DescZh": "这首歌的歌词和旋律像是在抓挠人的心一样，\n让我无法不带着感情去唱！\n\n不过我又会觉得，这首歌更适合那种把寂寞细细咀嚼却不外露的优雅唱法。\n\n反过来，我又感觉如果用稍微明亮一点的声线去唱，反而更能一下子钻进心里，所以我是一边安抚着自己的情绪一边唱的，笑。"
+    },
+    {
+      "Date": "2022.1.22",
+      "Title": "金木犀の夜 - きのこ帝国",
+      "Desc": "この曲は、風のない冷え切った夜の中で、\n白い息を吐きながら口ずさんでいる様な感覚で歌っていました。\n\nひたすらノスタルジックで、この歌を歌うだけで何故か私の過去の様々な記憶が静かによみがえってきたりして。\n\n歌っているだけで一つの映画を見ている様な、そんな気持ちにもなりました。",
+      "src": "BV1FS4y1o7W6.jpg",
+      "DescZh": "这首歌让我像是在没有风、冷得发透的夜里，\n一边吐着白气一边轻声哼唱那样地去唱。\n\n它实在太怀旧了，光是唱着这首歌，就不知为何会让我的许多过去的记忆静静地浮现出来。\n\n唱着唱着，甚至会有种像在看一部电影一样的感觉。"
+    },
+    {
+      "Date": "2022.1.15",
+      "Title": "Sincerely - TRUE",
+      "Desc": "この曲は曲調が起承転結はっきりしていたので、曲の流れのままに心を委ねて歌いました。\nとてもナチュラルに、曲が私を導いて形にしてくれたような。\n\n曲もひとつのいきものだとしたら、この曲はただただやさしくて、そして一生懸命な曲だと思うんです。\n\nそれを私は声にしたって感じ！ぜひ聴いてね。",
+      "src": "BV1WS4y1f7xu.jpg",
+      "DescZh": "这首歌的曲调起承转合非常分明，所以我就顺着歌曲本身的流动，把心完全交了出去。\n感觉非常自然，就像是歌本身在引导我，把它塑造成了如今的样子。\n\n如果歌曲也是一种生命的话，我觉得这首歌就是那种纯粹温柔、又非常努力的存在。\n\n而我做的，就是把它变成了声音！一定要听听哦。"
+    },
+    {
+      "Date": "2022.1.4",
+      "Title": "フォニイ - ツミキ",
+      "Desc": "フォニィ、歌ってみました！\n\n本家さんのMVで、女の子が狐の耳を手でこう...(伝わって！)してたから、私も歌の合間にそのポーズをしながらノリノリで歌っちゃった。笑\nなんかぶりっ子してるように聴こえちゃうかも...？🦊\nちとはずかし〜…っ",
+      "src": "BV19r4y1m7ev.jpg",
+      "DescZh": "我唱了《フォニイ》！\n\n因为原版 MV 里，那个女孩子会用手比出狐狸耳朵那样的动作（能懂吧！），所以我也在唱歌的间隙一边做那个动作一边很嗨地唱了。笑\n会不会听起来有点像在装可爱呢…？🦊\n有点害羞呀〜…っ"
+    },
+    {
+      "Date": "2021.12.20",
+      "Title": "絶え間なく藍色 - 獅子志司",
+      "Desc": "今みたいな冬の夜に合うオシャレで大人🍸な楽曲、歌ってみたよっ！\nどうかな？？",
+      "src": "BV1FZ4y1X7Sy.jpg",
+      "DescZh": "我唱了这首很适合像现在这样的冬夜、又时髦又成熟🍸的歌！\n怎么样呢？？"
+    },
+    {
+      "Date": "2021.12.6",
+      "Title": "獏 - john",
+      "Desc": "THE COVER 06",
+      "src": "BV1WL4y1H7Ru.jpg",
+      "DescZh": "THE COVER 06"
+    },
+    {
+      "Date": "2021.11.26",
+      "Title": "真夜中のメリーゴーランド - 鈴木愛理",
+      "Desc": "THE COVER 05",
+      "src": "BV18q4y1g7Js.jpg",
+      "DescZh": "THE COVER 05"
+    },
+    {
+      "Date": "2021.11.7",
+      "Title": "不埒な喝采 - ポリスピカデリー feat. 可不(KAFU)",
+      "Desc": "THE COVER 04",
+      "src": "BV1Rv411T7m4.jpg",
+      "DescZh": "THE COVER 04"
+    },
+    {
+      "Date": "2021.9.25",
+      "Title": "徒花の涙 - ウォルピスカーター",
+      "Desc": "THE COVER 03",
+      "src": "BV1cL411s7bB.jpg",
+      "DescZh": "THE COVER 03"
+    },
+    {
+      "Date": "2021.9.13",
+      "Title": "エウテルペ - EGOIST",
+      "Desc": "THE COVER 02",
+      "src": "BV1d34y1Q7BP.jpg",
+      "DescZh": "THE COVER 02"
+    },
+    {
+      "Date": "2021.9.1",
+      "Title": "六等星の夜 - Aimer",
+      "Desc": "THE COVER 01",
+      "src": "BV1zb4y1m7Mg.jpg",
+      "DescZh": "THE COVER 01"
+    }
+  ]
+}
+
+
+
+

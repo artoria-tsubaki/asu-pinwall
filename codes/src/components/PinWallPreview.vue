@@ -62,7 +62,7 @@
         <span class="minimap__label minimap__label--tl">INFORMATION</span>
         <span class="minimap__label minimap__label--tr">MUSIC</span>
         <span class="minimap__label minimap__label--bl">CAREER</span>
-        <span class="minimap__label minimap__label--br">NEWS</span>
+        <span class="minimap__label minimap__label--br">IMAGE</span>
 
         <!-- 卡片方块 -->
         <div
@@ -141,7 +141,7 @@ const MINIMAP_W = 340
 const scale = MINIMAP_W / props.canvasWidth          // 统一缩放比，约 0.08854
 const MINIMAP_H = Math.round(props.canvasHeight * scale) // ≈ 212，与 scale 精确对应
 
-// 四个区域定义（导航顺序：Information → Music → Career → News）
+// 四个区域定义（导航顺序：Information → Music → Career → Image）
 const sections = [
   {
     id: 'information',
@@ -168,8 +168,8 @@ const sections = [
     centerY: props.canvasHeight * 0.75
   },
   {
-    id: 'news',
-    label: 'NEWS',
+    id: 'image',
+    label: 'IMAGE',
     targetOffsetX: -(props.canvasWidth / 2),
     targetOffsetY: -(props.canvasHeight / 2),
     centerX: props.canvasWidth * 0.75,
@@ -186,7 +186,7 @@ const currentSectionIndex = computed(() => {
   if (centerCanvasX < halfW && centerCanvasY < halfH) return 0  // Information
   if (centerCanvasX >= halfW && centerCanvasY < halfH) return 1  // Music
   if (centerCanvasX < halfW && centerCanvasY >= halfH) return 2  // Career
-  return 3  // News
+  return 3  // Image
 })
 
 const currentSection = computed(() => sections[currentSectionIndex.value])

@@ -3,8 +3,7 @@
   <div
     class="pin-viewport"
     ref="viewportRef"
-    :class="{ 'pin-viewport--dragging': isDragging, 'pin-viewport--loading': !cardsReady }"
-    :aria-busy="!cardsReady"
+    :class="{ 'pin-viewport--dragging': isDragging }"
     @mousedown="onMouseDown"
     @mousemove="onMouseMove"
     @mouseup="onMouseUp"
@@ -91,7 +90,7 @@
 
     <!-- 卡片内图片等资源就绪前的加载层 -->
     <div
-      v-show="!cardsReady"
+      v-if="false"
       class="pin-wall__loading"
       aria-live="polite"
       aria-label="正在加载卡片资源"
@@ -213,7 +212,6 @@ const DEFAULT_LAYOUT_BY_TYPE = {
   'image-wall-teaser': { w: 420, h: 480 }
 }
 const DEFAULT_LAYOUT_FALLBACK = { w: 320, h: 240 }
-
 function navLabel(card) {
   const t = card.title
   if (t != null && String(t).trim() !== '') return String(t).trim()
@@ -293,36 +291,22 @@ onMounted(async () => {
   // 等卡片全部渲染完毕
   await nextTick()
 
-  // 收集所有卡片内尚未加载完成的图片，等待它们全部就绪（load 或 error）
-  const imgPromises = []
-  for (const card of props.cards) {
-    const compEl = _cardRefs[card.id]
-    if (compEl?.$el) {
-      compEl.$el.querySelectorAll('img').forEach(img => {
-        if (!img.complete) {
-          imgPromises.push(new Promise(resolve => {
-            img.addEventListener('load', resolve, { once: true })
-            img.addEventListener('error', resolve, { once: true })
-          }))
+  try {
+    // 图片全部就绪后，读取每张卡片的真实宽高
+    const dims = {}
+    for (const card of props.cards) {
+      const compEl = _cardRefs[card.id]
+      if (compEl?.$el) {
+        const cardEl = compEl.$el.querySelector('.pin-card, .social-grid')
+        if (cardEl) {
+          dims[card.id] = { w: cardEl.offsetWidth, h: cardEl.offsetHeight }
         }
-      })
-    }
-  }
-  await Promise.all(imgPromises)
-
-  // 图片全部就绪后，读取每张卡片的真实宽高
-  const dims = {}
-  for (const card of props.cards) {
-    const compEl = _cardRefs[card.id]
-    if (compEl?.$el) {
-      const cardEl = compEl.$el.querySelector('.pin-card, .social-grid')
-      if (cardEl) {
-        dims[card.id] = { w: cardEl.offsetWidth, h: cardEl.offsetHeight }
       }
     }
+    cardDimensions.value = dims
+  } finally {
+    cardsReady.value = true
   }
-  cardDimensions.value = dims
-  cardsReady.value = true
 
   onUnmounted(() => {
     window.removeEventListener('resize', handleResize)
@@ -404,57 +388,6 @@ function clampOffset(val, axis) {
 
 .pin-viewport--dragging {
   cursor: grabbing;
-}
-
-.pin-viewport--loading {
-  cursor: wait;
-}
-
-/* ---- 资源加载层（卡片图片等就绪前） ---- */
-.pin-wall__loading {
-  position: absolute;
-  top: 64px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 90;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(255, 250, 235, 0.82);
-  backdrop-filter: blur(6px);
-  pointer-events: auto;
-}
-
-.pin-wall__loading-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-}
-
-.pin-wall__loading-spinner {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 2px solid rgba(127, 99, 21, 0.2);
-  border-top-color: var(--color-brand-orange);
-  animation: pin-wall-loading-spin 0.75s linear infinite;
-}
-
-.pin-wall__loading-text {
-  margin: 0;
-  font-family: var(--font-family);
-  font-size: 13px;
-  font-weight: 400;
-  letter-spacing: 0.4px;
-  color: rgba(31, 31, 31, 0.55);
-}
-
-@keyframes pin-wall-loading-spin {
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 /* ---- 固定标题栏 ---- */

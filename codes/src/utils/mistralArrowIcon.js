@@ -1,0 +1,45 @@
+import { h } from 'vue'
+
+const paths = [
+  'M7.49976 4.37114e-07L4.99976 0L4.99976 2.5L7.49976 2.5L7.49976 4.37114e-07Z',
+  'M4.99975 2.49976L2.49975 2.49976L2.5 4.99976L-4.37114e-07 4.99976L-8.74228e-07 7.49976L2.5 7.49976L2.5 4.99976L5 4.99976L4.99975 2.49976Z',
+  'M9.99976 2.49976L7.49976 2.49976L7.49976 4.99976L9.99976 4.99976L9.99976 2.49976Z',
+  'M12.4998 4.99976L9.99976 4.99976L9.99976 7.49976L12.4998 7.49976L12.4998 4.99976Z',
+  'M7.49976 4.99976L4.99976 4.99976L4.99975 12.4998L7.49976 12.4998L7.49976 4.99976Z'
+]
+
+const transformByDirection = {
+  up: undefined,
+  down: 'translate(0 12.5) scale(1 -1)',
+  right: 'rotate(90 6.25 6.25)'
+}
+
+export const MistralArrowIcon = {
+  props: {
+    direction: {
+      type: String,
+      default: 'up'
+    }
+  },
+  setup(props, { attrs }) {
+    return () =>
+      h(
+        'svg',
+        {
+          ...attrs,
+          width: '13',
+          height: '13',
+          viewBox: '0 0 13 13',
+          fill: 'none',
+          xmlns: 'http://www.w3.org/2000/svg'
+        },
+        [
+          h(
+            'g',
+            { transform: transformByDirection[props.direction] },
+            paths.map((d) => h('path', { d, fill: 'currentColor' }))
+          )
+        ]
+      )
+  }
+}
